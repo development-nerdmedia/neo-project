@@ -321,27 +321,32 @@ section.proyectos {
       transition: all 300ms ease;
       position: relative;
       border-radius: 20px;
-      margin: 0 50px; }
+      margin: 0 50px;
+      border-radius: 20px; }
       section.proyectos .slider-proyectos .item-proyectos .filtro {
         position: absolute;
         bottom: 0;
         width: 100%;
         height: 100%;
         background: rgba(58, 42, 104, 0.6);
-        z-index: 2; }
+        z-index: 2;
+        border-radius: 20px; }
       section.proyectos .slider-proyectos .item-proyectos .filtro1 {
         position: absolute;
         bottom: 0;
         width: 100%;
         height: 70%;
+        border-radius: 20px;
         background: linear-gradient(180deg, rgba(73, 169, 183, 0) 0%, #4B9BB2 100%); }
       section.proyectos .slider-proyectos .item-proyectos img {
-        width: 100%; }
+        width: 100%;
+        border-radius: 20px; }
       section.proyectos .slider-proyectos .item-proyectos .info {
         position: absolute;
         bottom: 0;
         width: 100%;
-        padding: 26px 50px; }
+        padding: 26px 50px;
+        border-radius: 20px; }
         section.proyectos .slider-proyectos .item-proyectos .info h4 {
           font-family: var(--fuente-barlow);
           font-weight: 800;
@@ -666,4 +671,174 @@ section.tarj-contacto {
       text-decoration: none;
       color: var(--color-verde); }
       section.tarj-contacto .content a img {
+        padding-left: 19px; }
+
+section.services-info {
+  padding: 80px 0; }
+  section.services-info .info {
+    display: flex; }
+    section.services-info .info .part1 {
+      padding-right: 80px;
+      width: 35.7%; }
+      section.services-info .info .part1 .img {
+        position: relative; }
+        section.services-info .info .part1 .img .filtro {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 65%;
+          background: linear-gradient(180deg, rgba(73, 169, 183, 0) 0%, #4B9BB2 100%);
+          border-radius: 0px 0px 20px 20px; }
+        section.services-info .info .part1 .img img {
+          width: 100%;
+          border-radius: 20px; }
+    section.services-info .info .part2 {
+      width: 64.3%; }
+      section.services-info .info .part2 .content {
+        padding-left: 40px; }
+      section.services-info .info .part2 h3 {
+        font-family: var(--fuente-barlow);
+        font-weight: 900;
+        font-size: 40px;
+        color: var(--color-morado-claro);
+        position: relative;
+        margin-top: 30px; }
+        section.services-info .info .part2 h3::before {
+          content: '';
+          background-image: url(../icons/viñeta.svg);
+          width: 17.5px;
+          height: 100%;
+          font-size: 20px;
+          position: absolute;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          left: -39px;
+          top: 50%;
+          transform: translateY(-8.75px); }
+      section.services-info .info .part2 h3:first-child {
+        margin-top: 0; }
+      section.services-info .info .part2 p {
+        font-family: var(--fuente-prompt);
+        font-weight: 500;
+        font-size: 25px;
+        color: #6C6B6F;
+        padding-top: 10px; }
+      section.services-info .info .part2 .btn {
+        display: flex;
+        justify-content: flex-start; }
+        section.services-info .info .part2 .btn a {
+          margin-top: 50px;
+          padding: 11px 17px;
+          background-color: var(--color-morado);
+          text-decoration: none;
+          color: var(--color-verde);
+          display: flex;
+          align-items: center;
+          border-radius: 10px;
+          font-family: var(--fuente-prompt);
+          font-weight: 500;
+          font-size: 20px;
+          box-shadow: 7px 7px 6px rgba(40, 29, 71, 0.51); }
+          section.services-info .info .part2 .btn a img {
+            padding-left: 19px; }
+
+section.proyectos-list {
+  padding: 80px 0; }
+  section.proyectos-list .category {
+    padding-bottom: 80px; }
+    section.proyectos-list .category ul {
+      list-style: none;
+      border: solid 2px var(--color-morado);
+      border-radius: 10px;
+      width: fit-content;
+      margin: 0 auto; }
+      section.proyectos-list .category ul li {
+        font-family: var(--fuente-prompt);
+        font-weight: 500;
+        font-size: 20px;
+        padding: 11px 21px;
+        display: inline-block;
+        border-left: 1px solid var(--color-morado-claro);
+        transition: 0.2s linear;
+        margin: 0 -2px; }
+        section.proyectos-list .category ul li a {
+          text-decoration: none;
+          color: var(--color-morado);
+          transition: 0.2s linear; }
+      section.proyectos-list .category ul li:first-child {
+        border-left: none; }
+      section.proyectos-list .category ul li.select, section.proyectos-list .category ul li:hover {
+        background-color: var(--color-morado); }
+        section.proyectos-list .category ul li.select a, section.proyectos-list .category ul li:hover a {
+          color: var(--color-verde); }
+  section.proyectos-list .items-category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 58px;
+    column-gap: 58px;
+    row-gap: 64px; }
+    section.proyectos-list .items-category .item-category {
+      transition: all 300ms ease;
+      position: relative;
+      border-radius: 20px;
+      border-radius: 20px; }
+      section.proyectos-list .items-category .item-category .filtro1 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70%;
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(73, 169, 183, 0) 0%, #4B9BB2 100%);
+        z-index: 1; }
+      section.proyectos-list .items-category .item-category img {
+        width: 100%;
+        border-radius: 20px;
+        filter: drop-shadow(10px 10px 15px rgba(67, 148, 168, 0.4)); }
+      section.proyectos-list .items-category .item-category .info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 31px 63px;
+        border-radius: 20px;
+        z-index: 2; }
+        section.proyectos-list .items-category .item-category .info h4 {
+          font-family: var(--fuente-barlow);
+          font-weight: 800;
+          font-size: 35px;
+          color: #fff;
+          position: relative; }
+          section.proyectos-list .items-category .item-category .info h4::before {
+            content: '';
+            background-image: url(../icons/viñeta.svg);
+            width: 17.5px;
+            height: 18px;
+            font-size: 20px;
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            left: -24px;
+            top: 50%;
+            transform: translateY(-8.75px); }
+        section.proyectos-list .items-category .item-category .info p {
+          font-family: var(--fuente-barlow);
+          font-weight: 500;
+          font-size: 30px;
+          color: #fff; }
+  section.proyectos-list .btn {
+    display: flex;
+    justify-content: center; }
+    section.proyectos-list .btn a {
+      margin-top: 80px;
+      padding: 11px 17px;
+      background-color: var(--color-morado);
+      text-decoration: none;
+      color: var(--color-verde);
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      font-family: var(--fuente-prompt);
+      font-weight: 500;
+      font-size: 20px;
+      box-shadow: 7px 7px 6px rgba(40, 29, 71, 0.51); }
+      section.proyectos-list .btn a img {
         padding-left: 19px; }
