@@ -40,9 +40,9 @@
       <section class="proyectos-list">
         <div class="container">
           <div class="category">
-            <ul>
+            <ul id="categorias2">
               <li>
-                <a href="#">Mobiliario para puntos de venta</a>
+                <a href="#" class="select">Mobiliario para puntos de venta</a>
               </li>
               <li><a href="#">Arquitectura comercial</a></li>
               <li><a href="#">Stands para ferias</a></li>
@@ -50,65 +50,59 @@
             </ul>
           </div>
           <div class="items-category">
-            <div class="item-category">
-              <a href="#">
-                <div class="filtro1"></div>
-                <img src="../img/mobiliario-item-1.png" alt="" />
-                <div class="info">
-                  <h4>Invoga store</h4>
-                  <p>Mobiliario para puntos de venta</p>
-                </div>
-              </a>
+            <div
+              class="item-category"
+              data-categoria="mobiliario para puntos de venta"
+            >
+              <div class="filtro1"></div>
+              <img src="../img/mobiliario-item-1.png" alt="" />
+              <div class="info">
+                <h4>Invoga store</h4>
+                <p>Mobiliario para puntos de venta</p>
+              </div>
             </div>
-            <div class="item-category">
-              <a href="#">
-                <div class="filtro1"></div>
-                <img src="../img/mobiliario-item-2.png" alt="" />
-                <div class="info">
-                  <h4>Amphora</h4>
-                  <p>Mobiliario para puntos de venta</p>
-                </div>
-              </a>
+            <div class="item-category" data-categoria="arquitectura comercial">
+              <div class="filtro1"></div>
+              <img src="../img/mobiliario-item-2.png" alt="" />
+              <div class="info">
+                <h4>Amphora</h4>
+                <p>Mobiliario para puntos de venta</p>
+              </div>
             </div>
-            <div class="item-category">
-              <a href="#">
-                <div class="filtro1"></div>
-                <img src="../img/mobiliario-item-3.png" alt="" />
-                <div class="info">
-                  <h4>LG</h4>
-                  <p>Mobiliario para puntos de venta</p>
-                </div>
-              </a>
+            <div class="item-category" data-categoria="stands para ferias">
+              <div class="filtro1"></div>
+              <img src="../img/mobiliario-item-3.png" alt="" />
+              <div class="info">
+                <h4>LG</h4>
+                <p>Mobiliario para puntos de venta</p>
+              </div>
             </div>
-            <div class="item-category">
-              <a href="#">
-                <div class="filtro1"></div>
-                <img src="../img/mobiliario-item-4.png" alt="" />
-                <div class="info">
-                  <h4>Galaxy</h4>
-                  <p>Mobiliario para puntos de venta</p>
-                </div>
-              </a>
+            <div
+              class="item-category"
+              data-categoria="diseño de proyecto a media"
+            >
+              <div class="filtro1"></div>
+              <img src="../img/mobiliario-item-4.png" alt="" />
+              <div class="info">
+                <h4>Galaxy</h4>
+                <p>Mobiliario para puntos de venta</p>
+              </div>
             </div>
-            <div class="item-category">
-              <a href="#">
-                <div class="filtro1"></div>
-                <img src="../img/mobiliario-item-5.png" alt="" />
-                <div class="info">
-                  <h4>Ziol</h4>
-                  <p>Mobiliario para puntos de venta</p>
-                </div>
-              </a>
+            <div class="item-category" data-categoria="arquitectura comercial">
+              <div class="filtro1"></div>
+              <img src="../img/mobiliario-item-5.png" alt="" />
+              <div class="info">
+                <h4>Ziol</h4>
+                <p>Mobiliario para puntos de venta</p>
+              </div>
             </div>
-            <div class="item-category">
-              <a href="#">
-                <div class="filtro1"></div>
-                <img src="../img/mobiliario-item-6.png" alt="" />
-                <div class="info">
-                  <h4>Canon</h4>
-                  <p>Mobiliario para puntos de venta</p>
-                </div>
-              </a>
+            <div class="item-category" data-categoria="stands para ferias">
+              <div class="filtro1"></div>
+              <img src="../img/mobiliario-item-6.png" alt="" />
+              <div class="info">
+                <h4>Canon</h4>
+                <p>Mobiliario para puntos de venta</p>
+              </div>
             </div>
           </div>
           <div class="btn">
@@ -130,13 +124,41 @@
         </div>
       </section>
     </main>
+    <section class="item-popup">
+      <div class="container">
+        <div class="top">
+          <button class="btn btn-close">x</button>
+        </div>
+        <div class="content">
+          <div class="info">
+            <div class="text">
+              <h4>Invoga store</h4>
+              <p>Mobiliario para puntos de venta</p>
+            </div>
+            <div class="slider-popup">
+              <div class="slider-fotos">
+                <div class="item-foto">
+                  <img src="../img/item-popup1.png" alt="" />
+                </div>
+                <div class="item-foto">
+                  <img src="../img/item-popup1.png" alt="" />
+                </div>
+                <div class="item-foto">
+                  <img src="../img/item-popup1.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="container">
         <div class="content">
           <div>
             <p>
-              Av. Separadora Industrial, Mz H1 Lt 7E Parcela II Parque
-              Industrial Villa El Salvador - Lima
+              Av. Separadora Industrial, Mz H1 Lt 7E Parcela II <br />
+              Parque Industrial Villa El Salvador - Lima
             </p>
           </div>
           <div>
