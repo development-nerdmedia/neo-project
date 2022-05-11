@@ -41,7 +41,7 @@ MyApp = {
             const categoryMain = document.querySelector('#categorias2 a.select').innerHTML.toLowerCase();
             // console.log(categoryMain.innerHTML);
             console.log(categoryMain);
-            $(`.item-category[data-categoria="${categoryMain}"]`).show(500);
+            $(`.item-category[data-categoria="${categoryMain}"]`).show();
 
             enlaces.forEach((elemento) => {
                 elemento.addEventListener('click', (evento) => {
@@ -51,8 +51,8 @@ MyApp = {
 
                     const categoria = evento.target.innerHTML.toLowerCase(); /* para saber la categoria del menu donde estas*/
                     console.log(categoria);
-                    $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide(500);
-                    $(`.item-category[data-categoria="${categoria}"]`).show(500);
+                    $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide();
+                    $(`.item-category[data-categoria="${categoria}"]`).show();
                 });
             });
         }
