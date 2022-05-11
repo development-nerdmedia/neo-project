@@ -834,7 +834,8 @@ section.proyectos-list {
       transition: all 300ms ease;
       position: relative;
       border-radius: 20px;
-      border-radius: 20px; }
+      border-radius: 20px;
+      cursor: pointer; }
       section.proyectos-list .items-category .item-category .filtro1 {
         position: absolute;
         bottom: 0;
@@ -980,8 +981,7 @@ section.item-popup {
         opacity: 0.5; }
 
 section.item-popup.open {
-  visibility: visible;
-  overflow-y: auto; }
+  visibility: visible; }
 
 section.contacto-page {
   background: linear-gradient(180deg, #4BA6B8 0%, #4DEFDF 120%);

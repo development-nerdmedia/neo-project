@@ -1042,6 +1042,7 @@ section.proyectos-list{
             position: relative;
             border-radius: 20px;
             border-radius: 20px;
+            cursor: pointer;
             .filtro1{
                 position: absolute;
                 bottom: 0;
@@ -1220,7 +1221,7 @@ section.item-popup{
 
 section.item-popup.open{
     visibility: visible;
-    overflow-y: auto;
+    // overflow-y: auto;
 }
 
 section.contacto-page{
