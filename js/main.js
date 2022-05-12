@@ -38,7 +38,7 @@ MyApp = {
         init: function () {
             const enlaces = document.querySelectorAll('#categorias2 a');
             $('.item-category').hide();
-            const categoryMain = document.querySelector('#categorias2 a.select').innerHTML.toLowerCase();
+            const categoryMain = document.querySelector('#categorias2 a.select').innerHTML;
             // console.log(categoryMain.innerHTML);
             console.log(categoryMain);
             $(`.item-category[data-categoria="${categoryMain}"]`).show();
@@ -49,7 +49,7 @@ MyApp = {
                     enlaces.forEach((enlace) => enlace.classList.remove('select'));
                     evento.target.classList.add('select');
 
-                    const categoria = evento.target.innerHTML.toLowerCase(); /* para saber la categoria del menu donde estas*/
+                    const categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
                     console.log(categoria);
                     $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide();
                     $(`.item-category[data-categoria="${categoria}"]`).show();
@@ -164,7 +164,7 @@ document.addEventListener("click", (e) => {
     if (e.target.closest(".items-category")) {
         togglePortfolioPopup();
         // document.querySelector(".item-popup").scrollTo(0, 0);
-        // portfolioItemDetails(e.target.parentElement);
+        portfolioItemDetails(e.target.parentElement);
     }
 })
 
@@ -175,3 +175,13 @@ function togglePortfolioPopup() {
 }
 
 document.querySelector(".btn-close").addEventListener("click", togglePortfolioPopup);
+
+function portfolioItemDetails(portfolioItem) {
+    // document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
+
+    document.querySelector(".text-popup h4").innerHTML = portfolioItem.querySelector(".info h4").innerHTML;
+    document.querySelector(".text-popup p").innerHTML = portfolioItem.querySelector(".info p").innerHTML;
+    // console.log(portfolioItem);
+
+    // document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
+}
