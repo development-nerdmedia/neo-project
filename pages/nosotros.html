@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <title>NEO - Project | Nosotros</title>
   </head>
@@ -18,58 +22,67 @@
           </div>
           <div class="menu">
             <ul>
-              <li><a href="nosotros.html">Nosotros</a></li>
+              <li class="select"><a href="nosotros.html">Nosotros</a></li>
               <li><a href="servicios.html">Servicios</a></li>
               <li><a href="proyectos.html">Proyectos</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
+              <li class="contacto">
+                <a href="contacto.html"
+                  >Contacto<img src="../icons/flecha-verde2.svg" alt="" /><img
+                    src="../icons/flecha-morada.svg"
+                    alt=""
+                /></a>
+              </li>
             </ul>
-            <label class="switch">
-              <input type="checkbox" checked="" />
-            </label>
           </div>
         </nav>
       </div>
     </header>
     <main>
-      <section class="content-title">
-        <img src="../icons/hexagono-fondo.svg" alt="" />
-        <div class="container">
-          <h1>
-            DISEÑOS QUE <br />
-            <span>GENERAN EMOCIONES</span>
-          </h1>
-          <p>
-            Somos un grupo de profesionales que creen que
-            <span>la creatividad siempre conectará más con las emociones.</span>
-            Los espacios que creamos están pensados para exponenciar la
-            experiencia y felicidad de tus clientes.
-          </p>
+      <section class="interna">
+        <div class="interna-bg">
+          <img src="../img/fondo-internas.jpg" alt="" />
         </div>
-      </section>
-      <section class="mision-vision">
-        <div class="container">
-          <div class="content">
-            <div class="part1">
-              <div class="content-img">
-                <div class="filtro"></div>
-                <img src="../img/img-nosotros.png" alt="" />
+        <div class="content-title">
+          <div class="container">
+            <h1>
+              DISEÑOS QUE <br />
+              <span>GENERAN EMOCIONES</span>
+            </h1>
+            <p>
+              Somos un grupo de profesionales que creen que
+              <span
+                >la creatividad siempre conectará más con las emociones.</span
+              >
+              Los espacios que creamos están pensados para exponenciar la
+              experiencia y felicidad de tus clientes.
+            </p>
+          </div>
+        </div>
+        <div class="mision-vision">
+          <div class="container">
+            <div class="content">
+              <div class="part1">
+                <div class="content-img">
+                  <div class="filtro"></div>
+                  <img src="../img/img-nosotros.png" alt="" />
+                </div>
               </div>
-            </div>
-            <div class="part2">
-              <div>
-                <h3>MISIÓN</h3>
-                <p>
-                  Fabricamos stand para ferias, eventos, exposiciones y todo
-                  tipo de arquitectura comercial obteniendo resultados que el
-                  cliente espera.
-                </p>
-              </div>
-              <div>
-                <h3>VISIÓN</h3>
-                <p>
-                  Ser reconocido en el medio por la calidad, originalidad e
-                  innovación de nuestros productos.
-                </p>
+              <div class="part2">
+                <div>
+                  <h3>MISIÓN</h3>
+                  <p>
+                    Fabricamos stand para ferias, eventos, exposiciones y todo
+                    tipo de arquitectura comercial obteniendo resultados que el
+                    cliente espera.
+                  </p>
+                </div>
+                <div>
+                  <h3>VISIÓN</h3>
+                  <p>
+                    Ser reconocido en el medio por la calidad, originalidad e
+                    innovación de nuestros productos.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -85,11 +98,11 @@
             </div>
             <div>
               <img src="../img/valor-adaptabilidad.png" alt="" />
-              <p>Adaptabilidad</p>
+              <p>Responsabilidad</p>
             </div>
             <div>
               <img src="../img/valor-puntualidad.png" alt="" />
-              <p>Puntualidad</p>
+              <p>Justo a tiempo</p>
             </div>
           </div>
         </div>
@@ -113,10 +126,8 @@
       <div class="container">
         <div class="content">
           <div>
-            <p>
-              Av. Separadora Industrial, Mz H1 Lt 7E Parcela II <br />
-              Parque Industrial Villa El Salvador - Lima
-            </p>
+            <p>Av. Separadora Industrial, Mz H1 Lt 7E Parcela II</p>
+            <p>Parque Industrial Villa El Salvador - Lima</p>
           </div>
           <div>
             <p>informes@neoprojects.com.pe</p>
@@ -127,6 +138,7 @@
             <p>Sábados: 9:00 a 13:00</p>
           </div>
           <div class="redes">
+            <p>Síguenos en:</p>
             <a href="#"><img src="../icons/facebook.svg" alt="" /></a>
             <a href="#"><img src="../icons/instagram.svg" alt="" /></a>
             <a href="#"><img src="../icons/linkedin.svg" alt="" /></a>
@@ -147,6 +159,7 @@
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script type="text/javascript" src="../slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

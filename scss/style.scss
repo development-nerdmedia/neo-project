@@ -32,7 +32,7 @@
 }
 
 .servicios-item a:hover, .item-servicios a:hover{
-    cursor: url(../img/hover-mouse.png) 52 52, pointer;
+    cursor: url(../img/hover-mouse-green.png) 52 52, pointer;
 }
 
 .container {
@@ -61,10 +61,10 @@ header{
             display: flex;
             ul{
                 list-style: none;
-                padding-right: 50px;
+                // margin-right: 8px;
                 li{
                     display: inline-block;
-                    padding: 0 40px;
+                    padding: 0 26px;
                     font-family: var(--fuente-prompt);
                     font-weight: 500;
                     font-size: 20px;
@@ -74,14 +74,36 @@ header{
                         color: #fff;
                     }
                 }
-                li:nth-child(4){
+                li.select{
                     a{
-                        border: 1px solid var(--color-morado);
-                        border-bottom: 4px solid var(--color-morado);
-                        border-radius: 10px;
-                        padding: 11px 52px;
-                        color: var(--color-morado);
+                        color: var(--color-verde);
                     }
+                }
+                li.contacto{
+                    padding-right: 0;
+                    a{
+                        border: 1px solid var(--color-verde);
+                        border-bottom: 4px solid var(--color-verde);
+                        padding: 11px 38px;
+                        color: var(--color-verde);
+                        display: flex;
+                        align-items: center;
+                        img{
+                            margin-left: 5px;
+                        }
+                        img:nth-child(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .redes{
+                margin-right: 30px;
+                display: flex;
+                align-items: center;
+                a{                    
+                    margin: 0 10px;
+                    height: 26px;
                 }
             }
         }
@@ -91,10 +113,15 @@ header{
 header.sticky{
     padding: 25px 0;
     nav .menu ul li:nth-child(4) a{
-        background-color: var(--color-morado);
-        color: var(--color-verde);
-        border: 2px solid var(--color-verde);
-        border-bottom: 4px solid var(--color-verde);
+        color: var(--color-morado);
+        border: 2px solid var(--color-morado);
+        border-bottom: 4px solid var(--color-morado);
+        img:nth-child(1){
+            display: none;
+        }
+        img:nth-child(2){
+            display: block;
+        }
     }
 }
 
@@ -130,6 +157,7 @@ header::before {
         position: relative;
         border-radius: .2em;
         cursor: pointer;
+        border-radius: 10px;
     }
        
     input[type=checkbox]::before {
@@ -144,6 +172,7 @@ header::before {
         background-color: var(--color-verde);
         border-radius: .2em;
         transition: .3s ease;
+        border-radius: 8px;
     }
        
     input[type=checkbox]:checked::before {
@@ -163,7 +192,7 @@ a.whatsapp{
 section.home{
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 1350px;
     .filtro{
         width: 100%;
         height: 100%;
@@ -185,10 +214,10 @@ section.home{
         top: 0;
         height: 100%;
         width: 100%;
-        background-image: url(../img/home-fondo.png);
-        background-attachment: fixed;
+        // background-image: url(../img/fondo-home.jpg);
+        // background-attachment: fixed;
         background-size: cover;
-        background-position: center;
+        // background-position: center;
         z-index: -2;
     }
     .container{
@@ -198,8 +227,15 @@ section.home{
         height: 100%;
         display: flex;
         align-items: flex-start;
-        justify-content: center;
         flex-direction: column;
+        padding-top: 270px;
+        max-width: 855px;
+        img{
+            position: absolute;
+            top: 13%;
+            right: 0;
+            filter: drop-shadow(36px 4px 70px rgba(53, 130, 146, 0.47));
+        }
         h1{
             font-family: var(--fuente-barlow);
             font-size: 90px;
@@ -210,23 +246,52 @@ section.home{
                 color: var(--color-morado);
             }
         }
-        a{
-            margin-top: 50px;
-            padding: 11px 17px;
-            background-color: var(--color-morado);
-            text-decoration: none;
-            color: var(--color-verde);
-            display: flex;
-            align-items: center;
-            border-radius: 10px;
-            font-family: var(--fuente-prompt);            
-            font-weight: 500;
-            font-size: 20px;
-            box-shadow: 7px 7px 6px rgba(40, 29, 71, 0.51);
-            img{
-                padding-left: 19px;
+        .slider-servicios-home{
+            padding-top: 10px;
+            a{
+                text-decoration: none;
+                color: var(--color-morado);
+                font-family: var(--fuente-barlow);
+                font-size: 40px;
+                font-weight: 700;  
+            }
+            .owl-item{
+                width: auto !important;
+                margin-right: 0 !important;
+                .item{
+                    // display: flex;
+                    // justify-content: center;
+                    padding: 0 30px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 14px;
+                        height: 5px;
+                        right: -7px;
+                        top: 50%;
+                        background-color: var(--color-morado);
+                    }
+                }
             }
         }
+        // a{
+        //     margin-top: 50px;
+        //     padding: 11px 17px;
+        //     background-color: var(--color-morado);
+        //     text-decoration: none;
+        //     color: #fff;
+        //     display: flex;
+        //     align-items: center;
+        //     border-radius: 10px;
+        //     font-family: var(--fuente-prompt);            
+        //     font-weight: 500;
+        //     font-size: 20px;
+        //     box-shadow: 7px 7px 6px rgba(40, 29, 71, 0.51);
+        //     img{
+        //         padding-left: 19px;
+        //     }
+        // }
     }
 }
 
@@ -236,29 +301,36 @@ section.experiencias{
         font-family: var(--fuente-barlow);
         font-weight: 500;
         font-size: 70px;
-        color: var(--color-morado-claro);
-        text-align: center;
+        color: var(--color-morado);
+        // text-align: center;
         span{
             color: var(--color-morado);
             font-weight: 900;
         }
     }
+    p{
+        padding: 25px 0;
+        font-family: var(--fuente-prompt);
+        font-weight: 400;
+        font-size: 25px;
+        color: var(--color-morado);
+    }
     .info{
-        margin-top: 50px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .card-info{
             h3{
                 font-family: var(--fuente-barlow);                
                 font-weight: 900;
                 font-size: 120px;
-                color: var(--color-verde);
+                color: var(--color-morado);
                 span{
                     -webkit-text-fill-color: #fff;
-                    -webkit-text-stroke: 2.5px var(--color-verde);
+                    -webkit-text-stroke: 2.5px var(--color-morado);
                 }
             }
-            p{
+            h4{
                 color: var(--color-morado);
                 font-family: var(--fuente-prompt);
                 font-weight: 500;
@@ -270,22 +342,24 @@ section.experiencias{
 }
 
 section.servicios{
-    background: linear-gradient(180deg, #4DE7DB 0%, #4B99B1 100%);
+    // background: linear-gradient(180deg, #4DE7DB 0%, #4B99B1 100%);
     padding: 80px 0;
     h2{
         font-family: var(--fuente-barlow);
         font-weight: 500;
         font-size: 70px;
-        color: var(--color-morado-claro);
+        color: var(--color-morado);
+        margin-bottom: 38px;
         span{
+            font-weight: 900;
             color: var(--color-morado);
         }
     }
     p{
-        font-family: var(--fuente-prompt);
+        font-family: var(--fuente-barlow);
         font-weight: 500;
-        font-size: 25px;
-        line-height: 38px;
+        font-size: 35px;
+        line-height: 42px;
         color: #fff;
         margin: 25px 0;
         margin-bottom: 35px;
@@ -294,9 +368,11 @@ section.servicios{
     .content{
         display: flex;
         position: relative;
+        align-items: center;
     }
     .part1{
         width: 35%;
+        transform: translateY(-115px);
         .container{
             margin-right: 0;
             width: 65%;
@@ -309,8 +385,13 @@ section.servicios{
             padding: 11px 25px;
             border: 1px solid var(--color-morado);
             border-bottom: 4px solid var(--color-morado);
-            border-radius: 10px;
             color: var(--color-morado);
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            img{
+                margin-left: 5px;
+            }
         }
     }
     .part2{
@@ -318,7 +399,7 @@ section.servicios{
         .item-servicios{
             border-radius: 20px;
             margin: 0 30px;
-            filter: drop-shadow(14px 18px 15px #4394A8);
+            // filter: drop-shadow(14px 18px 15px #4394A8);
             a{
                 text-decoration: none;
             }
@@ -334,23 +415,26 @@ section.servicios{
                 bottom: 0;
                 width: 100%;
                 height: 65%;
-                background: linear-gradient(180deg, rgba(73, 169, 183, 0) 0%, #4B9BB2 100%);
+                background: linear-gradient(180.63deg, rgba(0, 0, 0, 0) 15.96%, rgba(0, 0, 0, 0.58) 99.46%);
                 border-radius: 0px 0px 20px 20px;
             }
             p{  
-                padding-left: 30px;
-                position: relative;
+                position: absolute;
+                bottom: 0;
+                margin: 0;
+                padding: 20px 0;
+                padding-left: 43px;
                 &::before  {  
                     content: '';
-                    background-image: url(../icons/viñeta.svg);
-                    width: 17.5px;
-                    height: 100%;
+                    background-image: url(../icons/flecha-verde2.svg);
+                    width: 16px;
+                    height: 16px;
                     font-size: 20px;
                     position: absolute;
                     background-size: 100%;
                     background-repeat: no-repeat;
-                    left: 0px;
-                    top: 8.5px;                    
+                    left: 16px;
+                    top: 34.5px;                    
                 }
             }
         }
@@ -362,22 +446,25 @@ section.servicios{
             background-image: url(../icons/flecha-izq.svg);
             background-repeat: no-repeat !important;
             background-size: 100% !important;
-            width: 71px;
-            height: 71px;
+            width: 54px;
+            height: 63px;
         }
         .slick-next {
-            left: 17vw;
+            left: 16vw;
             background-image: url(../icons/flecha-de.svg);
             background-repeat: no-repeat !important;
             background-size: 100% !important;
-            width: 71px;
-            height: 71px;
+            width: 54px;
+            height: 63px;
         }
         .slick-prev:before, .slick-next:before{
             display: none;
         }
         .slick-prev, .slick-next{
-            top: 60%;
+            top: 66%;
+        }
+        .slick-arrow.slick-disabled{
+            opacity: 0.5;
         }
     }
 }
@@ -385,7 +472,7 @@ section.servicios{
 section.proyectos{
     padding: 100px 0;
     h2{
-        color: var(--color-morado-claro);
+        color: var(--color-morado);
         font-family: var(--fuente-barlow);
         font-weight: 500;
         font-size: 70px;
@@ -434,26 +521,27 @@ section.proyectos{
                 h4{
                     font-family: var(--fuente-barlow);                    
                     font-weight: 800;
-                    font-size: 30px;
+                    font-size: 35px;
                     color: #fff;
                     position: relative;
                     &::before{
                         content: '';
                         background-image: url(../icons/viñeta.svg);
                         width: 17.5px;
-                        height: 100%;
+                        height: 17.5px;
                         font-size: 20px;
                         position: absolute;
                         background-size: 100%;
                         background-repeat: no-repeat;
                         left: -24px;
-                        top: 11.5px;
+                        top: 50%;
+                        transform: translateY(-40%);
                     }
                 }
                 p{
                     font-family: var(--fuente-barlow);
                     font-weight: 500;
-                    font-size: 20px;
+                    font-size: 30px;
                     color: #fff;
                 }
                 
@@ -471,19 +559,19 @@ section.proyectos{
         .slick-prev {
             left: initial;
             right: 305px;
-            background-image: url(../icons/flecha-izq-1.svg);
+            background-image: url(../icons/flecha-izq.svg);
             background-repeat: no-repeat !important;
             background-size: 100% !important;
-            width: 55px;
-            height: 55px;
+            width: 54px;
+            height: 63px;
         }
         .slick-next {
             right: 235px;
-            background-image: url(../icons/flecha-de-1.svg);
+            background-image: url(../icons/flecha-de.svg);
             background-repeat: no-repeat !important;
             background-size: 100% !important;
-            width: 55px;
-            height: 55px;
+            width: 54px;
+            height: 63px;
         }
         .slick-prev:before, .slick-next:before{
             display: none;
@@ -498,16 +586,15 @@ section.proyectos{
         a{
             margin-top: 50px;
             padding: 11px 17px;
-            background-color: var(--color-morado);
+            color: var(--color-morado);
             text-decoration: none;
-            color: var(--color-verde);
             display: flex;
             align-items: center;
-            border-radius: 10px;
             font-family: var(--fuente-prompt);
             font-weight: 500;
             font-size: 20px;
-            box-shadow: 7px 7px 6px rgba(40, 29, 71, 0.51);
+            border: 1px solid var(--color-morado);
+            border-bottom: 4px solid var(--color-morado);
             img{
                 padding-left: 19px;
             }
@@ -517,7 +604,7 @@ section.proyectos{
 
 section.clientes{
     padding: 80px 0;
-    background: linear-gradient(180deg, #4DE7DB 0%, #4B99B1 100%);
+    background-color: var(--color-morado);
     .content{
         display: flex;
         position: relative;
@@ -534,12 +621,12 @@ section.clientes{
     }
     h2{
         font-family: var(--fuente-barlow);
-        color: var(--color-morado-claro);
+        color: #fff;
         font-style: normal;
         font-weight: 500;
         font-size: 70px;
+        line-height: 70px;
         span{
-            color: var(--color-morado);
             font-weight: 900;
         }
     }
@@ -594,6 +681,9 @@ footer{
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+        p{
+            padding-bottom: 10px;
+        }
         .redes{
             a{
                 margin: 0 5px;
@@ -639,19 +729,26 @@ footer{
     }
 }
 
-section.content-title{
+section.interna{
+    position: relative;
+    overflow: hidden;
+}
+
+.interna-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: -2;
+}
+
+.content-title{
     padding: 80px 0;
     padding-top: 240px;
-    background: linear-gradient(180deg, #4BA6B8 0%, #4DE7DB 100%);
-    position: relative;    
+    position: relative;
     overflow: hidden;
-    img{
-        position: absolute;
-        left: 50%;
-        top: 140px;
-        // bottom: 0;
-        transform: translateX(-50%);
-    }
     .container{
         width: 57.5%;
         position: relative;
@@ -674,15 +771,11 @@ section.content-title{
         font-weight: 500;
         font-size: 25px;
         text-align: center;
-        color: var(--color-morado-claro);
-        span{
-            font-weight: 700;
-            color: var(--color-morado);
-        }
+        color: var(--color-morado);
     }
 }
 
-section.mision-vision{
+.mision-vision{
     padding: 80px 0;
     .content{
         display: flex;
@@ -702,12 +795,13 @@ section.mision-vision{
                 bottom: 0;
                 border-radius: 20px;
                 z-index: 2;
-                background: linear-gradient(180deg, rgba(73, 169, 183, 0) 0%, #4B9BB2 100%);
+                // background: linear-gradient(180deg, rgba(73, 169, 183, 0) 0%, #4B9BB2 100%);
             }
         }
         img{
             border-radius: 20px;
-            filter: drop-shadow(14px 12px 15px rgba(67, 148, 168, 0.34));
+            // filter: drop-shadow(14px 12px 15px rgba(67, 148, 168, 0.34));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
     }
     .part2{
@@ -715,18 +809,11 @@ section.mision-vision{
         h3{
             font-family: var(--fuente-barlow);
             font-weight: 900;
-            font-size: 70px;
-        }
-        div:nth-child(1){
-            h3{
-                color: var(--color-morado-claro);
-            }
+            font-size: 70px;            
+            color: var(--color-morado);
         }
         div:nth-child(2){
             margin-top: 60px;
-            h3{
-                color: var(--color-morado);
-            }
         }
         p{
             margin-top: 15px;
@@ -740,16 +827,15 @@ section.mision-vision{
 
 section.valores{
     padding: 80px 0;
-    background: linear-gradient(180deg, #4DE7DB 0%, #4B99B1 100%, #4BA6B8 100%);
+    background-color: var(--color-morado);
     h2{
         font-family: var(--fuente-barlow);
         font-weight: 500;
         font-size: 70px;
-        color: var(--color-morado-claro);
+        color: #fff;
         text-align: center;
         span{
             font-weight: 900;
-            color: var(--color-morado);
         }
     }
     .content-valores{
@@ -757,13 +843,16 @@ section.valores{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        div{
+        div{            
+            display: flex;
+            align-items: center;
+            flex-direction: column;
             p{
                 text-align: center;
                 font-family: var(--fuente-prompt);
                 font-weight: 500;
                 font-size: 35px;
-                color: var(--color-morado);
+                color: #fff;
             }
         }
     }
@@ -796,7 +885,7 @@ section.valores{
     li {
       line-height: 100px;
       white-space: nowrap;
-      color: #4BA6B8;
+      color: #3A2A68;
       // margin: 0 15px;
       margin-right: 15px;
       letter-spacing: 1px;
@@ -819,7 +908,7 @@ section.valores{
     }
 }
 
-section.servicios-grid{
+.servicios-grid{
     padding: 80px 0;
     .servicios-cards{
         display: grid;
@@ -835,16 +924,18 @@ section.servicios-grid{
             width: 100%;
             height: 80%;
             bottom: 0;
-            background: linear-gradient(180deg, rgba(73, 169, 183, 0) 0%, #4B9BB2 100%);
+            background: linear-gradient(180.63deg, rgba(0, 0, 0, 0) 15.96%, rgba(0, 0, 0, 0.64) 99.46%);
             border-radius: 20px;
         }
         img{
             width: 100%;
+            height: 100%;
             border-radius: 20px;
         }
         .info{
             position: absolute;
             bottom: 0;
+            width: 100%;
             padding: 24px 60px;
         }
         p{            
@@ -855,7 +946,7 @@ section.servicios-grid{
             position: relative;
             &::before{
                 content: '';
-                background-image: url(../icons/viñeta.svg);
+                background-image: url(../icons/flecha-verde2.svg);
                 width: 17.5px;
                 height: 100%;
                 font-size: 20px;
@@ -871,7 +962,7 @@ section.servicios-grid{
 
 section.tarj-contacto{
     padding: 80px 0;
-    background: linear-gradient(180deg, #4DE7DB 0%, #4B99B1 100%);
+    background: var(--color-morado);
     .content{
         display: flex;
         justify-content: space-around;
@@ -880,33 +971,34 @@ section.tarj-contacto{
             font-family: var(--fuente-barlow);
             font-weight: 500;
             font-size: 70px;
-            color: var(--color-morado-claro);
+            color: #fff;
             width: 700px;
+            line-height: 70px;
             span{
                 font-weight: 900;
-                color: var(--color-morado);
             }
         }
         a{
             padding: 11px 32px;
             display: flex;
             align-items: center;
-            background-color: var(--color-morado);
-            border-radius: 10px;
             font-family: var(--fuente-prompt);
             font-weight: 500;
             font-size: 20px;
-            color: #fff;
-            text-decoration: none;
             color: var(--color-verde);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--color-verde);
+            border-bottom: 4px solid var(--color-verde);
             img{
-                padding-left: 19px;
+                padding-left: 10px;
             }
         }
     }
 }
 
-section.services-info{
+.services-info{
     padding: 80px 0;
     .info{
         display: flex;
@@ -938,7 +1030,7 @@ section.services-info{
                 font-family: var(--fuente-barlow);
                 font-weight: 900;
                 font-size: 40px;
-                color: var(--color-morado-claro);
+                color: var(--color-morado);
                 position: relative;
                 margin-top: 30px;
                 &::before {
@@ -962,7 +1054,7 @@ section.services-info{
                 font-family: var(--fuente-prompt);
                 font-weight: 500;
                 font-size: 25px;
-                color: #6C6B6F;   
+                color: var(--color-morado);   
                 padding-top: 10px;             
             }
             .btn {
@@ -971,18 +1063,17 @@ section.services-info{
                 a {
                     margin-top: 50px;
                     padding: 11px 17px;
-                    background-color: var(--color-morado);
                     text-decoration: none;
-                    color: var(--color-verde);
+                    color: var(--color-morado);
                     display: flex;
                     align-items: center;
-                    border-radius: 10px;
                     font-family: var(--fuente-prompt);
                     font-weight: 500;
                     font-size: 20px;
-                    box-shadow: 7px 7px 6px rgba(40, 29, 71, 0.51);
+                    border: 1px solid var(--color-morado);
+                    border-bottom: 4px solid var(--color-morado);
                     img {
-                        padding-left: 19px;
+                        padding-left: 10px;
                     }
                 }
             }
@@ -991,7 +1082,7 @@ section.services-info{
     
 }
 
-section.proyectos-list{
+.proyectos-list{
     padding: 80px 0;
     .category{
         padding-bottom: 80px;
@@ -1049,13 +1140,13 @@ section.proyectos-list{
                 width: 100%;
                 height: 70%;
                 border-radius: 20px;
-                background: linear-gradient(180deg, rgba(73, 169, 183, 0) 0%, #4B9BB2 100%);
+                background: linear-gradient(180.63deg, rgba(0, 0, 0, 0) 15.96%, rgba(0, 0, 0, 0.85) 99.46%);
                 z-index: 1;
             }
             img{
                 width: 100%;
                 border-radius: 20px;
-                filter: drop-shadow(10px 10px 15px rgba(67, 148, 168, 0.4));
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
             }
             .info{
                 position: absolute;
@@ -1100,25 +1191,30 @@ section.proyectos-list{
         a {
             margin-top: 80px;
             padding: 11px 17px;
-            background-color: var(--color-morado);
             text-decoration: none;
-            color: var(--color-verde);
+            color: var(--color-morado);
             display: flex;
             align-items: center;
-            border-radius: 10px;
             font-family: var(--fuente-prompt);
             font-weight: 500;
             font-size: 20px;
-            box-shadow: 7px 7px 6px rgba(40, 29, 71, 0.51);
+            border: 1px solid var(--color-morado);
+            border-bottom: 4px solid var(--color-morado);
+            display: flex;
+            align-items: center;
             img {
-                padding-left: 19px;
+                padding-left: 10px;
             }
         }
     }
 }
 
+.modulo-mas {
+    display: none;
+  }
+
 section.item-popup{
-    background: rgba(75, 166, 184, 0.9);
+    background: linear-gradient(290.57deg, #4CBBC3 5.73%, #4A83A5 107.57%);
     position: fixed;
     left: 0;
     top: 0;
@@ -1126,8 +1222,8 @@ section.item-popup{
     width: 100%;
     z-index: 200;
     visibility: hidden;
-    z-index: 9;
-    padding: 100px 0;
+    z-index: 11;
+    padding: 25px 0;
     .top{
         display: flex;
         justify-content: flex-end;
@@ -1185,22 +1281,23 @@ section.item-popup{
                 img{
                     width: 100%;
                     border-radius: 20px;
-                    filter: drop-shadow(10px 10px 15px #4394A8);
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                    margin-bottom: 10px;
                 }
             }
             .slick-prev {
-                background-image: url(../icons/flecha-izq.svg);
+                background-image: url(../icons/flecha-izq-blanco.svg);
                 background-repeat: no-repeat !important;
                 background-size: 100% !important;
-                width: 71px;
-                height: 71px;
+                width: 54px;
+            height: 63px;
             }
             .slick-next {
-                background-image: url(../icons/flecha-de.svg);
+                background-image: url(../icons/flecha-de-blanco.svg);
                 background-repeat: no-repeat !important;
                 background-size: 100% !important;
-                width: 71px;
-                height: 71px;
+                width: 54px;
+            height: 63px;
             }
             .slick-prev:before, .slick-next:before{
                 display: none;
@@ -1216,6 +1313,13 @@ section.item-popup{
                 opacity: 0.5;
             }
         }
+        .parrafo-popup{
+            padding-top: 20px;
+            font-family: var(--fuente-barlow);
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 32px;
+        }
     }
 }
 
@@ -1226,6 +1330,7 @@ section.item-popup.open{
 
 section.contacto-page{
     background: linear-gradient(180deg, #4BA6B8 0%, #4DEFDF 120%);
+    // background-image: url(../img/fondo-contacto.jpg);
     height: 100vh;
     padding: 80px 0;
     position: relative;
@@ -1251,7 +1356,7 @@ section.contacto-page{
             justify-content: flex-end;
             a{
                 text-decoration: none;
-                color: var(--color-morado);
+                color: #fff;
                 z-index: 5;
                 font-family: var(--fuente-barlow);
                 font-weight: 900;
@@ -1270,7 +1375,7 @@ section.contacto-page{
                     font-family: var(--fuente-barlow);
                     font-weight: 700;
                     font-size: 40px;
-                    color: var(--color-morado-claro);
+                    color: var(--color-morado);
                     span{
                         color: var(--color-morado);
                         font-weight: 900;
@@ -1295,11 +1400,11 @@ section.contacto-page{
                                 border: none;
                                 font-size: 20px;
                                 width: 100%;
-                                color: #fff;
-                                background: rgba(75, 166, 184, 0.73);
+                                color: var(--color-morado);
+                                background: transparent;
                                 padding: 0 20px;
                                 padding-top: 8px;
-                                border-radius: 20px;
+                                border: 2px solid var(--color-morado);
                                 &:focus {
                                     outline-style: none;
                                   } 
@@ -1308,10 +1413,10 @@ section.contacto-page{
                                 position: absolute;
                                 left: 20px;
                                 top: 20px;
-                                color: #fff;
+                                color: var(--color-morado);
                                 font-family: var(--fuente-barlow);
                                 font-size: 18px;
-                                cursor: text;
+                                font-weight: 400;                                cursor: text;
                                 transition: 0.1s linear;
                                 z-index: 1;
                             }
@@ -1327,11 +1432,11 @@ section.contacto-page{
                                 border: none;
                                 font-size: 20px;
                                 width: 100%;
-                                color: #fff;
-                                background: rgba(75, 166, 184, 0.73);
+                                color: var(--color-morado);
+                                border: 2px solid var(--color-morado);
+                                background: transparent;
                                 padding: 0 20px;
                                 padding-top: 22px;
-                                border-radius: 20px;
                                 &:focus {
                                     outline-style: none;
                                   } 
@@ -1343,42 +1448,48 @@ section.contacto-page{
                         font-family: var(--fuente-prompt);
                         font-weight: 500;
                         font-size: 20px;
-                        border-radius: 10px;
-                        background-color: var(--color-morado);
-                        color: var(--color-verde);
+                        background-color: transparent;
+                        color: var(--color-morado);
                         border: none;
                         display: flex;
                         align-items: center;
                         cursor: pointer;
+                        border: 1px solid var(--color-morado);
+                        border-bottom: 4px solid var(--color-morado);
                         img{
-                            margin-left: 20px;
+                            margin-left: 10px;
                         }
                     }
                 }
                 .info{
                     width: 50%;
-                    // margin-top: 25px;
-                    // margin-bottom: 70px;
-                    margin: 42px 0 70px 80px;
+                    margin: 20px 0 70px 80px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     p{
-                        font-family: var(--fuente-barlow);
-                        font-weight: 500;
-                        font-size: 18px;
-                        color: #495A8F;
+                        font-family: var(--fuente-prompt);
+                        font-weight: 400;
+                        font-size: 25px;
+                        color: var(--color-morado);
                         position: relative;
-                        &::before{
+                        &::before {
                             content: '';
-                            width: 19px;
-                            height: 3px;
+                            background-image: url(../icons/flecha-morada.svg);
+                            width: 16px;
+                            height: 16px;
+                            font-size: 20px;
                             position: absolute;
-                            background-color: var(--color-morado);
-                            top: -15px;
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            left: -30px;
+                            top: 11px;
                         }
                     }
                     div{
+                        p{
+                            padding-bottom: 10px;
+                        }
                         a{
                             margin: 0 7px;
                         }
@@ -1386,14 +1497,6 @@ section.contacto-page{
                             margin-left: 0;
                         }
                         position: relative;
-                        &::before{
-                            content: '';
-                            width: 19px;
-                            height: 3px;
-                            position: absolute;
-                            background-color: var(--color-morado);
-                            top: -15px;
-                        }
                     } 
                 }
             }
@@ -1402,7 +1505,6 @@ section.contacto-page{
 }
 
 section.thanks-page{
-    background: linear-gradient(180deg, #4BA6B8 0%, #4DEFDF 120%);
     height: 100vh;
     padding: 80px 0;
     position: relative;
@@ -1428,7 +1530,7 @@ section.thanks-page{
             justify-content: flex-end;
             a{
                 text-decoration: none;
-                color: var(--color-morado);
+                color: #fff;
                 z-index: 5;
                 font-family: var(--fuente-barlow);
                 font-weight: 900;
@@ -1438,7 +1540,6 @@ section.thanks-page{
         .content{
             display: flex;
             height: 100%;
-            align-items: center;
             flex-direction: column;
             justify-content: center;
             transform: translateY(-95px);
@@ -1446,7 +1547,21 @@ section.thanks-page{
                 font-family: var(--fuente-barlow);
                 font-weight: 900;
                 font-size: 80px;
-                color: #fff;
+                color: var(--color-morado);
+                position: relative;
+                &::before {
+                    content: '';
+                    background-image: url(../icons/flecha-morada.svg);
+                    width: 36.42px;
+                    height: 41px;
+                    font-size: 20px;
+                    position: absolute;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    left: -40px;
+                    top: 55%;
+                    transform: translateY(-50%);
+                }
             }
             p{
                 font-family: var(--fuente-barlow);
@@ -1456,18 +1571,20 @@ section.thanks-page{
             }
             a{
                 padding: 11px 32px;
-                color: var(--color-verde);
                 font-family: var(--fuente-prompt);
                 font-weight: 500;
                 font-size: 20px;
-                border-radius: 10px;
-                background-color: var(--color-morado);
                 display: flex;
                 align-items: center;
                 text-decoration: none;
+                background-color: transparent;
                 margin-top: 30px;
+                color: var(--color-morado);
+                border: 1px solid var(--color-morado);
+                border-bottom: 4px solid var(--color-morado);
+                width: fit-content;
                 img{
-                    margin-left: 28px;
+                    margin-left: 10px;
                 }
             }
         }

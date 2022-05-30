@@ -41,7 +41,8 @@ MyApp = {
             const categoryMain = document.querySelector('#categorias2 a.select').innerHTML;
             // console.log(categoryMain.innerHTML);
             console.log(categoryMain);
-            $(`.item-category[data-categoria="${categoryMain}"]`).show();
+            // $(`.item-category[data-categoria="${categoryMain}"]`).show();
+            $(`.item-category.modulo-mas[data-categoria="${categoryMain}"]`).slice(0, 6).show();
 
             enlaces.forEach((elemento) => {
                 elemento.addEventListener('click', (evento) => {
@@ -51,8 +52,21 @@ MyApp = {
 
                     const categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
                     console.log(categoria);
+                    $("#cargarMasModulo").attr("style", "display:block;");
                     $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide();
-                    $(`.item-category[data-categoria="${categoria}"]`).show();
+                    // $(`.item-category[data-categoria="${categoria}"]`).show();
+                    // Cargar más módulos proyectos
+                    // jQuery(function ($) {
+                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 6).show();
+                    $("#cargarMasModulo").click(function (e) {
+                        e.preventDefault();
+                        $(`.modulo-mas[data-categoria="${categoria}"]:hidden`).slice(0, 6).slideDown();
+                        if ($(`.modulo-mas[data-categoria="${categoria}"]:hidden`).length == 0) {
+                            $("#cargarMasModulo").attr("style", "display:none;");
+                        }
+                    });
+                    // $("#cargarMasModulo").attr("style", "display:block;");
+                    // });
                 });
             });
         }
@@ -158,6 +172,38 @@ $('.slider-fotos').slick({
         }
     ]
 });
+
+
+
+$('.slider-servicios-home').owlCarousel({
+    autoplay: true,
+    loop: true,
+    margin: 15,
+    dots: false,
+    slideTransition: 'linear',
+    autoplayTimeout: 4500,
+    autoplaySpeed: 4500,
+    autoplayHoverPause: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        500: {
+            items: 3
+        },
+        600: {
+            items: 3
+        },
+        800: {
+            items: 3
+        },
+        1200: {
+            items: 2.29
+        },
+    }
+})
+
+
 
 /* popup */
 document.addEventListener("click", (e) => {

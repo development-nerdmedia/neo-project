@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <title>NEO - Project | Diseño de proyectos</title>
   </head>
@@ -21,293 +25,344 @@
               <li><a href="nosotros.html">Nosotros</a></li>
               <li><a href="servicios.html">Servicios</a></li>
               <li><a href="proyectos.html">Proyectos</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
+              <li class="contacto">
+                <a href="contacto.html"
+                  >Contacto<img src="../icons/flecha-verde2.svg" alt="" /><img
+                    src="../icons/flecha-morada.svg"
+                    alt=""
+                /></a>
+              </li>
             </ul>
-            <label class="switch">
-              <input type="checkbox" checked="" />
-            </label>
           </div>
         </nav>
       </div>
     </header>
     <main>
-      <section class="content-title">
-        <img src="../icons/hexagono-fondo.svg" alt="" />
-        <div class="container">
-          <h1>CREATIVIDAD Y <br /><span>EXPERIENCIAS</span></h1>
+      <section class="interna">
+        <div class="interna-bg">
+          <img src="../img/fondo-internas.jpg" alt="" />
         </div>
-      </section>
-      <section class="proyectos-list">
-        <div class="container">
-          <div class="category">
-            <ul id="categorias2">
-              <li>
-                <a href="#" class="select">Mobiliario para puntos de venta</a>
-              </li>
-              <li><a href="#">Arquitectura comercial</a></li>
-              <li><a href="#">Stands para ferias</a></li>
-              <li><a href="#">Diseño de proyecto a media</a></li>
-            </ul>
+        <div class="content-title">
+          <div class="container">
+            <h1>CREATIVIDAD Y <br /><span>EXPERIENCIAS</span></h1>
           </div>
-          <div class="items-category">
-            <div
-              class="item-category"
-              data-categoria="Mobiliario para puntos de venta"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-1.png" alt="" />
-              <div class="info">
-                <h4>Invoga store</h4>
-                <p>Mobiliario para puntos de venta</p>
+        </div>
+        <div class="proyectos-list">
+          <div class="container">
+            <div class="category">
+              <ul id="categorias2">
+                <li>
+                  <a href="#" class="select">Mobiliario para puntos de venta</a>
+                </li>
+                <li><a href="#">Arquitectura comercial</a></li>
+                <li><a href="#">Stands para ferias</a></li>
+                <li><a href="#">Diseño de proyecto a media</a></li>
+              </ul>
+            </div>
+            <div class="items-category">
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Mobiliario para puntos de venta"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-1.png" alt="" />
+                <div class="info">
+                  <h4>Invoga store</h4>
+                  <p>Mobiliario para puntos de venta</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Mobiliario para puntos de venta"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-2.png" alt="" />
+                <div class="info">
+                  <h4>Amphora</h4>
+                  <p>Mobiliario para puntos de venta</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Mobiliario para puntos de venta"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-3.png" alt="" />
+                <div class="info">
+                  <h4>LG</h4>
+                  <p>Mobiliario para puntos de venta</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Mobiliario para puntos de venta"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-4.png" alt="" />
+                <div class="info">
+                  <h4>Galaxy</h4>
+                  <p>Mobiliario para puntos de venta</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Mobiliario para puntos de venta"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-5.png" alt="" />
+                <div class="info">
+                  <h4>Ziol</h4>
+                  <p>Mobiliario para puntos de venta</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Mobiliario para puntos de venta"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Mobiliario para puntos de venta</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Mobiliario para puntos de venta"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-1.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Mobiliario para puntos de venta</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Arquitectura comercial"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Arquitectura 1</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Arquitectura comercial"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Arquitectura 2</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Arquitectura comercial"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Arquitectura 3</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Arquitectura comercial"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Arquitectura 4</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Arquitectura comercial"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Arquitectura 5</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Arquitectura comercial"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Arquitectura 6</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Arquitectura comercial"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Arquitectura 7</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Arquitectura comercial"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <div class="info">
+                  <h4>Canon</h4>
+                  <p>Arquitectura 8</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Stands para ferias"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-4.png" alt="" />
+                <div class="info">
+                  <h4>Galaxy</h4>
+                  <p>Stands para ferias 1</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Stands para ferias"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-4.png" alt="" />
+                <div class="info">
+                  <h4>Galaxy</h4>
+                  <p>Stands para ferias 2</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Stands para ferias"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-4.png" alt="" />
+                <div class="info">
+                  <h4>Galaxy</h4>
+                  <p>Stands para ferias 3</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Stands para ferias"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-4.png" alt="" />
+                <div class="info">
+                  <h4>Galaxy</h4>
+                  <p>Stands para ferias 4</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Stands para ferias"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-4.png" alt="" />
+                <div class="info">
+                  <h4>Galaxy</h4>
+                  <p>Stands para ferias 5</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Stands para ferias"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-4.png" alt="" />
+                <div class="info">
+                  <h4>Galaxy</h4>
+                  <p>Stands para ferias 6</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Stands para ferias"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-4.png" alt="" />
+                <div class="info">
+                  <h4>Galaxy</h4>
+                  <p>Stands para ferias 7</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Diseño de proyecto a media"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-3.png" alt="" />
+                <div class="info">
+                  <h4>LG</h4>
+                  <p>Diseño de proyecto a media 1</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Diseño de proyecto a media"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-3.png" alt="" />
+                <div class="info">
+                  <h4>LG</h4>
+                  <p>Diseño de proyecto a media 2</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Diseño de proyecto a media"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-3.png" alt="" />
+                <div class="info">
+                  <h4>LG</h4>
+                  <p>Diseño de proyecto a media 3</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Diseño de proyecto a media"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-3.png" alt="" />
+                <div class="info">
+                  <h4>LG</h4>
+                  <p>Diseño de proyecto a media 4</p>
+                </div>
+              </div>
+              <div
+                class="item-category modulo-mas"
+                data-categoria="Diseño de proyecto a media"
+              >
+                <div class="filtro1"></div>
+                <img src="../img/mobiliario-item-3.png" alt="" />
+                <div class="info">
+                  <h4>LG</h4>
+                  <p>Diseño de proyecto a media 5</p>
+                </div>
               </div>
             </div>
-            <div
-              class="item-category"
-              data-categoria="Mobiliario para puntos de venta"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-2.png" alt="" />
-              <div class="info">
-                <h4>Amphora</h4>
-                <p>Mobiliario para puntos de venta</p>
-              </div>
+            <div class="btn">
+              <a href="#" id="cargarMasModulo"
+                >Ver más proyectos<img src="../icons/flecha-morada.svg" alt=""
+              /></a>
             </div>
-            <div
-              class="item-category"
-              data-categoria="Mobiliario para puntos de venta"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-3.png" alt="" />
-              <div class="info">
-                <h4>LG</h4>
-                <p>Mobiliario para puntos de venta</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Mobiliario para puntos de venta"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-4.png" alt="" />
-              <div class="info">
-                <h4>Galaxy</h4>
-                <p>Mobiliario para puntos de venta</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Mobiliario para puntos de venta"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-5.png" alt="" />
-              <div class="info">
-                <h4>Ziol</h4>
-                <p>Mobiliario para puntos de venta</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Mobiliario para puntos de venta"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Mobiliario para puntos de venta</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Mobiliario para puntos de venta"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-1.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Mobiliario para puntos de venta</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Arquitectura comercial">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Arquitectura 1</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Arquitectura comercial">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Arquitectura 2</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Arquitectura comercial">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Arquitectura 3</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Arquitectura comercial">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Arquitectura 4</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Arquitectura comercial">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Arquitectura 5</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Arquitectura comercial">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Arquitectura 6</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Arquitectura comercial">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Arquitectura 7</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Arquitectura comercial">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-6.png" alt="" />
-              <div class="info">
-                <h4>Canon</h4>
-                <p>Arquitectura 8</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Stands para ferias">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-4.png" alt="" />
-              <div class="info">
-                <h4>Galaxy</h4>
-                <p>Stands para ferias 1</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Stands para ferias">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-4.png" alt="" />
-              <div class="info">
-                <h4>Galaxy</h4>
-                <p>Stands para ferias 2</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Stands para ferias">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-4.png" alt="" />
-              <div class="info">
-                <h4>Galaxy</h4>
-                <p>Stands para ferias 3</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Stands para ferias">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-4.png" alt="" />
-              <div class="info">
-                <h4>Galaxy</h4>
-                <p>Stands para ferias 4</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Stands para ferias">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-4.png" alt="" />
-              <div class="info">
-                <h4>Galaxy</h4>
-                <p>Stands para ferias 5</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Stands para ferias">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-4.png" alt="" />
-              <div class="info">
-                <h4>Galaxy</h4>
-                <p>Stands para ferias 6</p>
-              </div>
-            </div>
-            <div class="item-category" data-categoria="Stands para ferias">
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-4.png" alt="" />
-              <div class="info">
-                <h4>Galaxy</h4>
-                <p>Stands para ferias 7</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Diseño de proyecto a media"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-3.png" alt="" />
-              <div class="info">
-                <h4>LG</h4>
-                <p>Diseño de proyecto a media 1</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Diseño de proyecto a media"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-3.png" alt="" />
-              <div class="info">
-                <h4>LG</h4>
-                <p>Diseño de proyecto a media 2</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Diseño de proyecto a media"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-3.png" alt="" />
-              <div class="info">
-                <h4>LG</h4>
-                <p>Diseño de proyecto a media 3</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Diseño de proyecto a media"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-3.png" alt="" />
-              <div class="info">
-                <h4>LG</h4>
-                <p>Diseño de proyecto a media 4</p>
-              </div>
-            </div>
-            <div
-              class="item-category"
-              data-categoria="Diseño de proyecto a media"
-            >
-              <div class="filtro1"></div>
-              <img src="../img/mobiliario-item-3.png" alt="" />
-              <div class="info">
-                <h4>LG</h4>
-                <p>Diseño de proyecto a media 5</p>
-              </div>
-            </div>
-          </div>
-          <div class="btn">
-            <a href="#"
-              >Ver los proyectos de este servicio
-              <img src="../icons/flecha-verde-abajo.svg" alt=""
-            /></a>
           </div>
         </div>
       </section>
@@ -316,7 +371,7 @@
           <div class="content">
             <h2>¡HAGAMOS REALIDAD <span>TU PROYECTO!</span></h2>
             <a href="contacto.html"
-              >Contáctanos <img src="../icons/flecha-verde.svg" alt=""
+              >Contacto<img src="../icons/flecha-verde2.svg" alt=""
             /></a>
           </div>
         </div>
@@ -345,6 +400,12 @@
                   <img src="../img/item-popup1.png" alt="" />
                 </div>
               </div>
+            </div>
+            <div>
+              <p class="parrafo-popup">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
+                tristique nibh risus, egestas.
+              </p>
             </div>
           </div>
         </div>
@@ -388,6 +449,7 @@
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script type="text/javascript" src="../slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
