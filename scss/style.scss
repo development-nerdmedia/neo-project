@@ -1134,6 +1134,9 @@ section.tarj-contacto{
             border-radius: 20px;
             border-radius: 20px;
             cursor: pointer;
+            .info-popup{
+                display: none;
+            }
             .filtro1{
                 position: absolute;
                 bottom: 0;

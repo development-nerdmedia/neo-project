@@ -889,6 +889,8 @@ section.tarj-contacto {
       border-radius: 20px;
       border-radius: 20px;
       cursor: pointer; }
+      .proyectos-list .items-category .item-category .info-popup {
+        display: none; }
       .proyectos-list .items-category .item-category .filtro1 {
         position: absolute;
         bottom: 0;
