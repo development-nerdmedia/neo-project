@@ -1098,7 +1098,7 @@ section.tarj-contacto{
     padding: 53px 0;
     padding-bottom: 140px;
     .category{
-        padding-bottom: 80px;
+        padding-bottom: 50px;
         ul{
             list-style: none;
             border: solid 2px var(--color-morado);
@@ -1138,9 +1138,7 @@ section.tarj-contacto{
     .items-category{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 58px;
-        column-gap: 58px;
-        row-gap: 64px;
+        grid-gap: 50px;
         .item-category{
             transition: all 300ms ease;
             position: relative;
@@ -1289,6 +1287,7 @@ section.item-popup{
             font-weight: 500;
             font-size: 30px;
             color: #fff;
+            padding-top: 8px;
         }
         .slider-fotos{
             margin-top: 30px;
@@ -1330,7 +1329,7 @@ section.item-popup{
             }
         }
         .parrafo-popup{
-            padding-top: 20px;
+            padding-top: 15px;
             font-family: var(--fuente-barlow);
             font-weight: 400;
             font-size: 25px;
