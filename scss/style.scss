@@ -31,7 +31,7 @@
     /*end slider de clientes en home*/
 }
 
-.servicios-item a:hover, .item-servicios a:hover{
+.servicios-item a:hover, .item-servicios a:hover, .item-category{
     cursor: url(../img/hover-mouse-green.png) 52 52, pointer;
 }
 
@@ -82,17 +82,46 @@ header{
                 li.contacto{
                     padding-right: 0;
                     a{
-                        border: 1px solid var(--color-verde);
+                        border: 2px solid var(--color-verde);
                         border-bottom: 4px solid var(--color-verde);
                         padding: 11px 38px;
                         color: var(--color-verde);
                         display: flex;
                         align-items: center;
+                        position: relative;
+                        overflow: hidden;
+                        transition: 0.2s linear;
                         img{
                             margin-left: 5px;
                         }
-                        img:nth-child(2){
+                        img:nth-child(2),
+                        img:nth-child(3){
                             display: none;
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            background-color: var(--color-verde);
+                            height: 100%;
+                            transform: translateY(100%);
+                            transition: 0.2s linear;
+                            z-index: -2;
+                        }
+                    }                    
+                    a:hover{
+                        color: var(--color-morado);
+                        img:nth-child(1),
+                        img:nth-child(3){
+                            display: none;
+                        }
+                        img:nth-child(2){
+                            display: block;
+                        }
+                        &::before{
+                            transform: translateY(0);
                         }
                     }
                 }
@@ -112,15 +141,41 @@ header{
 
 header.sticky{
     padding: 25px 0;
-    nav .menu ul li:nth-child(4) a{
+    nav .menu ul li.contacto a{
         color: var(--color-morado);
         border: 2px solid var(--color-morado);
         border-bottom: 4px solid var(--color-morado);
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-morado);
+            height: 100%;
+            transform: translateY(100%);
+            transition: 0.2s linear;
+            z-index: -2;
+        }        
         img:nth-child(1){
             display: none;
         }
         img:nth-child(2){
             display: block;
+        }
+        &:hover{
+            color: #fff;
+            img:nth-child(1),
+            img:nth-child(2)
+            {
+                display: none;
+            }
+            img:nth-child(3){
+                display: block;
+            }
+            &::before{
+                transform: translateY(0);
+            }
         }
     }
 }
@@ -229,7 +284,7 @@ section.home{
         align-items: flex-start;
         flex-direction: column;
         padding-top: 270px;
-        max-width: 855px;
+        max-width: 801px;
         img{
             position: absolute;
             top: 13%;
@@ -300,7 +355,7 @@ section.experiencias{
     h2{
         font-family: var(--fuente-barlow);
         font-weight: 500;
-        font-size: 70px;
+        font-size: 60px;
         color: var(--color-morado);
         // text-align: center;
         span{
@@ -313,7 +368,7 @@ section.experiencias{
         padding-bottom: 15px;
         font-family: var(--fuente-prompt);
         font-weight: 400;
-        font-size: 25px;
+        font-size: 22px;
         color: var(--color-morado);
     }
     .info{
@@ -348,7 +403,7 @@ section.servicios{
     h2{
         font-family: var(--fuente-barlow);
         font-weight: 500;
-        font-size: 70px;
+        font-size: 60px;
         color: var(--color-morado);
         margin-bottom: 35px;
         span{
@@ -359,8 +414,8 @@ section.servicios{
     p{
         font-family: var(--fuente-barlow);
         font-weight: 500;
-        font-size: 35px;
-        line-height: 42px;
+        font-size: 30px;
+        line-height: 35px;
         color: #fff;
         margin: 25px 0;
         margin-bottom: 35px;
@@ -384,14 +439,44 @@ section.servicios{
             font-weight: 500;
             font-size: 20px;
             padding: 11px 25px;
-            border: 1px solid var(--color-morado);
+            border: 2px solid var(--color-morado);
             border-bottom: 4px solid var(--color-morado);
             color: var(--color-morado);
             display: flex;
             align-items: center;
             width: fit-content;
+            position: relative;
+            overflow: hidden;
+            transition: 0.2s linear;
             img{
                 margin-left: 5px;
+            }
+            img:nth-child(2){
+                display: none;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-morado);
+                height: 100%;
+                transform: translateY(100%);
+                transition: 0.2s linear;
+                z-index: -2;
+            }
+            &:hover{
+                color: #fff;
+                img:nth-child(1){
+                    display: none;
+                }
+                img:nth-child(2){
+                    display: block;
+                }
+                &::before{
+                    transform: translateY(0);
+                }
             }
         }
     }
@@ -477,7 +562,7 @@ section.proyectos{
         color: var(--color-morado);
         font-family: var(--fuente-barlow);
         font-weight: 500;
-        font-size: 70px;
+        font-size: 60px;
         span{
             color: var(--color-morado);
             font-weight: 900;
@@ -523,7 +608,7 @@ section.proyectos{
                 h4{
                     font-family: var(--fuente-barlow);                    
                     font-weight: 800;
-                    font-size: 35px;
+                    font-size: 30px;
                     color: #fff;
                     position: relative;
                     &::before{
@@ -543,7 +628,7 @@ section.proyectos{
                 p{
                     font-family: var(--fuente-barlow);
                     font-weight: 500;
-                    font-size: 30px;
+                    font-size: 22px;
                     color: #fff;
                 }
                 
@@ -595,10 +680,39 @@ section.proyectos{
             font-family: var(--fuente-prompt);
             font-weight: 500;
             font-size: 20px;
-            border: 1px solid var(--color-morado);
+            border: 2px solid var(--color-morado);
             border-bottom: 4px solid var(--color-morado);
+            position: relative;
+            overflow: hidden;
             img{
                 padding-left: 19px;
+            }
+            img:nth-child(2){
+             display: none;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-morado);
+                height: 100%;
+                transform: translateY(100%);
+                transition: 0.2s linear;
+                z-index: -2;
+            }
+            &:hover{
+                color: #fff;
+                img:nth-child(1){
+                    display: none;
+                }
+                img:nth-child(2){
+                    display: block;
+                }
+                &::before{
+                    transform: translateY(0);
+                }
             }
         }
     }
@@ -626,8 +740,8 @@ section.clientes{
         color: #fff;
         font-style: normal;
         font-weight: 500;
-        font-size: 70px;
-        line-height: 70px;
+        font-size: 60px;
+        line-height: 60px;
         span{
             font-weight: 900;
         }
@@ -771,7 +885,7 @@ section.interna{
         margin-top: 30px;
         font-family: var(--fuente-prompt);
         font-weight: 500;
-        font-size: 25px;
+        font-size: 22px;
         text-align: center;
         color: var(--color-morado);
     }
@@ -812,7 +926,7 @@ section.interna{
         h3{
             font-family: var(--fuente-barlow);
             font-weight: 900;
-            font-size: 70px;            
+            font-size: 60px;            
             color: var(--color-morado);
         }
         div:nth-child(2){
@@ -822,8 +936,8 @@ section.interna{
             margin-top: 10px;
             font-family: var(--fuente-prompt);
             font-weight: 500;
-            font-size: 25px;
-            color: #6C6B6F;
+            font-size: 22px;
+            color: var(--color-morado);
         }
     }
 }
@@ -835,7 +949,7 @@ section.valores{
     h2{
         font-family: var(--fuente-barlow);
         font-weight: 500;
-        font-size: 70px;
+        font-size: 60px;
         color: #fff;
         text-align: center;
         span{
@@ -975,10 +1089,10 @@ section.tarj-contacto{
         h2{
             font-family: var(--fuente-barlow);
             font-weight: 500;
-            font-size: 70px;
+            font-size: 60px;
             color: #fff;
-            width: 700px;
-            line-height: 70px;
+            width: 652px;
+            line-height: 60px;
             span{
                 font-weight: 900;
             }
@@ -994,10 +1108,38 @@ section.tarj-contacto{
             text-decoration: none;
             display: flex;
             align-items: center;
-            border: 1px solid var(--color-verde);
+            border: 2px solid var(--color-verde);
             border-bottom: 4px solid var(--color-verde);
+            position: relative;
+            overflow: hidden;
             img{
                 padding-left: 10px;
+            }
+            img:nth-child(2){
+                display: none;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-verde);
+                height: 100%;
+                transform: translateY(100%);
+                transition: 0.2s linear;
+            }
+            &:hover{
+                color: #fff;
+                img:nth-child(1){
+                    display: none;
+                }
+                img:nth-child(2){
+                    display: block;
+                }
+                &::before{
+                    transform: translateY(0);
+                }
             }
         }
     }
@@ -1035,7 +1177,7 @@ section.tarj-contacto{
             h3{
                 font-family: var(--fuente-barlow);
                 font-weight: 900;
-                font-size: 40px;
+                font-size: 35px;
                 color: var(--color-morado);
                 position: relative;
                 line-height: 37px;
@@ -1065,7 +1207,7 @@ section.tarj-contacto{
             p{
                 font-family: var(--fuente-prompt);
                 font-weight: 500;
-                font-size: 25px;
+                font-size: 22px;
                 color: var(--color-morado);   
                 padding-top: 20px;             
             }
@@ -1102,7 +1244,6 @@ section.tarj-contacto{
         ul{
             list-style: none;
             border: solid 2px var(--color-morado);
-            border-radius: 10px;
             width: fit-content;
             margin: 0 auto;
             li{                
@@ -1114,22 +1255,20 @@ section.tarj-contacto{
                     transition: 0.2s linear;
                     font-family: var(--fuente-prompt);
                     font-weight: 500;
-                    font-size: 20px;
+                    font-size: 22px;
                     padding: 11px 21px;
                     display: block;
-                    border-left: 1px solid var(--color-morado-claro);
+                    border-left: 2px solid var(--color-morado-claro);
                     transition: 0.2s linear;
                 }
             }
             li:first-child a{
                 border-left: none;
-                border-radius: 10px 0 0 10px;
             }
-            li:last-child a{
-                border-radius: 0 10px 10px 0;
-            }
+            //li:last-child a{
+            //}
             li a.select,li a:hover{
-                color: var(--color-verde);                    
+                color: #fff;                    
                 background-color: var(--color-morado);
             }
         }
@@ -1144,7 +1283,6 @@ section.tarj-contacto{
             position: relative;
             border-radius: 20px;
             border-radius: 20px;
-            cursor: pointer;
             .info-popup{
                 display: none;
             }
@@ -1177,7 +1315,7 @@ section.tarj-contacto{
                     position: relative;
                     &::before{
                         content: '';
-                        background-image: url(../icons/viñeta.svg);
+                        background-image: url(../icons/flecha-verde2.svg);
                         width: 17.5px;
                         height: 18px;
                         font-size: 20px;
@@ -1469,7 +1607,7 @@ section.contacto-page{
                         display: flex;
                         align-items: center;
                         cursor: pointer;
-                        border: 1px solid var(--color-morado);
+                        border: 2px solid var(--color-morado);
                         border-bottom: 4px solid var(--color-morado);
                         img{
                             margin-left: 10px;
@@ -1484,7 +1622,7 @@ section.contacto-page{
                     p{
                         font-family: var(--fuente-prompt);
                         font-weight: 400;
-                        font-size: 25px;
+                        font-size: 22px;
                         color: var(--color-morado);
                         position: relative;
                         padding-bottom: 33px;
@@ -1596,7 +1734,7 @@ section.thanks-page{
                 background-color: transparent;
                 margin-top: 40px;
                 color: var(--color-morado);
-                border: 1px solid var(--color-morado);
+                border: 2px solid var(--color-morado);
                 border-bottom: 4px solid var(--color-morado);
                 width: fit-content;
                 img{

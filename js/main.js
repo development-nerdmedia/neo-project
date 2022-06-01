@@ -89,15 +89,17 @@ MyApp = {
                 document.querySelector(".text-popup p").innerHTML = portfolioItem.querySelector(".info p").innerHTML;
                 document.querySelector(".text-parrrafo p").innerHTML = portfolioItem.querySelector(".info-popup p").innerHTML;
                 sliderImgs2 = portfolioItem.querySelectorAll(".imagenes img");
+                fotos = [];
                 for (let i = 0; i < sliderImgs2.length; i++) {
-                    console.log(sliderImgs2[i]);
-                    fotos = sliderImgs2[i];
+                    //console.log(sliderImgs2[i]);
+                    fotos.push(sliderImgs2[i])
                     sliderFotos2 = document.querySelector(".slider-fotos");
                     item2 = document.createElement("div");
                     item2.setAttribute("class", "item-foto")
-                    item2.appendChild(fotos)
+                    item2.appendChild(fotos[i])
                     sliderFotos2.appendChild(item2);
-                }
+                }                
+                console.log(fotos);
                 sliderFotosPopup(); 
             }
 
