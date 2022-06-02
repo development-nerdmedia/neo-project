@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
@@ -23,15 +24,21 @@
           <div class="menu">
             <ul>
               <li><a href="pages/nosotros.html">Nosotros</a></li>
-              <li><a href="pages/servicios.html">Servicios</a></li>
+              <li class="fex"><a href="pages/servicios.html">Servicios</a>
+                <ul id="menu" class="submenu">
+                  <li><a href="pages/mobiliario.html">Mobiliaria para puntos de venta</a></li>
+                  <li><a href="pages/arquitectura-comercial.html">Arquitectura comercial</a></li>
+                  <li><a href="pages/stands.html">Stand para ferias</a></li>
+                  <li><a href="pages/diseños-de-proyectos.html">Diseño de proyectos de modas</a></li>
+                </ul>
+              </li>
               <li><a href="pages/proyectos.html">Proyectos</a></li>
               <li class="contacto">
                 <a href="pages/contacto.html"
                   >Contacto<img src="icons/flecha-verde2.svg" alt="" /><img
                     src="icons/flecha-morada.svg"
                     alt=""
-                />
-              <img src="icons/flecha-blanca.svg" alt=""></a>
+                /></a>
               </li>
             </ul>
           </div>
@@ -44,56 +51,51 @@
         <!-- <div class="filtro1"></div>
         <div class="filtro"></div> -->
         <div class="home-bg">
-          <img src="img/fondo-home.jpg" alt="" />
+          <img src="img/fondo-home_1.jpg" alt="" />
         </div>
         <div class="container">
           <div class="content">
-            <h1>
+            <h1 data-aos="fade-right">
               TRANSFORMAMOS <br />
               IDEAS EN <span>EXPERIENCIAS</span>
             </h1>
-            <div class="owl-carousel owl-theme slider-servicios-home">
-              <div class="item box">
-                <a href="pages/mobiliario.html">Mobiliario</a>
+            <div class='marquee-with-options' data-aos="fade-right">
+              <div class="text"><a href="pages/mobiliario.html">Mobiliario para puntos de venta</a>-<a href="pages/arquitectura-comercial.html">Arquitectura comercial</a>-<a href="pages/stands.html">Stands para ferias</a>-<a href="pages/diseños-de-proyectos.html"
+                >Diseño de proyectos de modas</a
+              >-</div>
               </div>
-              <div class="item box">
-                <a href="pages/arquitectura-comercial.html">Arquitectura</a>
-              </div>
-              <div class="item box">
-                <a href="pages/stands.html">Stands para ferias</a>
-              </div>
-              <div class="item box">
-                <a href="pages/diseños-de-proyectos.html"
-                  >Diseños de proyectos</a
-                >
-              </div>
-            </div>
             <img src="img/home-img.png" alt="" />
           </div>
         </div>
       </section>
       <section class="experiencias">
         <div class="container">
-          <h2>IDEAS BASADAS EN <span>EXPERIENCIA</span></h2>
-          <p>
+          <h2 data-aos="fade-right">IDEAS BASADAS EN <span>EXPERIENCIA</span></h2>
+          <p data-aos="fade-right">
             Más de 10 años fabricando stands para ferias, eventos, exposiciones
             y todo tipo de arquitectura comercial. Somos profesionales
             dispuestos a crear propuestas innovadoras gracias a nuestros equipos
             de última tecnología.
           </p>
-          <div class="info">
+          <div class="info" data-aos="fade-left">
             <div class="card-info">
-              <h3>360<span>°</span></h3>
+              <div class="numero">
+                <h3>000</h3><span>°</span><h4>360</h4>
+              </div>
               <h4>Servicio</h4>
             </div>
             <div class="card-info">
-              <h3>
-                <span>+</span>10000<span>m<sup>2</sup></span>
-              </h3>
+              <div class="numero">  
+                <h4 class="mil">10000</h4>              
+                <span>+</span><h3 class="mil1">0000</h3><span>m<sup>2</sup></span>                
+              </div>              
               <h4>Construidos</h4>
             </div>
             <div class="card-info">
-              <h3><span>+</span>3000</h3>
+              <div class="numero">   
+                <h4 class="tres">3000</h4>             
+                <span>+</span><h3 class="tres1">0</h3>
+              </div>
               <h4>Proyectos</h4>
             </div>
           </div>
@@ -102,7 +104,7 @@
       <section class="servicios">
         <div class="content">
           <div class="part1">
-            <div class="container">
+            <div class="container" data-aos="fade-right">
               <h2>NUESTROS<br /><span>SERVICIOS</span></h2>
               <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
               <a href="pages/servicios.html"
@@ -112,7 +114,7 @@
             </div>
           </div>
           <div class="part2">
-            <div class="slider-servicios">
+            <div class="slider-servicios" data-aos="fade-left">
               <div class="item-servicios">
                 <a href="pages/mobiliario.html">
                   <div class="img">
@@ -166,11 +168,11 @@
         </div>
       </section>
       <section class="proyectos">
-        <div class="container">
+        <div class="container" data-aos="fade-right">
           <h2>ÚLTIMOS <span>PROYECTOS</span></h2>
         </div>
-        <div class="slider-proyectos center">
-          <div class="item-proyectos">
+        <div class="slider-proyectos center" data-aos="fade-left">
+          <div class="item-proyectos item-category">
             <div class="filtro"></div>
             <div class="filtro1"></div>
             <img src="img/item2.png" alt="" />
@@ -178,26 +180,59 @@
               <h4>Sally Hanser</h4>
               <p>Mobiliario para puntos de venta</p>
             </div>
+            <div class="info-popup">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Neque tristique nibh risus, egestas.
+              </p>
+              <div class="imagenes">
+                <img src="../img/mobiliario-item-5.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+              </div>
+            </div>
           </div>
-          <div class="item-proyectos">
+          <div class="item-proyectos item-category">
             <div class="filtro"></div>
             <div class="filtro1"></div>
             <img src="img/item3.png" alt="" />
             <div class="info">
-              <h4>Sally Hanser</h4>
-              <p>Mobiliario para puntos de venta</p>
+              <h4>Chronos</h4>
+              <p>Stands de ferias</p>
+            </div>
+            <div class="info-popup">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Neque tristique nibh risus, egestas.
+              </p>
+              <div class="imagenes">
+                <img src="../img/mobiliario-item-5.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+              </div>
             </div>
           </div>
-          <div class="item-proyectos">
+          <div class="item-proyectos item-category">
             <div class="filtro"></div>
             <div class="filtro1"></div>
             <img src="img/item1.png" alt="" />
             <div class="info">
-              <h4>Chronos</h4>
-              <p>Stands de ferias</p>
+              <h4>Canon</h4>
+              <p>Arquitectura comercial</p>
+            </div>
+            <div class="info-popup">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Neque tristique nibh risus, egestas.
+              </p>
+              <div class="imagenes">
+                <img src="../img/mobiliario-item-5.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+              </div>
             </div>
           </div>
-          <div class="item-proyectos">
+          <div class="item-proyectos item-category">
             <div class="filtro"></div>
             <div class="filtro1"></div>
             <img src="img/item2.png" alt="" />
@@ -205,27 +240,60 @@
               <h4>Sally Hanser</h4>
               <p>Mobiliario para puntos de venta</p>
             </div>
+            <div class="info-popup">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Neque tristique nibh risus, egestas.
+              </p>
+              <div class="imagenes">
+                <img src="../img/mobiliario-item-5.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+              </div>
+            </div>
           </div>
-          <div class="item-proyectos">
+          <div class="item-proyectos item-category">
             <div class="filtro"></div>
             <div class="filtro1"></div>
             <img src="img/item3.png" alt="" />
             <div class="info">
-              <h4>Sally Hanser</h4>
-              <p>Mobiliario para puntos de venta</p>
+              <h4>Chronos</h4>
+              <p>Stands de ferias</p>
+            </div>
+            <div class="info-popup">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Neque tristique nibh risus, egestas.
+              </p>
+              <div class="imagenes">
+                <img src="../img/mobiliario-item-5.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+              </div>
             </div>
           </div>
-          <div class="item-proyectos">
+          <div class="item-proyectos item-category">
             <div class="filtro"></div>
             <div class="filtro1"></div>
             <img src="img/item1.png" alt="" />
             <div class="info">
-              <h4>Chronos</h4>
-              <p>Stands de ferias</p>
+              <h4>Canon</h4>
+              <p>Arquitectura comercial</p>
+            </div>
+            <div class="info-popup">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Neque tristique nibh risus, egestas.
+              </p>
+              <div class="imagenes">
+                <img src="../img/mobiliario-item-5.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+                <img src="../img/mobiliario-item-6.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
-        <div class="btn">
+        <div class="btn" data-aos="fade-left">
           <a href="pages/servicios.html"
             >Nuestros proyectos<img src="icons/flecha-morada.svg" alt=""
           /><img src="icons/flecha-blanca.svg" alt=""
@@ -235,12 +303,12 @@
       <section class="clientes">
         <div class="content">
           <div class="part1">
-            <div class="container">
+            <div class="container" data-aos="fade-right">
               <h2>NUESTROS <br /><span>CLIENTES</span></h2>
             </div>
           </div>
           <div class="part2">
-            <div class="sliderClientes">
+            <div class="sliderClientes" data-aos="fade-left">
               <div class="marquee2">
                 <ul class="marquee-content2">
                   <li><img src="img/cliente1.png" alt="" /></li>
@@ -259,22 +327,43 @@
         </div>
       </section>
     </main>
+    <section class="item-popup">
+      <div class="container">
+        <div class="top">
+          <button class="btn btn-close">x</button>
+        </div>
+        <div class="content">
+          <div class="info">
+            <div class="text text-popup">
+              <h4></h4>
+              <p></p>
+            </div>
+            <div class="slider-popup">
+              <div class="slider-fotos" id="sliderFotos"></div>
+            </div>
+            <div class="text-parrrafo">
+              <p class="parrafo-popup"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="container">
         <div class="content">
-          <div>
+          <div data-aos="fade-right">
             <p>Av. Separadora Industrial, Mz H1 Lt 7E Parcela II</p>
             <p>Parque Industrial Villa El Salvador - Lima</p>
           </div>
-          <div>
+          <div data-aos="fade-right">
             <p>informes@neoprojects.com.pe</p>
             <p>287 7371 / 942 781 552 / 969 303 044</p>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <p>Lunes a Viernes: 8:30 a 18:00</p>
             <p>Sábados: 9:00 a 13:00</p>
           </div>
-          <div class="redes">
+          <div class="redes" data-aos="fade-left">
             <p>Síguenos en:</p>
             <a href="#"><img src="icons/facebook.svg" alt="" /></a>
             <a href="#"><img src="icons/instagram.svg" alt="" /></a>
@@ -283,7 +372,13 @@
         </div>
         <div class="pie">
           <p>2022 Todos lo derechos reservados</p>
+          <div class="creditos">            
           <p>Hecha con amor</p>
+          <img class="corazon" src="icons/corazon.svg" alt="">
+          <a href="https://www.nerdmedia.pe/" target="_blank">
+            <img class="nerd" src="icons/logonerd.svg" alt="NERD">
+          </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -297,6 +392,10 @@
     ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/jquery.pause.js" type="text/javascript"></script>
+		<script src="js/jquery.easing.min.js" type="text/javascript"></script>
+		<script src="js/jquery.marquee.js?v=3" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
