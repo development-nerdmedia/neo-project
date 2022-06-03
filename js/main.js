@@ -40,8 +40,7 @@ MyApp = {
             const enlaces = document.querySelectorAll('#categorias2 a');
             $('.item-category').hide();
             const categoryMain = document.querySelector('#categorias2 a.select').innerHTML;
-            console.log(categoryMain);
-            $(`.item-category.modulo-mas[data-categoria="${categoryMain}"]`).slice(0, 6).show();
+            $(`.item-category.modulo-mas[data-categoria="${categoryMain}"]`).slice(0, 4).show();
 
             enlaces.forEach((elemento) => {
                 elemento.addEventListener('click', (evento) => {
@@ -50,19 +49,20 @@ MyApp = {
                     evento.target.classList.add('select');
 
                     const categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
-                    console.log(categoria);
-                    $("#cargarMasModulo").attr("style", "display:block;");
+                    $("#cargarMasModulo").attr("style", "display:flex;");
                     $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide();
-                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 6).show();
-                    $("#cargarMasModulo").click(function (e) {
-                        e.preventDefault();
-                        $(`.modulo-mas[data-categoria="${categoria}"]:hidden`).slice(0, 6).slideDown();
-                        if ($(`.modulo-mas[data-categoria="${categoria}"]:hidden`).length == 0) {
-                            $("#cargarMasModulo").attr("style", "display:none;");
-                        }
-                    });
+                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 4).show();                    
                 });
-            });            
+            });   
+            $("#cargarMasModulo").click(function (e) {
+                e.preventDefault();
+                const categoryMain2 = document.querySelector('#categorias2 a.select').innerHTML;
+                console.log("accionó botton");
+                $(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).slice(0, 2).slideDown();
+                if ($(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).length == 0) {
+                    $("#cargarMasModulo").attr("style", "display:none;");
+                }
+            });         
         }
     },
     popUp: {
@@ -87,15 +87,13 @@ MyApp = {
 
             document.querySelector(".btn-close").addEventListener("click", togglePortfolioPopup);
 
-            function portfolioItemDetails(portfolioItem) {                
-                console.log("entro");
+            function portfolioItemDetails(portfolioItem) { 
                 document.querySelector(".text-popup h4").innerHTML = portfolioItem.querySelector(".info h4").innerHTML;
                 document.querySelector(".text-popup p").innerHTML = portfolioItem.querySelector(".info p").innerHTML;
                 document.querySelector(".text-parrrafo p").innerHTML = portfolioItem.querySelector(".info-popup p").innerHTML;
                 sliderImgs2 = portfolioItem.querySelectorAll(".imagenes img");
                 fotos = [];
                 for (let i = 0; i < sliderImgs2.length; i++) {
-                    //console.log(sliderImgs2[i]);
                     fotos.push(sliderImgs2[i])
                     sliderFotos2 = document.querySelector(".slider-fotos");
                     item2 = document.createElement("div");
@@ -105,9 +103,7 @@ MyApp = {
                     itemfoto = document.createElement("img");
                     itemfoto.setAttribute("src", sliderImgs2[i].currentSrc);
                     portfolioItem.querySelector(".imagenes").appendChild(itemfoto);
-                }                                
-                console.log(sliderImgs2);
-                console.log(fotos);
+                }                       
                 sliderFotosPopup(); 
             }
 
