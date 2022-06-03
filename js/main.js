@@ -71,9 +71,11 @@ MyApp = {
             document.addEventListener("click", (e) => {
                 if (e.target.closest(".item-category")) {
                     togglePortfolioPopup();
+                    document.body.classList.toggle("hide-scrolling");
                     portfolioItemDetails(e.target.parentElement);
                 }
                 if (e.target.closest(".btn-close")) {
+                    document.body.classList.toggle("hide-scrolling");
                     // const imagenesInSlider = document.querySelector(".item-foto");
                     document.querySelector(".slider-fotos").innerHTML = "";
                     document.querySelector(".slider-fotos").classList.remove('slick-initialized');
