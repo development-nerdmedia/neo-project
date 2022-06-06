@@ -37,7 +37,29 @@ MyApp = {
     },
     categorias: {
         init: function () {
-            const enlaces = document.querySelectorAll('#categorias2 a');
+            document.querySelector("#categorias2 a").classList.add("select");
+            var categoriaServices = localStorage.getItem("ItemServices").toLowerCase();
+            console.log(categoriaServices);
+            if (categoriaServices == "none") {
+                document.querySelector("#categorias2 a").classList.add("select");
+            }
+            let listaTitle = [];
+            const enlaces = document.querySelectorAll('#categorias2 a');//original
+            for (let i = 0; i < enlaces.length; i++) {
+                textoitem = enlaces[i].textContent.toLowerCase().replace(/(\r\n|\n|\r| )/gm, "").trimStart().trimEnd();
+                listaTitle.push(textoitem);
+            }
+            console.log(listaTitle);
+
+            if (listaTitle.includes(categoriaServices)) {
+                for (let y = 0; y < enlaces.length; y++) {
+                    if (categoriaServices === enlaces[y].textContent.toLowerCase().replace(/(\r\n|\n|\r| )/gm, "").trimStart().trimEnd()) {
+                        document.querySelector("#categorias2 a").classList.remove("select");
+                        enlaces[y].classList.add('select')
+                    }
+                }
+            }
+
             $('.item-category').hide();
             const categoryMain = document.querySelector('#categorias2 a.select').innerHTML;
             $(`.item-category.modulo-mas[data-categoria="${categoryMain}"]`).slice(0, 4).show();
@@ -51,9 +73,9 @@ MyApp = {
                     const categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
                     $("#cargarMasModulo").attr("style", "display:flex;");
                     $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide();
-                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 4).show();                    
+                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 4).show();
                 });
-            });   
+            });
             $("#cargarMasModulo").click(function (e) {
                 e.preventDefault();
                 const categoryMain2 = document.querySelector('#categorias2 a.select').innerHTML;
@@ -62,7 +84,7 @@ MyApp = {
                 if ($(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).length == 0) {
                     $("#cargarMasModulo").attr("style", "display:none;");
                 }
-            });         
+            });
         }
     },
     popUp: {
@@ -89,7 +111,7 @@ MyApp = {
 
             document.querySelector(".btn-close").addEventListener("click", togglePortfolioPopup);
 
-            function portfolioItemDetails(portfolioItem) { 
+            function portfolioItemDetails(portfolioItem) {
                 document.querySelector(".text-popup h4").innerHTML = portfolioItem.querySelector(".info h4").innerHTML;
                 document.querySelector(".text-popup p").innerHTML = portfolioItem.querySelector(".info p").innerHTML;
                 document.querySelector(".text-parrrafo p").innerHTML = portfolioItem.querySelector(".info-popup p").innerHTML;
@@ -105,8 +127,8 @@ MyApp = {
                     itemfoto = document.createElement("img");
                     itemfoto.setAttribute("src", sliderImgs2[i].currentSrc);
                     portfolioItem.querySelector(".imagenes").appendChild(itemfoto);
-                }                       
-                sliderFotosPopup(); 
+                }
+                sliderFotosPopup();
             }
 
             function sliderFotosPopup() {
@@ -151,33 +173,44 @@ MyApp = {
             let cantidad = 0;
             let tiempo = setInterval(() => {
                 cantidad += 9;
-                numero.textContent=cantidad
+                numero.textContent = cantidad
                 if (cantidad >= numero1) {
                     clearInterval(tiempo)
                 }
-            },120)
+            }, 120)
             const numero2 = document.querySelector(".experiencias .numero h3.mil1")
             const numero3 = document.querySelector(".experiencias .numero h4.mil").textContent
             let cantidad1 = 0;
             let tiempo1 = setInterval(() => {
                 cantidad1 += 9;
-                numero2.textContent=cantidad1
+                numero2.textContent = cantidad1
                 if (cantidad1 >= numero3) {
                     clearInterval(tiempo1)
                     numero2.textContent = 10000
                 }
-            },2)
+            }, 2)
             const numero4 = document.querySelector(".experiencias .numero h3.tres1")
             const numero5 = document.querySelector(".experiencias .numero h4.tres").textContent
             let cantidad2 = 0;
             let tiempo2 = setInterval(() => {
                 cantidad2 += 9;
-                numero4.textContent=cantidad2
+                numero4.textContent = cantidad2
                 if (cantidad2 >= numero5) {
                     clearInterval(tiempo2)
                     numero4.textContent = 3000
                 }
-            },15)
+            }, 15)
+        }
+    },
+    internaBtn: {
+        init: function () {
+            document.addEventListener("click", function (e) {
+                if (e.target.closest(".btn a")) {
+                    const titleService = document.querySelector(".interna .content-title h1").textContent.toLowerCase().replace(/(\r\n|\n|\r| )/gm, "").trimStart().trimEnd();
+                    console.log(titleService);
+                    localStorage.setItem('ItemServices', `${titleService}`);
+                } 
+            })
         }
     }
 }
@@ -197,6 +230,15 @@ if ($('.proyectos ').length > 0) {
 if ($('.experiencias ').length > 0) {
     MyApp.contador.init();
 }
+if ($('.services-info ').length > 0) {
+    MyApp.internaBtn.init();
+}
+
+document.addEventListener("click", (e) => {    
+    if (e.target.closest("li a")) {
+        localStorage.setItem('ItemServices', "none");
+    }
+})
 
 $('.slider-proyectos').slick({
     centerMode: true,
@@ -257,12 +299,12 @@ $('.slider-servicios').slick({
 });
 
 $('.marquee-with-options').marquee({
-	speed: 15000,
-	gap: 50,
-	delayBeforeStart: 0,
-	direction: 'left',
-	duplicated: true,
-	pauseOnHover: true
+    speed: 15000,
+    gap: 50,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true,
+    pauseOnHover: true
 });
 
 
