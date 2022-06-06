@@ -360,7 +360,7 @@ section.home{
             position: absolute;
             top: 13%;
             right: 0;
-            filter: drop-shadow(36px 4px 70px rgba(53, 130, 146, 0.47));
+            filter: drop-shadow(36px 4px 40px rgba(53, 130, 146, 0.47));
             z-index: -2;
         }
         h1{
@@ -606,6 +606,8 @@ section.servicios{
         .item-servicios{
             border-radius: 20px;
             margin: 0 30px;
+            padding: 9px 0;
+            transition: 0.2s linear;
             // filter: drop-shadow(14px 18px 15px #4394A8);
             a{
                 text-decoration: none;
@@ -647,6 +649,9 @@ section.servicios{
                     left: 16px;
                     top: 30px;                    
                 }
+            }
+            &:hover{
+                transform: translateY(-5px);
             }
         }
         .slick-slider{
@@ -700,7 +705,8 @@ section.proyectos{
             position: relative;
             border-radius: 20px;
             margin: 0 50px;
-            border-radius: 20px;
+            border-radius: 20px;            
+            transition: 0.2s linear;
             .info-popup{
                 display: none;
             }
@@ -761,10 +767,10 @@ section.proyectos{
                     font-weight: 500;
                     font-size: 22px;
                     color: #fff;
-                }
-                
+                }                
             }
         }
+
         .slick-list {
             overflow: visible;
         }
@@ -772,6 +778,9 @@ section.proyectos{
             transform: scale(1.2);
             .filtro{
                 background: none;
+            }            
+            &:hover{
+                transform: scale(1.2) translateY(-5px);
             }
         }
         .slick-prev {

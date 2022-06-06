@@ -292,7 +292,7 @@ section.home {
       position: absolute;
       top: 13%;
       right: 0;
-      filter: drop-shadow(36px 4px 70px rgba(53, 130, 146, 0.47));
+      filter: drop-shadow(36px 4px 40px rgba(53, 130, 146, 0.47));
       z-index: -2; }
     section.home .content h1 {
       font-family: var(--fuente-barlow);
@@ -469,7 +469,9 @@ section.servicios {
     width: 65%; }
     section.servicios .part2 .item-servicios {
       border-radius: 20px;
-      margin: 0 30px; }
+      margin: 0 30px;
+      padding: 9px 0;
+      transition: 0.2s linear; }
       section.servicios .part2 .item-servicios a {
         text-decoration: none; }
       section.servicios .part2 .item-servicios img {
@@ -505,6 +507,8 @@ section.servicios {
           background-repeat: no-repeat;
           left: 16px;
           top: 30px; }
+      section.servicios .part2 .item-servicios:hover {
+        transform: translateY(-5px); }
     section.servicios .part2 .slick-slider {
       position: initial; }
     section.servicios .part2 .slick-prev {
@@ -546,7 +550,8 @@ section.proyectos {
       position: relative;
       border-radius: 20px;
       margin: 0 50px;
-      border-radius: 20px; }
+      border-radius: 20px;
+      transition: 0.2s linear; }
       section.proyectos .slider-proyectos .item-proyectos .info-popup {
         display: none; }
       section.proyectos .slider-proyectos .item-proyectos .filtro {
@@ -605,6 +610,8 @@ section.proyectos {
       transform: scale(1.2); }
       section.proyectos .slider-proyectos .slick-center .filtro {
         background: none; }
+      section.proyectos .slider-proyectos .slick-center:hover {
+        transform: scale(1.2) translateY(-5px); }
     section.proyectos .slider-proyectos .slick-prev {
       left: initial;
       right: 305px;
