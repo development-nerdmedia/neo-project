@@ -362,6 +362,7 @@ section.home{
             right: 0;
             filter: drop-shadow(36px 4px 40px rgba(53, 130, 146, 0.47));
             z-index: -2;
+            width: 63.39vw;
         }
         h1{
             font-family: var(--fuente-barlow);
@@ -1214,6 +1215,7 @@ section.valores{
         position: relative;
         border-radius: 20px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        transition: 0.2s linear;
         .filtro{
             position: absolute;
             width: 100%;
@@ -1251,6 +1253,9 @@ section.valores{
                 left: -31px;
                 top: 14.5px;
             }
+        }
+        &:hover{
+            transform: translateY(-5px);
         }
     }
 }
@@ -1501,6 +1506,7 @@ section.tarj-contacto{
             position: relative;
             border-radius: 20px;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            transition: 0.2s linear;
             .info-popup{
                 display: none;
             }
@@ -1552,6 +1558,9 @@ section.tarj-contacto{
                     font-size: 30px;
                     color: #fff;
                 }
+            }
+            &:hover{
+                transform: translateY(-5px);
             }
         }
     }
@@ -2083,5 +2092,23 @@ section.thanks-page{
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1440px) {
+    header{
+        padding: 33px 0;
+    }
+    header nav .menu ul li.contacto a{        
+        padding: 11px 31px;
+    }
+    section.home .content h1{
+        font-size: 70px;
+    }
+    section.home .marquee-with-options .text{
+        font-size: 30px;
+    }
+    section.home .marquee-with-options .text a{
+        margin: 0 17px;
     }
 }

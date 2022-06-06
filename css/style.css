@@ -293,7 +293,8 @@ section.home {
       top: 13%;
       right: 0;
       filter: drop-shadow(36px 4px 40px rgba(53, 130, 146, 0.47));
-      z-index: -2; }
+      z-index: -2;
+      width: 63.39vw; }
     section.home .content h1 {
       font-family: var(--fuente-barlow);
       font-size: 90px;
@@ -942,7 +943,8 @@ section.valores {
   .servicios-grid .servicios-item {
     position: relative;
     border-radius: 20px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.2s linear; }
     .servicios-grid .servicios-item .filtro {
       position: absolute;
       width: 100%;
@@ -976,6 +978,8 @@ section.valores {
         background-repeat: no-repeat;
         left: -31px;
         top: 14.5px; }
+    .servicios-grid .servicios-item:hover {
+      transform: translateY(-5px); }
 
 section.tarj-contacto {
   padding: 140px 0;
@@ -1173,7 +1177,8 @@ section.tarj-contacto {
       transition: all 300ms ease;
       position: relative;
       border-radius: 20px;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      transition: 0.2s linear; }
       .proyectos-list .items-category .item-category .info-popup {
         display: none; }
       .proyectos-list .items-category .item-category .filtro1 {
@@ -1219,6 +1224,8 @@ section.tarj-contacto {
           font-weight: 500;
           font-size: 30px;
           color: #fff; }
+      .proyectos-list .items-category .item-category:hover {
+        transform: translateY(-5px); }
   .proyectos-list .btn {
     display: flex;
     justify-content: center; }
@@ -1650,3 +1657,15 @@ section.thanks-page {
             transform: translateY(0%); }
           section.thanks-page .container .content a:hover img {
             animation: desplazamiento 1.3s infinite; }
+
+@media (max-width: 1440px) {
+  header {
+    padding: 33px 0; }
+  header nav .menu ul li.contacto a {
+    padding: 11px 31px; }
+  section.home .content h1 {
+    font-size: 70px; }
+  section.home .marquee-with-options .text {
+    font-size: 30px; }
+  section.home .marquee-with-options .text a {
+    margin: 0 17px; } }
