@@ -105,7 +105,7 @@ header{
                     a{
                         border: 2px solid var(--color-verde);
                         border-bottom: 4px solid var(--color-verde);
-                        padding: 11px 38px;
+                        padding: 11px 25px;
                         color: var(--color-verde);
                         display: flex;
                         align-items: center;
@@ -269,7 +269,7 @@ header::before {
     width: 100%;
     background: linear-gradient(90deg, #2D889F 35.66%, #38326C 114.11%);
     z-index: -2;
-    transition: transform 0.5s ease;
+    transition: transform 0.1s ease;
     transform: translateY(-100%);
   }
 
@@ -1299,7 +1299,7 @@ section.tarj-contacto{
             }
         }
         a{
-            padding: 11px 32px;
+            padding: 11px 25px;
             font-family: var(--fuente-prompt);
             font-weight: 500;
             font-size: 20px;
@@ -1669,6 +1669,15 @@ section.item-popup{
             color: var(--color-morado);
             cursor: pointer;
             z-index: 5;
+            img{
+                transition: 0.3s linear;
+            }
+            &:hover{
+                img{                    
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
     .content{
@@ -1784,15 +1793,15 @@ section.contacto-page{
             min-height: 100%;
             top: 0%;
             left: 50%;
-            transform: translate(-50%);
+            transform: translate(-50%); 
         }
     }
     .container{
         height: 100%;
+        position: relative;
         .top{
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
+            position: absolute;
+            right: 0;
             z-index: 2;
             a{
                 text-decoration: none;
@@ -1800,14 +1809,24 @@ section.contacto-page{
                 z-index: 5;
                 font-family: var(--fuente-barlow);
                 font-weight: 900;
-                font-size: 70px;
+                font-size: 70px;                
+                position: relative;
+                img{
+                    transition: 0.3s linear;
+                }
+            }
+            &:hover{
+                a img{                    
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
             }
         }
         .content{
             display: flex;
             height: 100%;
             align-items: center;
-            transform: translateY(-85px);
+            // transform: translateY(-85px);
             // justify-content: center;
             .part1{
                 width: 100%;
@@ -1884,7 +1903,7 @@ section.contacto-page{
                         }
                     }
                     button{
-                        padding: 11px 32px;
+                        padding: 11px 25px;
                         font-family: var(--fuente-prompt);
                         font-weight: 500;
                         font-size: 20px;
@@ -2026,7 +2045,17 @@ section.thanks-page{
                 z-index: 5;
                 font-family: var(--fuente-barlow);
                 font-weight: 900;
-                font-size: 70px;     
+                font-size: 70px;  
+                position: relative;
+                img{
+                    transition: 0.3s linear;
+                }   
+            }
+            &:hover{
+                a img{                    
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
             }
         }
         .content{
@@ -2063,7 +2092,7 @@ section.thanks-page{
                 padding-top: 11px;
             }
             a{
-                padding: 11px 32px;
+                padding: 11px 25px;
                 font-family: var(--fuente-prompt);
                 font-weight: 500;
                 font-size: 20px;
@@ -2203,10 +2232,10 @@ section.thanks-page{
 
 @media (max-width: 1600px) {
     header{
-        padding: 33px 0;
+        padding: 25px 0;
     }
     header nav .menu ul li.contacto a{        
-        padding: 11px 31px;
+        padding: 11px 25px;
     }
     section.home{
         height: 71.11vw;
@@ -2227,6 +2256,29 @@ section.thanks-page{
         padding-top: 260px;
         max-width: 636px;
     }
+    section.experiencias h2,
+    section.servicios h2,
+    section.proyectos h2,
+    section.clientes h2,
+    .mision-vision .part2 h3,
+    section.valores h2,
+    section.tarj-contacto .content h2{
+        font-size: 50px;
+    }
+    section.experiencias p,
+    .content-title p,
+    .mision-vision .part2 p,
+    .services-info .info .part2 p,
+    section.item-popup .content .parrafo-popup,
+    section.contacto-page .container .content .part1 .info p{
+        font-size: 20px;
+    }
+    section.valores .content-valores div img{
+        width: 200px;
+    }
+    section.valores .content-valores div p{
+        font-size: 25px;    
+    }
     section.experiencias{
         padding-bottom: 50px;
     }
@@ -2237,6 +2289,28 @@ section.thanks-page{
         padding: 50px 0;
         padding-bottom: 100px;
     }
+    section.servicios .part1{
+        transform: translateY(-65px);
+    }
+    section.servicios .part1 a,
+    section.proyectos .btn a,
+    section.tarj-contacto .content a,
+    .services-info .info .part2 .btn a,
+    .proyectos-list .btn a,
+    section.contacto-page .container .content .part1 form button,
+    section.thanks-page .container .content a
+    {
+        font-size: 18px;
+    }
+    section.thanks-page .container .content h1{
+        font-size: 70px;
+    }
+    section.thanks-page .container .content p{
+        font-size: 40px;
+    }
+    section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+        top: 70%;
+    }   
     section.clientes{
         padding: 100px 0;
     }
@@ -2254,9 +2328,9 @@ section.thanks-page{
     }
     section.experiencias .info .card-info:nth-child(3) {
         width: 253.13px;
-    }
+    }   
     section.experiencias .info .card-info h4{
-        font-size: 30px;
+        font-size: 25px;
     }
     section.servicios .part1 .container,
     section.clientes .content .part1 .container {
@@ -2470,4 +2544,5 @@ section.thanks-page{
     section.proyectos .slider-proyectos .item-proyectos{
         margin: 0 20px;
     }
+    
 }

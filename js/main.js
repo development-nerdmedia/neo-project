@@ -39,7 +39,6 @@ MyApp = {
         init: function () {
             document.querySelector("#categorias2 a").classList.add("select");
             var categoriaServices = localStorage.getItem("ItemServices").toLowerCase();
-            console.log(categoriaServices);
             if (categoriaServices == "none") {
                 document.querySelector("#categorias2 a").classList.add("select");
             }
@@ -49,8 +48,6 @@ MyApp = {
                 textoitem = enlaces[i].textContent.toLowerCase().replace(/(\r\n|\n|\r| )/gm, "").trimStart().trimEnd();
                 listaTitle.push(textoitem);
             }
-            console.log(listaTitle);
-
             if (listaTitle.includes(categoriaServices)) {
                 for (let y = 0; y < enlaces.length; y++) {
                     if (categoriaServices === enlaces[y].textContent.toLowerCase().replace(/(\r\n|\n|\r| )/gm, "").trimStart().trimEnd()) {
@@ -62,7 +59,7 @@ MyApp = {
 
             $('.item-category').hide();
             const categoryMain = document.querySelector('#categorias2 a.select').innerHTML;
-            $(`.item-category.modulo-mas[data-categoria="${categoryMain}"]`).slice(0, 4).show();
+            $(`.item-category.modulo-mas[data-categoria="${categoryMain}"]`).slice(0, 6).show();
 
             enlaces.forEach((elemento) => {
                 elemento.addEventListener('click', (evento) => {
@@ -73,14 +70,13 @@ MyApp = {
                     const categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
                     $("#cargarMasModulo").attr("style", "display:flex;");
                     $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide();
-                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 4).show();
+                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 6).show();
                 });
             });
             $("#cargarMasModulo").click(function (e) {
                 e.preventDefault();
                 const categoryMain2 = document.querySelector('#categorias2 a.select').innerHTML;
-                console.log("accionó botton");
-                $(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).slice(0, 2).slideDown();
+                $(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).slice(0, 6).slideDown();
                 if ($(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).length == 0) {
                     $("#cargarMasModulo").attr("style", "display:none;");
                 }
@@ -207,9 +203,8 @@ MyApp = {
             document.addEventListener("click", function (e) {
                 if (e.target.closest(".btn a")) {
                     const titleService = document.querySelector(".interna .content-title h1").textContent.toLowerCase().replace(/(\r\n|\n|\r| )/gm, "").trimStart().trimEnd();
-                    console.log(titleService);
                     localStorage.setItem('ItemServices', `${titleService}`);
-                } 
+                }
             })
         }
     }
@@ -234,7 +229,7 @@ if ($('.services-info ').length > 0) {
     MyApp.internaBtn.init();
 }
 
-document.addEventListener("click", (e) => {    
+document.addEventListener("click", (e) => {
     if (e.target.closest("li a")) {
         localStorage.setItem('ItemServices', "none");
     }
@@ -246,11 +241,26 @@ $('.slider-proyectos').slick({
     slidesToShow: 3,
     responsive: [
         {
+            breakpoint: 1601,
+            settings: {
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 1025,
+            settings: {
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 3
+            }
+        },
+        {
             breakpoint: 768,
             settings: {
-                arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '0',
                 slidesToShow: 3
             }
         },
@@ -259,7 +269,7 @@ $('.slider-proyectos').slick({
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '0',
                 slidesToShow: 1
             }
         }
@@ -275,10 +285,17 @@ $('.slider-servicios').slick({
     slidesToScroll: 1,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1601,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 1.94,
+                slidesToScroll: 2,
+            }
+        },
+        {
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 1.99,
+                slidesToScroll: 2,
             }
         },
         {
