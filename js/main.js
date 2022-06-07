@@ -308,30 +308,21 @@ $('.slider-proyectos').slick({
             }
         },
         {
-            breakpoint: 1025,
+            breakpoint: 1281,
             settings: {
                 centerMode: true,
                 centerPadding: '200px',
                 slidesToShow: 1
             }
         },
-        // {
-        //     breakpoint: 768,
-        //     settings: {
-        //         centerMode: true,
-        //         centerPadding: '0',
-        //         slidesToShow: 3
-        //     }
-        // },
-        // {
-        //     breakpoint: 480,
-        //     settings: {
-        //         arrows: false,
-        //         centerMode: true,
-        //         centerPadding: '0',
-        //         slidesToShow: 1
-        //     }
-        // }
+        {
+            breakpoint: 1025,
+            settings: {
+                centerMode: true,
+                centerPadding: '200px',
+                slidesToShow: 1
+            }
+        }
     ]
 });
 
