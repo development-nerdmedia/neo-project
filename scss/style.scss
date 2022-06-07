@@ -2240,6 +2240,10 @@ section.menupage.open{
     transform: translateX(0%);
 }
 
+header nav .menu ul li.menu-responsive{
+    display: none;
+}
+
 @media (max-width: 1875px) {
     section.proyectos .slider-proyectos .slick-next{
         right: 11.7vw;
@@ -2323,6 +2327,9 @@ section.menupage.open{
 }
 
 @media (max-width: 1600px) {
+    section.tarj-contacto .content h2{
+        width: 543px;
+    }
     section.servicios .part2 .item-servicios p::before{
         left: 22px;
     }
@@ -2558,6 +2565,64 @@ section.menupage.open{
     }
 }
 
+@media (max-width: 1280px) {
+    header nav .logo img {
+        width: 245px;
+    }
+    section.home .content img {
+        top: 28%;
+    }
+    section.home {
+        height: 77vw;
+    }
+    section.proyectos .slider-proyectos .slick-next {
+        right: 7.9vw;
+    }
+    section.proyectos .slider-proyectos .item-proyectos {
+        margin: 0 80px;
+    }
+    section.proyectos .slider-proyectos {
+        margin: 100px 0;
+    }
+    section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next {
+        top: -120px;
+    }
+    .mision-vision .part1 {
+        padding-right: 70px;
+    }
+    .content-title .container {
+        width: 67%;
+    }
+    .services-info .info .part1 {
+        padding-right: 52px;
+    }
+    .proyectos-list .items-category{
+        grid-gap: 45px;
+    }
+    .proyectos-list .category ul{
+        display: flex;
+        li{
+            a{
+                // text-align: center;
+                padding: 11px 21px;
+            }
+        }        
+    }
+    section.item-popup .top button img {
+        width: 35px;
+    }
+    section.contacto-page .container .content .part1 form {
+        margin-right: 11px;
+    }
+    section.servicios .part2 .item-servicios p{
+        font-size: 25px;
+    }
+    section.servicios .part2 .slick-prev,
+    section.servicios .part2 .slick-next{
+        width: 45px;
+    }
+}
+
 @media (max-width: 1024px) {
     header{
         padding: 40px 0;
@@ -2698,7 +2763,26 @@ section.menupage.open{
     .marquee-content2 li img{
         transform: scale(0.9);
     }
+    footer .content div:nth-child(1){
+        display: flex;        
+    }
+    footer .content div:nth-child(3){
+        display: flex;        
+        p:nth-child(2){
+            margin-left: 10px;
+        }
+    }
+    footer .content div:nth-child(4){
+        display: flex;        
+        p{
+            margin-right: 10px;
+        }
+        a{
+            margin: 0 5px;
+        }
+    }
 }
+
 
 @media (max-width: 1024px) and (min-height: 1000px) {
     section.home .content img {
