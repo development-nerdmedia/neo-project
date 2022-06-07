@@ -8,6 +8,15 @@ window.addEventListener("scroll", function () {
     }
 });
 
+document.addEventListener("click", (e) => {
+    if (e.target.closest(".menu-responsive")) {
+        document.querySelector(".menupage").classList.toggle("open");
+    }
+    if (e.target.closest("section.menupage .top button")) {
+        document.querySelector(".menupage").classList.toggle("open");
+    }
+})
+
 MyApp = {
     slider: {
         init: function () {
@@ -235,46 +244,6 @@ document.addEventListener("click", (e) => {
     }
 })
 
-$('.slider-proyectos').slick({
-    centerMode: true,
-    centerPadding: '0px',
-    slidesToShow: 3,
-    responsive: [
-        {
-            breakpoint: 1601,
-            settings: {
-                centerMode: true,
-                centerPadding: '0px',
-                slidesToShow: 3
-            }
-        },
-        {
-            breakpoint: 1025,
-            settings: {
-                centerMode: true,
-                centerPadding: '0px',
-                slidesToShow: 3
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                centerMode: true,
-                centerPadding: '0',
-                slidesToShow: 3
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '0',
-                slidesToShow: 1
-            }
-        }
-    ]
-});
 
 $('.slider-servicios').slick({
     dots: true,
@@ -324,5 +293,46 @@ $('.marquee-with-options').marquee({
     pauseOnHover: true
 });
 
+
+$('.slider-proyectos').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 3,
+    responsive: [
+        {
+            breakpoint: 1601,
+            settings: {
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 1025,
+            settings: {
+                centerMode: true,
+                centerPadding: '200px',
+                slidesToShow: 1
+            }
+        },
+        // {
+        //     breakpoint: 768,
+        //     settings: {
+        //         centerMode: true,
+        //         centerPadding: '0',
+        //         slidesToShow: 3
+        //     }
+        // },
+        // {
+        //     breakpoint: 480,
+        //     settings: {
+        //         arrows: false,
+        //         centerMode: true,
+        //         centerPadding: '0',
+        //         slidesToShow: 1
+        //     }
+        // }
+    ]
+});
 
 
