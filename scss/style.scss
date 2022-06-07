@@ -1656,21 +1656,21 @@ section.item-popup{
     z-index: 200;
     visibility: hidden;
     z-index: 11;
-    padding: 25px 0;
+    padding: 70px 0;
+    .container{
+        position: relative;
+        height: 100%;
+    }
     .top{
-        display: flex;
-        justify-content: flex-end;
+        position: absolute;
+        right: 0;
         button{
             border: none;
             background-color: transparent;
-            font-family: var(--fuente-barlow);
-            font-weight: 900;
-            font-size: 72px;
-            color: var(--color-morado);
             cursor: pointer;
             z-index: 5;
             img{
-                transition: 0.3s linear;
+                transition: transform 0.3s linear;
             }
             &:hover{
                 img{                    
@@ -1683,9 +1683,11 @@ section.item-popup{
     .content{
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 100%;
         .info{            
             width: 68%;
-            transform: translateY(-29px);
+            // transform: translateY(-29px);
             .text{
                 padding-left: 38px;
             }
@@ -1806,10 +1808,7 @@ section.contacto-page{
             a{
                 text-decoration: none;
                 color: #fff;
-                z-index: 5;
-                font-family: var(--fuente-barlow);
-                font-weight: 900;
-                font-size: 70px;                
+                z-index: 5;         
                 position: relative;
                 img{
                     transition: 0.3s linear;
@@ -2034,18 +2033,18 @@ section.thanks-page{
     }
     .container{
         height: 100%;
+        position: relative;
         .top{
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
+            position: absolute;
+            right: 0;
             z-index: 2;
             a{
                 text-decoration: none;
                 color: #fff;
                 z-index: 5;
-                font-family: var(--fuente-barlow);
-                font-weight: 900;
-                font-size: 70px;  
+                // font-family: var(--fuente-barlow);
+                // font-weight: 900;
+                // font-size: 70px;  
                 position: relative;
                 img{
                     transition: 0.3s linear;
@@ -2063,7 +2062,7 @@ section.thanks-page{
             height: 100%;
             flex-direction: column;
             justify-content: center;
-            transform: translateY(-95px);
+            // transform: translateY(-95px);
             h1{
                 font-family: var(--fuente-barlow);
                 font-weight: 900;
@@ -2436,9 +2435,6 @@ section.thanks-page{
     }
     section.item-popup .content .parrafo-popup{
         font-size: 22px;
-    }
-    section.item-popup .top button{
-        font-size: 70px;
     }
     section.contacto-page .container .content .part1 h1{
         font-size: 35px;

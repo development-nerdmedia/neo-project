@@ -1304,30 +1304,30 @@ section.item-popup {
   z-index: 200;
   visibility: hidden;
   z-index: 11;
-  padding: 25px 0; }
+  padding: 70px 0; }
+  section.item-popup .container {
+    position: relative;
+    height: 100%; }
   section.item-popup .top {
-    display: flex;
-    justify-content: flex-end; }
+    position: absolute;
+    right: 0; }
     section.item-popup .top button {
       border: none;
       background-color: transparent;
-      font-family: var(--fuente-barlow);
-      font-weight: 900;
-      font-size: 72px;
-      color: var(--color-morado);
       cursor: pointer;
       z-index: 5; }
       section.item-popup .top button img {
-        transition: 0.3s linear; }
+        transition: transform 0.3s linear; }
       section.item-popup .top button:hover img {
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg); }
   section.item-popup .content {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
     section.item-popup .content .info {
-      width: 68%;
-      transform: translateY(-29px); }
+      width: 68%; }
       section.item-popup .content .info .text {
         padding-left: 38px; }
     section.item-popup .content h4 {
@@ -1425,9 +1425,6 @@ section.contacto-page {
         text-decoration: none;
         color: #fff;
         z-index: 5;
-        font-family: var(--fuente-barlow);
-        font-weight: 900;
-        font-size: 70px;
         position: relative; }
         section.contacto-page .container .top a img {
           transition: 0.3s linear; }
@@ -1602,19 +1599,16 @@ section.thanks-page {
       left: 50%;
       transform: translate(-50%); }
   section.thanks-page .container {
-    height: 100%; }
+    height: 100%;
+    position: relative; }
     section.thanks-page .container .top {
-      display: flex;
-      justify-content: flex-end;
-      position: relative;
+      position: absolute;
+      right: 0;
       z-index: 2; }
       section.thanks-page .container .top a {
         text-decoration: none;
         color: #fff;
         z-index: 5;
-        font-family: var(--fuente-barlow);
-        font-weight: 900;
-        font-size: 70px;
         position: relative; }
         section.thanks-page .container .top a img {
           transition: 0.3s linear; }
@@ -1625,8 +1619,7 @@ section.thanks-page {
       display: flex;
       height: 100%;
       flex-direction: column;
-      justify-content: center;
-      transform: translateY(-95px); }
+      justify-content: center; }
       section.thanks-page .container .content h1 {
         font-family: var(--fuente-barlow);
         font-weight: 900;
@@ -1900,8 +1893,6 @@ section.thanks-page {
     font-size: 28px; }
   section.item-popup .content .parrafo-popup {
     font-size: 22px; }
-  section.item-popup .top button {
-    font-size: 70px; }
   section.contacto-page .container .content .part1 h1 {
     font-size: 35px; }
   /* contacto*/
