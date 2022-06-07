@@ -255,9 +255,9 @@ a.whatsapp {
   z-index: 10; }
 
 section.home {
-  position: relative;
   overflow: hidden;
-  height: 1250px; }
+  height: 1250px;
+  height: 65.11vw; }
   section.home .filtro {
     width: 100%;
     height: 100%;
@@ -277,8 +277,16 @@ section.home {
     top: 0;
     height: 100%;
     width: 100%;
-    background-size: cover;
-    z-index: -2; }
+    overflow: hidden;
+    z-index: -2;
+    height: 1250px; }
+    section.home .home-bg img {
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%); }
   section.home .container {
     height: 100%; }
   section.home .content {
@@ -290,7 +298,8 @@ section.home {
     max-width: 801px; }
     section.home .content img {
       position: absolute;
-      top: 13%;
+      top: 16%;
+      top: 170px;
       right: 0;
       filter: drop-shadow(36px 4px 40px rgba(53, 130, 146, 0.47));
       z-index: -2;
@@ -298,6 +307,7 @@ section.home {
     section.home .content h1 {
       font-family: var(--fuente-barlow);
       font-size: 90px;
+      font-size: 4.8vw;
       font-weight: 900;
       letter-spacing: 0.05em;
       color: #fff; }
@@ -334,6 +344,7 @@ section.home {
     section.home .marquee-with-options .text {
       font-family: var(--fuente-barlow);
       font-size: 40px;
+      font-size: 2vw;
       font-weight: 700;
       color: var(--color-morado); }
       section.home .marquee-with-options .text a {
@@ -631,7 +642,7 @@ section.proyectos {
     section.proyectos .slider-proyectos .slick-prev:before, section.proyectos .slider-proyectos .slick-next:before {
       display: none; }
     section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next {
-      top: -123px; }
+      top: -105px; }
   section.proyectos .btn {
     display: flex;
     justify-content: center; }
@@ -733,7 +744,8 @@ section.clientes {
 
 footer {
   padding-top: 70px;
-  color: var(--color-morado); }
+  color: var(--color-morado);
+  overflow: hidden; }
   footer .content {
     display: flex;
     justify-content: space-between;
@@ -792,7 +804,10 @@ footer {
 
 section.interna {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  background-image: url(../img/fondo-internas_1.jpg);
+  background-repeat: no-repeat;
+  background-position: top; }
 
 .interna-bg {
   position: absolute;
@@ -809,7 +824,7 @@ section.interna {
   position: relative;
   overflow: hidden; }
   .content-title .container {
-    width: 57.5%;
+    width: 66%;
     position: relative;
     z-index: 2; }
   .content-title h1 {
@@ -836,7 +851,8 @@ section.interna {
     display: flex;
     align-items: center; }
   .mision-vision .part1 {
-    width: 50%; }
+    width: 50%;
+    padding-right: 105px; }
     .mision-vision .part1 .content-img {
       position: relative;
       width: fit-content;
@@ -851,6 +867,7 @@ section.interna {
         z-index: 2; }
     .mision-vision .part1 img {
       border-radius: 20px;
+      width: 100%;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
   .mision-vision .part2 {
     width: 50%; }
@@ -881,7 +898,7 @@ section.valores {
     section.valores h2 span {
       font-weight: 900; }
   section.valores .content-valores {
-    padding-top: 60px;
+    padding-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between; }
@@ -971,13 +988,13 @@ section.valores {
         content: '';
         background-image: url(../icons/flecha-verde2.svg);
         width: 17.5px;
-        height: 100%;
+        height: 17.5px;
         font-size: 20px;
         position: absolute;
         background-size: 100%;
         background-repeat: no-repeat;
         left: -31px;
-        top: 14.5px; }
+        top: 13px; }
     .servicios-grid .servicios-item:hover {
       transform: translateY(-5px); }
 
@@ -1373,10 +1390,12 @@ section.item-popup.open {
   visibility: visible; }
 
 section.contacto-page {
-  background: linear-gradient(180deg, #4BA6B8 0%, #4DEFDF 120%);
   height: 100vh;
   padding: 80px 0;
-  position: relative; }
+  position: relative;
+  background-image: url(../img/fondo-contacto_1.jpg);
+  background-repeat: no-repeat;
+  background-position: top; }
   section.contacto-page .fondo {
     position: absolute;
     top: 0;
@@ -1555,7 +1574,10 @@ section.contacto-page {
 section.thanks-page {
   height: 100vh;
   padding: 80px 0;
-  position: relative; }
+  position: relative;
+  background-image: url(../img/fondo-contacto_1.jpg);
+  background-repeat: no-repeat;
+  background-position: top; }
   section.thanks-page .fondo {
     position: absolute;
     top: 0;
@@ -1658,14 +1680,244 @@ section.thanks-page {
           section.thanks-page .container .content a:hover img {
             animation: desplazamiento 1.3s infinite; }
 
-@media (max-width: 1440px) {
+@media (max-width: 1875px) {
+  section.proyectos .slider-proyectos .slick-next {
+    right: 11.7vw; }
+  section.proyectos .slider-proyectos .slick-prev {
+    right: 16.3vw; } }
+
+@media (max-width: 1870px) {
+  section.servicios .part1 .container,
+  section.clientes .content .part1 .container {
+    width: 67%; }
+  section.servicios .part2 .slick-prev {
+    left: -23.5vw; }
+  section.servicios .part2 .slick-next {
+    left: -19.5vw; } }
+
+@media (max-width: 1870px) and (max-width: 1825px) {
+  section.servicios .part1 .container,
+  section.clientes .content .part1 .container {
+    width: 70%; }
+  section.servicios .part2 .slick-prev {
+    left: -24.5vw; }
+  section.servicios .part2 .slick-next {
+    left: -20vw; }
+  section.proyectos .slider-proyectos .slick-next {
+    right: 10.7vw; }
+  section.proyectos .slider-proyectos .slick-prev {
+    right: 15.5vw; } }
+
+@media (max-width: 1870px) and (max-width: 1760px) {
+  section.servicios .part1 .container,
+  section.clientes .content .part1 .container {
+    width: 74%; }
+  section.servicios .part2 .slick-prev {
+    left: -25.9vw; }
+  section.servicios .part2 .slick-next {
+    left: -21vw; }
+  section.proyectos .slider-proyectos .slick-next {
+    right: 9.3vw; }
+  section.proyectos .slider-proyectos .slick-prev {
+    right: 15.5vw; }
+  section.proyectos .slider-proyectos .slick-prev {
+    right: 14.5vw; } }
+
+@media (max-width: 1870px) and (max-width: 1720px) {
+  section.servicios .part1 .container,
+  section.clientes .content .part1 .container {
+    width: 77%; }
+  section.servicios .part2 .slick-prev {
+    left: -26.9vw; }
+  section.servicios .part2 .slick-next {
+    left: -22vw; }
+  section.proyectos .slider-proyectos .slick-next {
+    right: 8.3vw; }
+  section.proyectos .slider-proyectos .slick-prev {
+    right: 14.5vw; }
+  section.proyectos .slider-proyectos .slick-prev {
+    right: 13.5vw; } }
+
+@media (max-width: 1600px) {
   header {
     padding: 33px 0; }
   header nav .menu ul li.contacto a {
     padding: 11px 31px; }
+  section.home {
+    height: 71.11vw; }
   section.home .content h1 {
     font-size: 70px; }
+  section.home .content img {
+    top: 23%; }
   section.home .marquee-with-options .text {
     font-size: 30px; }
   section.home .marquee-with-options .text a {
-    margin: 0 17px; } }
+    margin: 0 17px; }
+  section.home .content {
+    padding-top: 260px;
+    max-width: 636px; }
+  section.experiencias {
+    padding-bottom: 50px; }
+  section.servicios {
+    padding: 50px 0; }
+  section.proyectos {
+    padding: 50px 0;
+    padding-bottom: 100px; }
+  section.clientes {
+    padding: 100px 0; }
+  section.experiencias .info .card-info h3 {
+    font-size: 90px; }
+  section.experiencias .info .card-info span {
+    font-size: 90px; }
+  section.experiencias .info .card-info:nth-child(1) {
+    width: 183.5px; }
+  section.experiencias .info .card-info:nth-child(2) {
+    width: 416px; }
+  section.experiencias .info .card-info:nth-child(3) {
+    width: 253.13px; }
+  section.experiencias .info .card-info h4 {
+    font-size: 30px; }
+  section.servicios .part1 .container,
+  section.clientes .content .part1 .container {
+    width: 79%; }
+  section.servicios .part2 .slick-prev {
+    left: -27.5vw; }
+  section.servicios .part2 .slick-next {
+    left: -22vw; }
+  section.proyectos .slider-proyectos .item-proyectos {
+    margin: 0 35px; }
+  :root {
+    --marquee-elements-displayed2: 3; }
+  footer .content p {
+    font-size: 16px; }
+  footer .content .redes a img {
+    transform: scale(0.9); }
+  footer .content .redes a {
+    margin: 0; }
+  a.whatsapp img {
+    width: 60px; }
+  section.proyectos .slider-proyectos .item-proyectos .info h4 {
+    font-size: 25px; }
+  section.proyectos .slider-proyectos .item-proyectos .info p {
+    font-size: 20px; }
+  section.proyectos .slider-proyectos .item-proyectos .info {
+    padding: 26px 46px; }
+  .content-title {
+    padding-bottom: 50px; }
+  .content-title h1 {
+    font-size: 70px; }
+  .mision-vision {
+    padding: 50px 0;
+    padding-bottom: 100px; }
+  .mision-vision .part1 {
+    padding-right: 97px; }
+  section.valores {
+    padding: 83px 0; }
+  .marquee {
+    padding: 76px 0;
+    padding-bottom: 0px; }
+  /*servicios*/
+  .servicios-grid .servicios-item p {
+    font-size: 30px; }
+  .servicios-grid .servicios-item p::before {
+    left: -28px;
+    top: 11px; }
+  .servicios-grid .servicios-item .info {
+    padding: 24px 56px; }
+  .servicios-grid {
+    padding: 50px 0;
+    padding-bottom: 100px; }
+  .servicios-grid .servicios-cards {
+    grid-gap: 45px; }
+  section.tarj-contacto {
+    padding: 100px 0; }
+  .services-info {
+    padding: 50px 0;
+    padding-bottom: 100px; }
+  .content-title .container {
+    width: 63%; }
+  .proyectos-list .category ul li a {
+    font-size: 20px; }
+  .proyectos-list {
+    padding: 50px 0;
+    padding-bottom: 100px; }
+  .proyectos-list .items-category .item-category .info h4 {
+    font-size: 30px; }
+  .proyectos-list .items-category .item-category .info p {
+    font-size: 28px; }
+  section.item-popup .content p {
+    font-size: 28px; }
+  section.item-popup .content .parrafo-popup {
+    font-size: 22px; }
+  section.item-popup .top button {
+    font-size: 70px; }
+  section.contacto-page .container .content .part1 h1 {
+    font-size: 35px; }
+  /* contacto*/
+  section.contacto-page .container .content .part1 form fieldset .form-group input {
+    margin-bottom: 20px; }
+  section.contacto-page {
+    padding: 68px 0; }
+  section.contacto-page .container .content .part1 form fieldset .form-group input {
+    font-size: 18px; }
+  section.contacto-page .container .content .part1 form fieldset .form-group textarea {
+    margin-bottom: 25px;
+    height: 144px; }
+  section.thanks-page .container {
+    width: 75%; } }
+
+@media (max-width: 1024px) {
+  .container {
+    width: 91.4%; }
+  header nav .menu ul li {
+    display: none; }
+  header nav .menu ul li.contacto {
+    display: block; }
+  section.home .content h1 {
+    font-size: 60px; }
+  section.home .marquee-with-options .text {
+    font-size: 25px; }
+  section.home .content {
+    padding-top: 272px;
+    max-width: 538px; }
+  section.home .content img {
+    top: 33%; }
+  section.home {
+    height: 90.11vw; }
+  section.experiencias h2 {
+    font-size: 50px; }
+  section.experiencias .info .card-info h3 {
+    font-size: 70px; }
+  section.experiencias .info .card-info span {
+    font-size: 70px; }
+  section.experiencias .info .card-info h4 {
+    font-size: 25px; }
+  section.experiencias .info .card-info:nth-child(1) {
+    width: 142.5px; }
+  section.experiencias .info .card-info:nth-child(2) {
+    width: 326px; }
+  section.experiencias .info .card-info:nth-child(3) {
+    width: 201.13px; }
+  section.experiencias p {
+    padding-bottom: 30px; }
+  section.servicios h2 {
+    font-size: 50px; }
+  section.servicios .part1 .container, section.clientes .content .part1 .container {
+    width: 89%; }
+  section.servicios .part2 .item-servicios {
+    margin: 0 19px; }
+  section.servicios .part2 .slick-prev,
+  section.servicios .part2 .slick-next {
+    width: 52px; }
+  section.servicios .part2 .slick-prev {
+    left: -31.2vw; }
+  section.servicios .part2 .slick-next {
+    left: -24vw; }
+  section.servicios .part1 {
+    transform: translateY(-79px); }
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 73%; }
+  section.proyectos h2 {
+    font-size: 50px; }
+  section.proyectos .slider-proyectos .item-proyectos {
+    margin: 0 20px; } }
