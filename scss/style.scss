@@ -732,6 +732,7 @@ section.proyectos{
                 background: rgba(58, 42, 104, 0.6);
                 z-index: 2;
                 border-radius: 20px;
+                z-index: 5;
             }
             .filtro1{
                 position: absolute;
@@ -791,7 +792,7 @@ section.proyectos{
         .slick-center{
             transform: scale(1.2);
             .filtro{
-                background: none;
+                display: none;
             }            
             &:hover{
                 transform: scale(1.2) translateY(-5px);
@@ -991,6 +992,17 @@ footer{
                 top: -25px;
                 background-color: var(--color-verde);
             }   
+        }
+        div:nth-child(1){
+            max-width: 416px;
+        }
+        div:nth-child(2){
+            p:first-child{
+                padding-bottom: 0;
+            }
+        }
+        div:nth-child(3){
+            max-width: 259px;
         }
     }
     .pie{
@@ -2243,6 +2255,18 @@ section.menupage.open{
 header nav .menu ul li.menu-responsive{
     display: none;
 }
+section.servicios .part2 .btn{
+    display: none;
+}
+
+.services-info .info .part1{
+    img:nth-child(2){
+        display: none;
+    }
+    a{
+        display: none;
+    }
+}
 
 @media (max-width: 1875px) {
     section.proyectos .slider-proyectos .slick-next{
@@ -2327,6 +2351,9 @@ header nav .menu ul li.menu-responsive{
 }
 
 @media (max-width: 1600px) {
+    .marquee-content{
+        font-size: 70px;
+    }
     section.tarj-contacto .content h2{
         width: 543px;
     }
@@ -2563,6 +2590,12 @@ header nav .menu ul li.menu-responsive{
     section.thanks-page .container{
         width: 75%;
     }
+    footer .content div:nth-child(1) {
+        max-width: 374px;
+    }
+    footer .content div:nth-child(3) {
+        max-width: 237px;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -2571,7 +2604,7 @@ header nav .menu ul li.menu-responsive{
     }
     section.home .content img {
         top: 28%;
-    }
+    }   
     section.home {
         height: 77vw;
     }
@@ -2579,7 +2612,7 @@ header nav .menu ul li.menu-responsive{
         right: 7.9vw;
     }
     section.proyectos .slider-proyectos .item-proyectos {
-        margin: 0 80px;
+        margin: 0 60px;
     }
     section.proyectos .slider-proyectos {
         margin: 100px 0;
@@ -2618,14 +2651,36 @@ header nav .menu ul li.menu-responsive{
         font-size: 25px;
     }
     section.servicios .part2 .slick-prev,
-    section.servicios .part2 .slick-next{
+    section.servicios .part2 .slick-next,
+    section.proyectos .slider-proyectos .slick-prev,
+    section.proyectos .slider-proyectos .slick-next,
+    section.item-popup .content .slider-fotos .slick-next,
+    section.item-popup .content .slider-fotos .slick-prev{
         width: 45px;
+    }
+    section.item-popup .content .slider-fotos .slick-prev {
+        left: -70px;
+    }
+    section.item-popup .content .slider-fotos .slick-next {
+        right: -70px;
+    }
+    ul.marquee-content2 li img {
+        transform: scale(0.8);
     }
 }
 
 @media (max-width: 1024px) {
+    section.contacto-page .container .content .part1 form{
+        width: 60%;
+    }
     header{
         padding: 40px 0;
+    }
+    header.sticky {
+        padding: 40px 0;
+    }
+    header::before{
+        height: 128px;
     }
     header nav .menu ul{
         display: flex;
@@ -2665,8 +2720,14 @@ header nav .menu ul li.menu-responsive{
     section.home {
         height: 90.11vw;
     }
-    section.experiencias h2{
-        font-size: 50px;
+    section.experiencias h2, 
+    section.servicios h2, 
+    section.proyectos h2, 
+    section.clientes h2, 
+    .mision-vision .part2 h3, 
+    section.valores h2, 
+    section.tarj-contacto .content h2{
+        font-size: 45px;
     }
     section.experiencias .info .card-info h3 {
         font-size: 70px;
@@ -2674,8 +2735,11 @@ header nav .menu ul li.menu-responsive{
     section.experiencias .info .card-info span {
         font-size: 70px;
     }
-    section.experiencias .info .card-info h4 {
-        font-size: 25px;
+    section.experiencias .info .card-info h4,
+    section.servicios .part2 .item-servicios p,
+    section.valores .content-valores div p,
+    .servicios-grid .servicios-item p {
+        font-size: 22px;
     }
     section.experiencias .info .card-info:nth-child(1) {
         width: 142.5px;
@@ -2689,18 +2753,11 @@ header nav .menu ul li.menu-responsive{
     section.experiencias p{
         padding-bottom: 30px;
     }
-    section.servicios h2{
-        font-size: 50px;
-    }
     section.servicios .part1 .container, section.clientes .content .part1 .container {
         width: 89%;
     }
     section.servicios .part2 .item-servicios{
         margin: 0 19px;
-    }
-    section.servicios .part2 .slick-prev,
-    section.servicios .part2 .slick-next{
-        width: 52px;
     }
     section.servicios .part2 .slick-prev {
         left: -31.2vw;
@@ -2738,8 +2795,7 @@ header nav .menu ul li.menu-responsive{
     }
     section.proyectos .slider-proyectos .slick-prev,
     section.proyectos .slider-proyectos .slick-next{
-        width: 52px;
-        top: -115px;
+        top: -107px;
     }
     section.proyectos .slider-proyectos .item-proyectos {
         margin: 0 60px;
@@ -2764,13 +2820,10 @@ header nav .menu ul li.menu-responsive{
         transform: scale(0.9);
     }
     footer .content div:nth-child(1){
-        display: flex;        
-    }
+        max-width: 100%;      
+    }    
     footer .content div:nth-child(3){
-        display: flex;        
-        p:nth-child(2){
-            margin-left: 10px;
-        }
+        max-width: 100%;  
     }
     footer .content div:nth-child(4){
         display: flex;        
@@ -2781,8 +2834,494 @@ header nav .menu ul li.menu-responsive{
             margin: 0 5px;
         }
     }
+    footer .content div.redes{
+        align-items: center;
+        p{
+            padding-bottom: 0;
+        }
+    }
+    .content-title .container {
+        width: 76%;/*84*/
+    }
+    .content-title{
+        padding-top: 214px;
+    }
+    .content-title h1 {
+        font-size: 60px;
+    }
+    .mision-vision .part1 {
+        padding-right: 10px;
+    }
+    .mision-vision .part2 {
+        padding-left: 50px;
+    }
+    section.valores .content-valores div img {
+        width: 172px;
+    }
+    .marquee-content{
+        font-size: 60px;
+    }
+    .servicios-grid .servicios-cards {
+        row-gap: 45px;
+        column-gap: 30px;
+    }
+    .servicios-grid .servicios-item p::before{
+        width: 12.5px;
+        height: 12.5px;
+        left: -22px;
+        top: 9px;
+    }
+    .servicios-grid .servicios-item .info {
+        padding: 24px 45px;
+    }
+    section.tarj-contacto .content{
+        justify-content: space-between;
+    }
+    section.tarj-contacto .content h2 {
+        width: 435px;
+    }
+    .services-info .info .part1 {
+        padding-right: 0px;
+        width: 38%;
+    }
+    .services-info .info .part2{
+        padding-left: 52px;
+        width: 62%;
+    }
+    .services-info .info .part2 h3{
+        font-size: 30px;
+    }
+    .proyectos-list .items-category .item-category .info h4 {
+        font-size: 25px;
+    }
+    .proyectos-list .items-category .item-category .info p {
+        font-size: 22px;
+    }
+    .proyectos-list .items-category .item-category .info{
+        padding: 20px 48px; 
+    }
+    .proyectos-list .items-category .item-category .info h4::before{
+        width: 14.5px;
+        height: 14.5px;
+        left: -24px;
+        transform: translateY(-50%);
+    }
+    .proyectos-list .items-category{
+        row-gap: 45px;
+        column-gap: 30px;
+    }
+    section.item-popup .content h4{
+        font-size: 30px;
+    }
+    section.item-popup .content p {
+        font-size: 25px;
+    }
+    section.item-popup .content h4::before{
+        width: 14.5px;
+        height: 14.5px;
+    }
+    section.item-popup .content .info {
+        width: 80%;
+    }
+    section.item-popup .content .parrafo-popup {
+        font-size: 20px;
+    }
+    section.contacto-page{
+        height: auto;
+    }
+    section.contacto-page .container .content .part1 .formulario-contacto{
+        flex-direction: column;
+    }
+    section.contacto-page .container .content{
+        padding-top: 20px;
+    }
+    section.contacto-page .container .content .part1 form fieldset .form-group input,
+    section.contacto-page .container .content .part1 form fieldset .form-group textarea{
+        margin-bottom: 32px;
+    }
+    section.contacto-page .container .content .part1 .info{
+        margin: 65px 0 70px 30px;
+        width: 100%;
+    }
+    section.thanks-page .container .content h1 {
+        font-size: 60px;
+    }
+    section.thanks-page .container .content p {
+        font-size: 35px;
+    }
 }
 
+@media (max-width: 768px) {
+    header::before {
+        height: 118px;
+    }
+    header {
+        padding: 30px 0;
+    }
+    header.sticky {
+        padding: 30px 0;
+    }
+    section.home .content h1 {
+        font-size: 50px;
+    }
+    section.home .content{
+        max-width: 452px;
+    }
+    section.home .content img {
+        top: 52%;
+    }
+    section.home {
+        height: 121vw;
+    }
+    section.experiencias h2, section.servicios h2, section.proyectos h2, section.clientes h2, .mision-vision .part2 h3, section.valores h2, section.tarj-contacto .content h2{
+        font-size: 40px;
+    }
+    section.experiencias .info .card-info h3 {
+        font-size: 60px;
+    }
+    section.experiencias .info .card-info:nth-child(1) {
+        width: 125.5px;
+    }   
+    section.experiencias .info .card-info:nth-child(2) {
+        width: 295px;
+    }
+    section.experiencias .info .card-info:nth-child(3) {
+        width: 175.13px;
+    }
+    section.servicios .content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    section.servicios .part1 {
+        transform: translateY(0px);
+        width: 100%;
+    }
+    section.servicios .part1 .container, 
+    section.clientes .content .part1 .container{
+        width: 91.4%;  
+        margin-right: auto; 
+        a{
+            display: none;
+        }
+    }
+    section.servicios .part2 {
+        width: 100%;
+        padding-left: 30px;
+    }
+    section.servicios .part2 .item-servicios {
+        margin: 0 10px;
+    }
+    section.servicios .part2 .item-servicios p::before{
+        width: 12.5px; 
+        left: 21px;
+        top: 28px;
+    }
+    section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+        top: -48px;
+    }
+    section.servicios .part2 .slick-prev,
+    section.proyectos .slider-proyectos .slick-prev {
+        left: inherit;
+        right: 87px;
+    }       
+    section.servicios .part2 .slick-next,
+    section.proyectos .slider-proyectos .slick-next{
+        left: inherit;
+        right: 32px;    
+    }
+    section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next, section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next, section.item-popup .content .slider-fotos .slick-next, section.item-popup .content .slider-fotos .slick-prev{
+        width: 37px;
+    }
+    section.servicios .part2 .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    section.servicios .part2 .btn a{
+        font-family: var(--fuente-prompt);
+        font-weight: 500;
+        font-size: 18px;
+        padding: 11px 25px;
+        border: 2px solid var(--color-morado);
+        border-bottom: 4px solid var(--color-morado);
+        color: var(--color-morado);
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        position: relative;
+        overflow: hidden;
+        transition: 0.2s linear;
+        text-decoration: none;
+        img{
+            width: 13px;
+            margin-top: 3px;
+            margin-left: 10px;
+        }
+        img:nth-child(2) {
+            display: none;
+        }
+        &:hover{
+            color: #fff;
+            &::before {
+                transform: translateY(0);
+            }
+            img:nth-child(1) {
+                display: none;
+            }
+            img:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+    section.servicios .part2 a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-morado);
+        height: 100%;
+        transform: translateY(100%);
+        transition: 0.2s linear;
+        z-index: -2;
+    }
+    section.servicios .part2 .slick-slider{
+        margin-bottom: 50px;
+    }
+    section.proyectos .slider-proyectos .item-proyectos {
+        margin: 0 50px;
+    }
+    section.proyectos .slider-proyectos {
+        margin: 80px 0;
+    }   
+    section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next {
+        top: -89px;
+    }
+    section.clientes .content{
+        flex-direction: column;
+    }
+    section.clientes .content .part1{
+        width: 100%;
+    }
+    section.clientes .content .part2 {
+        width: 100%;
+        margin-top: 35px;
+    }
+    :root{
+        --marquee-elements-displayed2: 3;
+    }
+    ul.marquee-content2 li img {
+        transform: scale(0.7);
+    }
+    .content-title .container {
+        width: 91.4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-title h1 {
+        font-size: 50px;
+        max-width: 650px;
+    }
+    .mision-vision .part1{
+        width: 48.5%;
+    }
+    .mision-vision .part2{
+        width: 51.5%;
+        padding-left: 35px;
+    }
+    .mision-vision .content{
+        align-items: flex-start;
+    }
+    .mision-vision .part2 div:nth-child(2) {
+        margin-top: 25px;
+    }
+    section.valores h2{
+        text-align: start;
+    }
+    section.valores .content-valores div img {
+        width: 150px;
+    }
+    .servicios-grid .servicios-cards{
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 460px;
+        grid-gap: 50px;
+    }
+    .servicios-grid{
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    section.tarj-contacto .content h2{
+        line-height: 40px;
+    }
+    section.tarj-contacto .content h2 {
+        width: 389px;
+    }
+    .services-info .info {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .services-info .info .part1,
+    .services-info .info .part2{
+        width: 100%;
+    }
+    .services-info .info .part2{
+        padding-left: 0px;
+        margin-bottom: 50px;
+        .btn{
+            display: none;
+        }
+    }
+    .services-info .info .part1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img:nth-child(1){
+            display: none;
+        }
+        img:nth-child(2){
+            display: block;
+        }
+        img{
+            max-width: 452px;
+        }
+        a{
+            margin-top: 50px;
+            padding: 11px 25px;
+            text-decoration: none;
+            color: var(--color-morado);
+            display: flex;
+            align-items: center;
+            font-family: var(--fuente-prompt);
+            font-weight: 500;
+            font-size: 20px;
+            border: 2px solid var(--color-morado);
+            border-bottom: 4px solid var(--color-morado);   
+            position: relative;
+            overflow: hidden;
+            transition: 0.2s linear;
+            img:nth-child(1){
+                display: block;
+            }
+            img{
+                margin-left: 10px;
+                width: 13px;
+                margin-top: 3px;
+            }
+            img:nth-child(2){
+                display: none;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: var(--color-morado);
+                top: 0;
+                left: 0;
+                transform: translateY(100%);
+                transition: 0.2s linear;
+                z-index: -2;
+            }
+            &:hover{
+                color: #fff;   
+                &::before{
+                    transform: translateY(0%);
+                } 
+                img:nth-child(1) {
+                    display: none;
+                }
+                img:nth-child(2) {
+                    display: block;
+                }
+                img {
+                    animation: desplazamiento 1.3s infinite;
+                }
+            }
+        }
+    }
+    .proyectos-list .items-category{
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 452px;
+        grid-gap: 50px;
+        margin: 0 auto;
+    }   
+    section.item-popup .content .info {
+        width: 85%;
+    }
+    section.item-popup .content .slider-fotos .slick-prev {
+        left: -45px;
+    }
+    section.item-popup .content .slider-fotos .slick-next {
+        right: -45px;
+    }
+    section.contacto-page {
+        padding: 45px 0;
+    }
+    section.contacto-page .container .content {
+        padding-top: 45px;
+    }
+    section.contacto-page .container .content .part1 form {
+        width: 75%;
+    }
+    section.thanks-page .container .content h1 {
+        font-size: 50px;
+    }
+    section.thanks-page .container .content p {
+        font-size: 30px;
+    }
+    section.thanks-page{
+        padding: 45px 0;
+    }
+    section.thanks-page .container .top{
+        right: -50px;
+    }
+    a.whatsapp {
+        right: 36px;
+        bottom: 34px;
+    }
+    .proyectos-list .category ul{
+        display: none;
+    }
+    .proyectos-list .category select{
+        width: 100%;
+        background-color: var(--color-morado);
+        color: #fff;
+        font-family: var(--fuente-prompt);
+        font-weight: 500;
+        font-size: 20px;        
+        padding: 11px 25px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        position: relative;
+        &:focus{
+            outline:none !important;
+            outline-width: 0 !important;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+    }
+    .proyectos-list .category form{
+        position: relative;
+        &::before{
+            content: '';
+            background-image: url(../icons/flecha-blanca-abajo.svg);
+            width: 19px;
+            height: 19px;
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 50;
+        }
+    }
+}   
 
 @media (max-width: 1024px) and (min-height: 1000px) {
     section.home .content img {

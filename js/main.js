@@ -216,6 +216,16 @@ MyApp = {
                 }
             })
         }
+    },
+    select: {
+        init: function () {
+            var select = document.getElementById('categoryPortfolio');
+            select.addEventListener('change',
+            function(){
+                var selectedOption = this.options[select.selectedIndex];
+                console.log(selectedOption.text);
+            });
+        }
     }
 }
 if ($('.slider ').length > 0) {
@@ -236,6 +246,9 @@ if ($('.experiencias ').length > 0) {
 }
 if ($('.services-info ').length > 0) {
     MyApp.internaBtn.init();
+}
+if ($('.category form').length > 0) {
+    MyApp.select.init();
 }
 
 document.addEventListener("click", (e) => {
@@ -268,10 +281,10 @@ $('.slider-servicios').slick({
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 769,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 2.3,
+                slidesToScroll: 1
             }
         },
         {
@@ -311,7 +324,7 @@ $('.slider-proyectos').slick({
             breakpoint: 1281,
             settings: {
                 centerMode: true,
-                centerPadding: '200px',
+                centerPadding: '300px',
                 slidesToShow: 1
             }
         },
@@ -320,6 +333,14 @@ $('.slider-proyectos').slick({
             settings: {
                 centerMode: true,
                 centerPadding: '200px',
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 769,
+            settings: {
+                centerMode: true,
+                centerPadding: '120px',
                 slidesToShow: 1
             }
         }
