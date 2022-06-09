@@ -66,9 +66,10 @@ MyApp = {
                 }
             }
 
+
             $('.item-category').hide();
             const categoryMain = document.querySelector('#categorias2 a.select').innerHTML;
-            $(`.item-category.modulo-mas[data-categoria="${categoryMain}"]`).slice(0, 6).show();
+            $(`.item-category.modulo-mas[data-categoria="${categoryMain}"]`).slice(0, 6).show(0);
 
             enlaces.forEach((elemento) => {
                 elemento.addEventListener('click', (evento) => {
@@ -76,20 +77,22 @@ MyApp = {
                     enlaces.forEach((enlace) => enlace.classList.remove('select'));
                     evento.target.classList.add('select');
 
-                    const categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
+                    var categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
+                    console.log(categoria);
                     $("#cargarMasModulo").attr("style", "display:flex;");
                     $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide();
-                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 6).show();
+                    $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 6).show(0);
                 });
             });
             $("#cargarMasModulo").click(function (e) {
                 e.preventDefault();
                 const categoryMain2 = document.querySelector('#categorias2 a.select').innerHTML;
-                $(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).slice(0, 6).slideDown();
+                $(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).slice(0, 6).slideDown(0);
                 if ($(`.modulo-mas[data-categoria="${categoryMain2}"]:hidden`).length == 0) {
                     $("#cargarMasModulo").attr("style", "display:none;");
                 }
             });
+
         }
     },
     popUp: {
@@ -146,26 +149,13 @@ MyApp = {
                     slidesToScroll: 1,
                     responsive: [
                         {
-                            breakpoint: 1024,
+                            breakpoint: 426,
                             settings: {
                                 slidesToShow: 1,
                                 slidesToScroll: 1,
+                                dots: true,
                             }
                         },
-                        {
-                            breakpoint: 600,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
-                        },
-                        {
-                            breakpoint: 480,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
-                        }
                     ]
                 });
             }
@@ -220,10 +210,24 @@ MyApp = {
     select: {
         init: function () {
             var select = document.getElementById('categoryPortfolio');
-            select.addEventListener('change',
-            function(){
+            var categoria2 = "";
+            select.addEventListener('change', function () {
                 var selectedOption = this.options[select.selectedIndex];
-                console.log(selectedOption.text);
+                var cateSelect = selectedOption.text.trimStart().trimEnd();
+                categoria2 = cateSelect
+                $("#cargarMasModulo").attr("style", "display:flex;");
+                $(`.item-category`).not(`[data-categoria="${categoria2}"]`).hide();
+                $(`.item-category.modulo-mas[data-categoria="${categoria2}"]`).slice(0, 6).show();
+                console.log(categoria2); 
+                // return categoria2
+            });
+            console.log(categoria2); 
+            $("#cargarMasModulo").click(function () {                
+                console.log(categoria2);
+                $(`.modulo-mas[data-categoria="${categoria2}"]:hidden`).slice(0, 6).slideDown(0);
+                if ($(`.modulo-mas[data-categoria="${categoria2}"]:hidden`).length == 0) {
+                    $("#cargarMasModulo").attr("style", "display:none;");
+                }
             });
         }
     }
@@ -288,10 +292,11 @@ $('.slider-servicios').slick({
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 426,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                dots: true,
             }
         }
     ]
@@ -342,6 +347,16 @@ $('.slider-proyectos').slick({
                 centerMode: true,
                 centerPadding: '120px',
                 slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 426,
+            settings: {
+                centerMode: true,
+                centerPadding: '120px',
+                slidesToShow: 1,
+                centerMode: false,
+                dots: true,
             }
         }
     ]

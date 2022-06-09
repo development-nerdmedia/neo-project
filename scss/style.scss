@@ -113,7 +113,7 @@ header{
                         overflow: hidden;
                         transition: 0.2s linear;
                         img{
-                            margin-left: 5px;
+                            margin-left: 10px;
                             width: 13px;
                             margin-top: 2px;
                         }
@@ -1793,7 +1793,7 @@ section.contacto-page{
     height: 100vh;
     padding: 80px 0;
     position: relative;
-    background-image: url(../img/fondo-contacto_1.jpg);
+    background-image: url(../img/fondo_contacto_tablet.jpg);
     background-repeat: no-repeat;
     background-position: top;
     .fondo{
@@ -2266,6 +2266,10 @@ section.servicios .part2 .btn{
     a{
         display: none;
     }
+}
+
+.proyectos-list .category form{
+    display: none;
 }
 
 @media (max-width: 1875px) {
@@ -2949,11 +2953,14 @@ section.servicios .part2 .btn{
     section.thanks-page .container .content p {
         font-size: 35px;
     }
+    section.menupage .content ul li {
+        padding: 55px 0;
+    }
 }
 
 @media (max-width: 768px) {
     header::before {
-        height: 118px;
+        height: 111px;
     }
     header {
         padding: 30px 0;
@@ -3073,7 +3080,7 @@ section.servicios .part2 .btn{
             }
         }
     }
-    section.servicios .part2 a::before {
+    section.servicios .part2 .btn a::before {
         content: "";
         position: absolute;
         top: 0;
@@ -3296,17 +3303,32 @@ section.servicios .part2 .btn{
         padding: 11px 25px;
         -moz-appearance: none;
         -webkit-appearance: none;
-        position: relative;
+        position: relative;        
+        border: 0px solid #2D889F !important;
+        outline:none !important;
         &:focus{
             outline:none !important;
             outline-width: 0 !important;
+            border: 0 !important;
             box-shadow: none;
             -moz-box-shadow: none;
             -webkit-box-shadow: none;
+            border: 0px solid #2D889F !important;
+        }
+        option{
+            outline: none !important;
+            border: 0px solid #2D889F !important;
+            background-color: #fff;
+            color: var(--color-morado);
+            font-size: 20px;   
+            font-family: var(--fuente-prompt);
+            font-weight: 500;
+            border: none !important;
         }
     }
     .proyectos-list .category form{
         position: relative;
+        display: block;
         &::before{
             content: '';
             background-image: url(../icons/flecha-blanca-abajo.svg);
@@ -3321,10 +3343,414 @@ section.servicios .part2 .btn{
             z-index: 50;
         }
     }
+    section.menupage .content ul li {
+        padding: 43px 0;
+        a{
+            font-size: 50px;
+        }
+    }
+    header nav .menu ul li.contacto a {
+        padding: 7px 22px;
+        font-size: 18px;
+    }
+    header nav .menu ul li.menu-responsive img{
+        width: 35px;
+    }
 }   
 
 @media (max-width: 1024px) and (min-height: 1000px) {
     section.home .content img {
         top: 21%;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        padding: 28px 0;
+    }
+    header::before {
+        height: 96px;
+    }
+    header nav .logo img {
+        width: 157px;
+    }
+    header nav .menu ul li.menu-responsive img {
+        width: 23.9px;
+    }
+    header nav .menu ul li.contacto a {
+        padding: 0px 18px;
+        font-size: 16px;
+    }
+    header nav .menu ul li.menu-responsive{
+        padding-left: 26px;
+    }
+    header nav .menu ul li.contacto a img{
+        margin-left: 6px;
+        width: 10px;
+    }
+    section.home .content{
+        padding-top: 135px;
+        max-width: 292px;
+    }
+    section.home .content h1 {
+        font-size: 32px;
+    }
+    section.home .marquee-with-options .text {
+        font-size: 18px;
+    }
+    section.home .marquee-with-options .text a {
+        margin: 0 8px;
+    }
+    section.home .content img{
+        width: 81.4vw;
+        top: 35%;
+    }
+    section.home {
+        height: 150vw;
+    }
+    section.experiencias h2, section.servicios h2, section.proyectos h2, section.clientes h2, .mision-vision .part2 h3, section.valores h2, section.tarj-contacto .content h2{
+        font-size: 30px;
+        line-height: 32px;
+    }
+    section.experiencias .info{
+        flex-direction: column;
+        .card-info{
+            margin: 10px 0;
+        }
+    }
+    section.experiencias .info .card-info span {
+        font-size: 60px;
+    }
+    section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next,
+    section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next{
+        display: none !important;
+    }
+    section.servicios .part2{
+        padding-left: 0;
+    }
+    section.servicios .part2 .item-servicios {
+        margin: 0 30px;
+    }    
+    section.servicios .slick-dots li button:before {
+        // color: #fff !important;
+        transform: scale(2.5) !important;
+        opacity: 1;
+    } 
+    section.servicios .slick-dots li.slick-active button:before {
+        color: var(--color-morado) !important;
+        opacity: 1;
+    }  
+    .slick-dots li button:before{
+        content: '○';
+        font-size: 13px;
+    }
+    section.servicios .slick-dots li.slick-active button:before{
+        content: "•";
+        font-size: 6.5px;
+        top: 4px;
+    }
+    section.servicios .part2 .slick-slider {
+        margin-bottom: 80px;
+    }
+    section.proyectos .slider-proyectos .item-proyectos{
+        .filtro{
+            display: none;
+        }
+    }
+    section.proyectos .slider-proyectos .item-proyectos {
+        margin: 0 24px;
+    }
+    section.proyectos .slider-proyectos{
+        margin-top: 35px;
+    }
+    /***/
+    section.proyectos .slick-dots li button:before {
+        // color: #fff !important;
+        transform: scale(2.5) !important;
+        opacity: 1;
+    } 
+    section.proyectos .slick-dots li.slick-active button:before {
+        color: var(--color-morado) !important;
+        opacity: 1;
+    }  
+    section.proyectos .slick-dots li.slick-active button:before{
+        content: "•";
+        font-size: 6.5px;
+        top: 4px;
+    }
+    section.proyectos .slick-dots{
+        bottom: -50px;
+    }
+    :root{
+        --marquee-elements-displayed2: 2;
+    }
+    section.clientes .content .part2{
+        margin-top: 22px;
+    }
+    footer .pie{
+        flex-direction: column;
+    }
+    a.whatsapp {
+        right: 18px;
+        bottom: 32px;
+    }
+    a.whatsapp img {
+        width: 45px;
+    }   
+    section.experiencias {
+        padding-bottom: 30px;
+    }
+    section.servicios {
+        padding: 30px 0;
+    }
+    section.proyectos {
+        padding: 30px 0;
+        padding-bottom: 60px;
+    }
+    section.clientes {
+        padding: 60px 0;
+    }
+    footer .content div.redes{
+        display: block;
+        margin-bottom: 0;
+        p{
+            padding-bottom: 10px;
+        }
+    }
+    footer .content div:nth-child(3){
+        max-width: 300px;
+    }
+    section.menupage .content ul li a {
+        font-size: 35px;
+    }
+    section.menupage .content ul li a::before{
+        width: 19.21px;
+        height: 21.21px;
+        left: -32px;
+    }
+    section.menupage .content ul li{
+        margin-left: 30px;
+    }
+    section.menupage .content ul li {
+        padding: 24px 0;
+    }
+    section.menupage{
+        padding: 30px 0;
+    }
+    section.menupage .top img{
+        width: 34px;
+    }
+    .menu ul li.contacto {
+        padding-left: 0;
+    }
+    .content-title h1 {
+        font-size: 32px;
+    }
+    .content-title {
+        padding-top: 130px;
+    }
+    section.experiencias p, .content-title p, .mision-vision .part2 p, .services-info .info .part2 p, section.item-popup .content .parrafo-popup, section.contacto-page .container .content .part1 .info p {
+        font-size: 18px;
+    }
+    .mision-vision .content{
+        flex-direction: column;
+    }
+    .mision-vision .part1 {
+       width: 100%;
+    }
+    .content-title {
+        padding-bottom: 30px;
+    }
+    .mision-vision,
+    .servicios-grid,
+    .proyectos-list {
+        padding: 30px 0;
+        padding-bottom: 60px;
+    }
+    .mision-vision .part2 {
+        width: 100%;
+        padding-left: 0px;  
+        padding-top: 50px;
+    }
+    section.valores {
+        padding: 60px 0;
+    }   
+    section.valores .content-valores{
+        flex-direction: column;
+    }
+    section.valores .content-valores div:nth-child(2){
+        margin: 30px 0;
+    }
+    .marquee-content li{
+        line-height: 45px;
+    }
+    .marquee-content {
+        font-size: 40px;
+    }
+    section.experiencias .info .card-info h4, section.servicios .part2 .item-servicios p, section.valores .content-valores div p, .servicios-grid .servicios-item p {
+        font-size: 20px;
+    }
+    .servicios-grid .servicios-item p::before{
+        top: 6px;
+    }
+    section.tarj-contacto {
+        padding: 60px 0;
+    }
+    section.tarj-contacto .content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    section.tarj-contacto .content h2{
+        width: 100%;
+        max-width: 300px;       
+        padding-bottom: 30px; 
+    }
+    .services-info .info .part2 h3 {
+        font-size: 25px;
+    }
+    .services-info {
+        padding: 30px 0;
+        padding-bottom: 60px;
+    }
+    .services-info .info .part2 h3::before{
+        width: 11.9px;
+        height: 13.14px;
+        left: -25px;
+        transform: translateY(-50%);
+    }
+    .services-info .info .part2 .content {
+        padding-left: 26px;
+    }
+    .services-info .info .part2 p{
+        padding-top: 15px;
+    }
+    .services-info .info .part1 a{
+        font-size: 18px;
+        padding: 11px 15px;
+    }
+    .proyectos-list .category select{
+        padding: 11px 16px;
+    }
+    .proyectos-list .category form::before{
+        width: 17px;
+        height: 15px;
+        right: 17px;
+    }
+    .proyectos-list .category select option,
+    .proyectos-list .category select{
+        font-size: 18px;
+    }
+    .proyectos-list .items-category .item-category .info h4 {
+        font-size: 22px;
+    }
+    .proyectos-list .items-category .item-category .info p {
+        font-size: 18px;
+    }
+    .proyectos-list .items-category .item-category .info {
+        padding: 20px 36px;
+    }
+    section.item-popup{
+        padding: 30px 0;
+    }
+    section.item-popup .top button img{
+        width: 34px;
+    }
+    section.item-popup .content h4 {
+        font-size: 25px;
+    }
+    section.item-popup .content p {
+        font-size: 22px;
+    }
+    section.item-popup .content .slider-fotos .slick-next, section.item-popup .content .slider-fotos .slick-prev{
+        display: none !important;
+    }
+    section.item-popup .content .info {
+        width: 100%;
+    }
+    section.item-popup .slick-dots li button:before {
+        // color: #fff !important;
+        transform: scale(2.5) !important;
+        opacity: 1;
+    } 
+    section.item-popup .slick-dots li.slick-active button:before {
+        color: var(--color-morado) !important;
+        opacity: 1;
+    }  
+    section.item-popup .slick-dots li.slick-active button:before{
+        content: "•";
+        font-size: 6.5px;
+        top: 4px;
+    }
+    section.item-popup .content .slider-fotos .item-foto {
+        margin: 0 5px;
+    }
+    section.item-popup .content .parrafo-popup{
+        padding-left: 5px;
+    }
+    section.item-popup .content .info .text {
+        padding-left: 30px;
+    }
+    section.contacto-page .container .top a img {
+        width: 34px;
+    }
+    section.contacto-page {
+        padding: 30px 0;
+    }
+    section.contacto-page .container .content .part1 h1 {
+        font-size: 30px;
+    }
+    section.contacto-page .container .content .part1 form fieldset .form-group input{
+        height: 57px;
+    }
+    section.contacto-page .container .content .part1 form fieldset .form-group .form-label{
+        top: 16px;
+    }
+    section.contacto-page .container .content .part1 form {
+        width: 100%;
+        margin-right: 11px;
+    }
+    section.contacto-page .container .content .part1 .info p::before{
+        width: 12.2px;
+        height: 13px;
+        left: -21px;
+    }
+    section.contacto-page .container .content .part1 .info{
+        margin: 65px 0px 70px 25px;
+    }
+    section.contacto-page .container .content .part1 .info p{
+        padding-right: 23px;
+    }
+    section.thanks-page .container .content h1 {
+        font-size: 40px;
+    }
+    section.thanks-page .container .content p {
+        font-size: 25px;
+    }
+    section.thanks-page .container .content h1::before{
+        width: 21px;
+        height: 23px;
+        left: -30px;
+    }
+    section.thanks-page .container {
+        width: 91.4%;
+    }
+    section.thanks-page .container .top {
+        right: 0;
+    }
+    section.thanks-page {
+        padding: 30px 0;
+    }
+    section.thanks-page .container .top a img{
+        width: 34px;
+    }
+    section.thanks-page .container .content div{
+        padding-left: 36px;
+    }
+}
+
+@media (max-width: 375px) {
+    header nav .menu ul li.menu-responsive {
+        padding-left: 16px;
+        padding-right: 0;
     }
 }
