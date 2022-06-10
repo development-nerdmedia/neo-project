@@ -1,12 +1,4 @@
 AOS.init();
-window.addEventListener("scroll", function () {
-    if (this.pageYOffset > 60) {
-        document.querySelector("header").classList.add("sticky");
-    }
-    else {
-        document.querySelector("header").classList.remove("sticky");
-    }
-});
 
 document.addEventListener("click", (e) => {
     if (e.target.closest(".menu-responsive")) {
@@ -18,6 +10,18 @@ document.addEventListener("click", (e) => {
 })
 
 MyApp = {
+    scroll: {
+        init: function () {
+            window.addEventListener("scroll", function () {
+                if (this.pageYOffset > 60) {
+                    document.querySelector("header").classList.add("sticky");
+                }
+                else {
+                    document.querySelector("header").classList.remove("sticky");
+                }
+            });
+        }
+    },
     slider: {
         init: function () {
             const root = document.documentElement;
@@ -211,6 +215,11 @@ MyApp = {
         init: function () {
             var select = document.getElementById('categoryPortfolio');
             var categoria2 = "";
+            var categoriaServices = localStorage.getItem("ItemServices");
+            var selection = document.getElementById("categoryPortfolio");
+            const options = selection.options[selection.selectedOptions].value;
+            console.log(categoriaServices); 
+            console.log(options); 
             select.addEventListener('change', function () {
                 var selectedOption = this.options[select.selectedIndex];
                 var cateSelect = selectedOption.text.trimStart().trimEnd();
@@ -218,10 +227,7 @@ MyApp = {
                 $("#cargarMasModulo").attr("style", "display:flex;");
                 $(`.item-category`).not(`[data-categoria="${categoria2}"]`).hide();
                 $(`.item-category.modulo-mas[data-categoria="${categoria2}"]`).slice(0, 6).show();
-                console.log(categoria2); 
-                // return categoria2
             });
-            console.log(categoria2); 
             $("#cargarMasModulo").click(function () {                
                 console.log(categoria2);
                 $(`.modulo-mas[data-categoria="${categoria2}"]:hidden`).slice(0, 6).slideDown(0);
@@ -231,6 +237,9 @@ MyApp = {
             });
         }
     }
+}
+if ($('header').length > 0) {
+    MyApp.scroll.init();
 }
 if ($('.slider ').length > 0) {
     MyApp.slider.init();
@@ -264,10 +273,11 @@ document.addEventListener("click", (e) => {
 
 $('.slider-servicios').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
+    autoplay: true,
     speed: 300,
     dots: false,
-    slidesToShow: 2.57,
+    slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
         {
@@ -289,6 +299,14 @@ $('.slider-servicios').slick({
             settings: {
                 slidesToShow: 2.3,
                 slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 650,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
             }
         },
         {
@@ -316,6 +334,8 @@ $('.slider-proyectos').slick({
     centerMode: true,
     centerPadding: '0px',
     slidesToShow: 3,
+    infinite: true,
+    autoplay: true,
     responsive: [
         {
             breakpoint: 1601,
@@ -334,10 +354,26 @@ $('.slider-proyectos').slick({
             }
         },
         {
+            breakpoint: 1091,
+            settings: {
+                centerMode: true,
+                centerPadding: '280px',
+                slidesToShow: 1
+            }
+        },
+        {
             breakpoint: 1025,
             settings: {
                 centerMode: true,
                 centerPadding: '200px',
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 953,
+            settings: {
+                centerMode: true,
+                centerPadding: '150px',
                 slidesToShow: 1
             }
         },
@@ -350,7 +386,15 @@ $('.slider-proyectos').slick({
             }
         },
         {
-            breakpoint: 426,
+            breakpoint: 650,
+            settings: {
+                centerMode: true,
+                centerPadding: '100px',
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 601,
             settings: {
                 centerMode: true,
                 centerPadding: '120px',

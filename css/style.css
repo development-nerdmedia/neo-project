@@ -250,7 +250,7 @@ header::before {
 
 a.whatsapp {
   position: fixed;
-  right: 100px;
+  right: 36px;
   bottom: 62px;
   z-index: 10; }
 
@@ -431,7 +431,7 @@ section.servicios {
     align-items: center; }
   section.servicios .part1 {
     width: 35%;
-    transform: translateY(-115px); }
+    transform: translateY(-86px); }
     section.servicios .part1 .container {
       margin-right: 0;
       width: 65%; }
@@ -481,7 +481,8 @@ section.servicios {
     width: 65%; }
     section.servicios .part2 .item-servicios {
       border-radius: 20px;
-      margin: 0 30px;
+      margin: 0 17px;
+      /*30*/
       padding: 9px 0;
       transition: 0.2s linear; }
       section.servicios .part2 .item-servicios a {
@@ -540,7 +541,7 @@ section.servicios {
     section.servicios .part2 .slick-prev:before, section.servicios .part2 .slick-next:before {
       display: none; }
     section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
-      top: 66%; }
+      top: 70%; }
     section.servicios .part2 .slick-arrow.slick-disabled {
       opacity: 0.5; }
 
@@ -779,7 +780,7 @@ footer {
     footer .content div:nth-child(2) p:first-child {
       padding-bottom: 0; }
     footer .content div:nth-child(3) {
-      max-width: 259px; }
+      max-width: 293px; }
   footer .pie {
     position: relative;
     padding-top: 10px;
@@ -831,7 +832,7 @@ section.interna {
   position: relative;
   overflow: hidden; }
   .content-title .container {
-    width: 66%;
+    width: 61%;
     position: relative;
     z-index: 2; }
   .content-title h1 {
@@ -1173,7 +1174,8 @@ section.tarj-contacto {
       list-style: none;
       border: solid 2px var(--color-morado);
       width: fit-content;
-      margin: 0 auto; }
+      margin: 0 auto;
+      display: flex; }
       .proyectos-list .category ul li {
         display: inline-block;
         margin: 0 -2px; }
@@ -1405,7 +1407,7 @@ section.contacto-page {
   height: 100vh;
   padding: 80px 0;
   position: relative;
-  background-image: url(../img/fondo_contacto_tablet.jpg);
+  background-image: url(../img/fondo-contacto_1.jpg);
   background-repeat: no-repeat;
   background-position: top; }
   section.contacto-page .fondo {
@@ -1551,7 +1553,7 @@ section.contacto-page {
                 animation: desplazamiento 1.3s infinite; }
         section.contacto-page .container .content .part1 .info {
           width: 50%;
-          margin: 36px 0 70px 80px;
+          margin: 36px 0 0px 80px;
           display: flex;
           flex-direction: column; }
           section.contacto-page .container .content .part1 .info p {
@@ -1786,6 +1788,9 @@ section.servicios .part2 .btn {
 .proyectos-list .category form {
   display: none; }
 
+.btn-contacto {
+  display: none; }
+
 @media (max-width: 1875px) {
   section.proyectos .slider-proyectos .slick-next {
     right: 11.7vw; }
@@ -1861,8 +1866,6 @@ section.servicios .part2 .btn {
     height: 71.11vw; }
   section.home .content h1 {
     font-size: 70px; }
-  section.home .content img {
-    top: 23%; }
   section.home .marquee-with-options .text {
     font-size: 30px; }
   section.home .marquee-with-options .text a {
@@ -2017,11 +2020,31 @@ section.servicios .part2 .btn {
   footer .content div:nth-child(3) {
     max-width: 237px; } }
 
+@media (max-width: 1500px) {
+  section.home .content img {
+    top: 196px; } }
+
+@media (max-width: 1500px) and (max-width: 1385px) {
+  section.home .content img {
+    top: 230px; }
+  section.home {
+    height: 74.11vw; }
+  section.servicios .part2 .item-servicios {
+    margin: 0 20px; } }
+
 @media (max-width: 1280px) {
+  a.whatsapp {
+    right: 96px; }
+  footer .content div {
+    margin: 20px 0; }
+  footer .content {
+    flex-direction: column; }
+  section.home {
+    height: 80vw; }
   header nav .logo img {
     width: 245px; }
   section.home .content img {
-    top: 28%; }
+    top: 260px; }
   section.home {
     height: 77vw; }
   section.proyectos .slider-proyectos .slick-next {
@@ -2064,9 +2087,41 @@ section.servicios .part2 .btn {
   ul.marquee-content2 li img {
     transform: scale(0.8); } }
 
-@media (max-width: 1024px) {
-  section.contacto-page .container .content .part1 form {
-    width: 60%; }
+@media (max-width: 1232px) {
+  section.home {
+    height: 81vw; } }
+
+@media (max-width: 1160px) {
+  section.experiencias .info .card-info:nth-child(1) {
+    width: 142.5px; }
+  section.experiencias .info .card-info:nth-child(2) {
+    width: 326px; }
+  section.experiencias .info .card-info:nth-child(3) {
+    width: 201.13px; }
+  section.experiencias .info .card-info span {
+    font-size: 70px; }
+  section.experiencias .info .card-info h3 {
+    font-size: 70px; }
+  section.experiencias .info .card-info h4 {
+    font-size: 22px; }
+  section.home {
+    height: 85vw; }
+  section.home .content h1 {
+    font-size: 60px; }
+  section.home .content {
+    padding-top: 272px;
+    max-width: 538px; }
+  section.home .content img {
+    top: 285px; } }
+
+@media (max-width: 1090px) {
+  a.whatsapp {
+    right: 45px;
+    bottom: 43px; }
+  section.proyectos .slider-proyectos .item-proyectos {
+    margin: 0 45px; }
+  section.home {
+    height: 88vw; }
   header {
     padding: 40px 0; }
   header.sticky {
@@ -2088,7 +2143,25 @@ section.servicios .part2 .btn {
   header nav .menu ul li.menu-responsive {
     height: 25px;
     padding-right: 0;
-    padding-left: 49px; }
+    padding-left: 49px; } }
+
+@media (max-width: 1024px) {
+  section.menupage .content ul li a {
+    font-size: 50px; }
+  section.menupage .content ul li {
+    padding: 43px 0; }
+  section.menupage {
+    padding: 58px 0; }
+  section.contacto-page {
+    background-image: url(../img/fondo_contacto_tablet.jpg); }
+  section.servicios .part1 a {
+    padding: 11px 14px; }
+  section.servicios .part1 {
+    transform: translateY(-55px); }
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 74%; }
+  section.contacto-page .container .content .part1 form {
+    width: 60%; }
   section.home .content h1 {
     font-size: 60px; }
   section.home .marquee-with-options .text {
@@ -2096,8 +2169,6 @@ section.servicios .part2 .btn {
   section.home .content {
     padding-top: 272px;
     max-width: 538px; }
-  section.home .content img {
-    top: 33%; }
   section.home {
     height: 90.11vw; }
   section.experiencias h2,
@@ -2256,14 +2327,112 @@ section.servicios .part2 .btn {
   section.contacto-page .container .content .part1 form fieldset .form-group textarea {
     margin-bottom: 32px; }
   section.contacto-page .container .content .part1 .info {
-    margin: 65px 0 70px 30px;
+    margin: 65px 0 0px 30px;
     width: 100%; }
   section.thanks-page .container .content h1 {
     font-size: 60px; }
   section.thanks-page .container .content p {
-    font-size: 35px; }
-  section.menupage .content ul li {
-    padding: 55px 0; } }
+    font-size: 35px; } }
+
+@media (max-width: 990px) {
+  section.servicios .part2 .item-servicios {
+    margin: 0 13px; }
+  section.home {
+    height: 108vw; }
+  section.home .content img {
+    top: 478px; } }
+
+@media (max-width: 990px) and (max-width: 952px) {
+  section.home {
+    height: 111vw; }
+  .proyectos-list .category form {
+    position: relative;
+    display: block; }
+  .proyectos-list .category form::before {
+    content: '';
+    background-image: url(../icons/flecha-blanca-abajo.svg);
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50; }
+  .proyectos-list .category select {
+    width: 100%;
+    background-color: var(--color-morado);
+    color: #fff;
+    font-family: var(--fuente-prompt);
+    font-weight: 500;
+    font-size: 20px;
+    padding: 11px 25px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    border: 0px solid #2D889F !important;
+    outline: none !important; }
+  .proyectos-list .category select option {
+    outline: none !important;
+    border: 0px solid #2D889F !important;
+    background-color: #fff;
+    color: var(--color-morado);
+    font-size: 20px;
+    font-family: var(--fuente-prompt);
+    font-weight: 500;
+    border: none !important; }
+  .proyectos-list .category ul {
+    display: none; } }
+
+@media (max-width: 990px) and (max-width: 890px) {
+  section.home .content img {
+    top: 524px; }
+  section.home {
+    height: 120vw; }
+  .mision-vision .content {
+    align-items: flex-start; } }
+
+@media (max-width: 990px) and (max-width: 848px) {
+  section.home {
+    height: 125vw; }
+  .services-info .info {
+    flex-direction: column-reverse; }
+  .services-info .info .part1, .services-info .info .part2 {
+    width: 100%; }
+  .services-info .info .part2 {
+    padding-left: 0px;
+    margin-bottom: 50px; }
+  .services-info .info .part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .services-info .info .part1 img:nth-child(1) {
+    display: none; }
+  .services-info .info .part1 img:nth-child(2) {
+    display: block; }
+  .services-info .info .part2 .btn {
+    display: none; }
+  .services-info .info .part1 a {
+    margin-top: 50px;
+    padding: 11px 25px;
+    text-decoration: none;
+    color: var(--color-morado);
+    display: flex;
+    align-items: center;
+    font-family: var(--fuente-prompt);
+    font-weight: 500;
+    font-size: 20px;
+    border: 2px solid var(--color-morado);
+    border-bottom: 4px solid var(--color-morado);
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s linear; } }
+
+@media (max-width: 990px) and (max-width: 790px) {
+  section.home {
+    height: 130vw; } }
 
 @media (max-width: 768px) {
   header::before {
@@ -2277,9 +2446,10 @@ section.servicios .part2 .btn {
   section.home .content {
     max-width: 452px; }
   section.home .content img {
-    top: 52%; }
+    width: 70.39vw;
+    top: 462px; }
   section.home {
-    height: 121vw; }
+    height: 130vw; }
   section.experiencias h2, section.servicios h2, section.proyectos h2, section.clientes h2, .mision-vision .part2 h3, section.valores h2, section.tarj-contacto .content h2 {
     font-size: 40px; }
   section.experiencias .info .card-info h3 {
@@ -2570,41 +2740,205 @@ section.servicios .part2 .btn {
   header nav .menu ul li.menu-responsive img {
     width: 35px; } }
 
+@media (max-width: 710px) {
+  .mision-vision .content {
+    flex-direction: column; }
+  section.experiencias .info {
+    flex-direction: column; }
+  .mision-vision .part1,
+  .mision-vision .part2 {
+    width: 100%; }
+  .mision-vision .part1 {
+    padding-right: 0px;
+    display: flex;
+    justify-content: center; }
+  .mision-vision .part2 {
+    padding-top: 50px;
+    padding-left: 0px; }
+  .mision-vision .part1 .content-img {
+    max-width: 80%; }
+  section.home .content {
+    padding-top: 253px; }
+  section.home .content img {
+    top: 470px; }
+  section.home {
+    height: 135vw; }
+  section.proyectos .slider-proyectos .item-proyectos {
+    margin: 0 40px; } }
+
+@media (max-width: 710px) and (max-width: 680px) {
+  section.home {
+    height: 140vw; } }
+
+@media (max-width: 630px) {
+  section.home .content {
+    padding-top: 213px; }
+  section.home .content img {
+    top: 470px; }
+  section.home .content img {
+    top: 448px; } }
+
+@media (max-width: 630px) and (max-width: 552px) {
+  section.home {
+    height: 145vw; }
+  footer .pie {
+    flex-direction: column; }
+  a.whatsapp {
+    right: 21px;
+    bottom: 58px; } }
+
+@media (max-width: 630px) and (max-width: 512px) {
+  section.home {
+    height: 150vw; } }
+
 @media (max-width: 1024px) and (min-height: 1000px) {
   section.home .content img {
-    top: 21%; } }
+    top: 285px; }
+  section.menupage {
+    padding: 58px 0; }
+  section.menupage.open {
+    padding: 100px 0; }
+  section.menupage .content ul li a {
+    font-size: 70px; } }
 
-@media (max-width: 425px) {
+@media (max-width: 642px) {
+  section.servicios .part2 {
+    padding-left: 0px; }
+  section.tarj-contacto .content {
+    flex-direction: column;
+    align-items: flex-start; }
+  section.tarj-contacto .content h2 {
+    padding-bottom: 30px; }
+  section.valores .content-valores {
+    flex-direction: column; }
+  section.servicios .part2 .item-servicios {
+    margin: 0 70px; }
+  section.servicios .part2 .item-servicios p {
+    font-size: 30px; }
+  section.servicios .part2 .item-servicios p::before {
+    width: 12.5px;
+    left: 21px;
+    top: 34px; }
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    display: none !important; } }
+
+@media (max-width: 600px) {
+  section.proyectos .slider-proyectos .item-proyectos .filtro {
+    display: none; }
+  section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next {
+    display: none !important; } }
+
+@media (max-width: 584px) {
+  .btn-contacto {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    background-color: var(--color-verde);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    box-shadow: 0px -2px 4px rgba(58, 42, 104, 0.22); }
+    .btn-contacto a {
+      font-family: var(--fuente-prompt);
+      color: var(--color-morado);
+      font-weight: 500;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      text-decoration: none; }
+      .btn-contacto a img {
+        margin-left: 10px;
+        margin-top: 3px; }
+  footer .pie {
+    padding-bottom: 60px; }
+  :root {
+    --marquee-elements-displayed2: 2.5; }
+  a.whatsapp {
+    right: 21px;
+    bottom: 96px; }
+  a.whatsapp img {
+    width: 45px; }
+  header nav {
+    align-items: flex-start; }
   header {
     padding: 28px 0; }
   header::before {
-    height: 96px; }
+    height: 89px; }
   header nav .logo img {
-    width: 157px; }
+    width: 180px; }
   header nav .menu ul li.menu-responsive img {
-    width: 23.9px; }
-  header nav .menu ul li.contacto a {
-    padding: 0px 18px;
-    font-size: 16px; }
+    width: 30.9px;
+    position: relative;
+    top: 3px; }
+  header nav .menu ul li.contacto {
+    display: none; }
   header nav .menu ul li.menu-responsive {
-    padding-left: 26px; }
+    padding-left: 0px; }
   header nav .menu ul li.contacto a img {
     margin-left: 6px;
     width: 10px; }
   section.home .content {
     padding-top: 135px;
+    max-width: 443px; }
+  section.home .content img {
+    top: 400px; } }
+
+@media (max-width: 552px) {
+  a.whatsapp {
+    right: 21px;
+    bottom: 58px; } }
+
+@media (max-width: 490px) {
+  :root {
+    --marquee-elements-displayed2: 2.2; }
+  section.clientes {
+    padding: 60px 0; }
+  section.home {
+    height: 140vw; }
+  section.home .content h1 {
+    font-size: 40px; }
+  section.home .content {
+    max-width: 352px; }
+  section.home .content img {
+    top: 328px; }
+  section.experiencias h2, section.servicios h2, section.proyectos h2, section.clientes h2, .mision-vision .part2 h3, section.valores h2, section.tarj-contacto .content h2 {
+    font-size: 30px;
+    line-height: 32px; }
+  section.home {
+    height: 145vw; } }
+
+@media (max-width: 425px) {
+  .mision-vision .part1 .content-img {
+    max-width: 100%; }
+  section.servicios .part2 .item-servicios p::before {
+    width: 12.5px;
+    left: 21px;
+    top: 28px; }
+  section.menupage {
+    background-image: url(../img/fondomenú_movil.jpg);
+    background-position: left top; }
+  section.interna {
+    background-image: url(../img/fondointerna_movil.jpg);
+    background-position: left top; }
+  section.contacto-page {
+    background-image: url(../img/fondocontacto_movil.jpg);
+    background-position: left top; }
+  section.home .content {
+    padding-top: 135px;
     max-width: 292px; }
   section.home .content h1 {
-    font-size: 32px; }
+    font-size: 40px; }
   section.home .marquee-with-options .text {
     font-size: 18px; }
   section.home .marquee-with-options .text a {
     margin: 0 8px; }
   section.home .content img {
     width: 81.4vw;
-    top: 35%; }
+    top: 328px; }
   section.home {
-    height: 150vw; }
+    height: 161vw; }
   section.experiencias h2, section.servicios h2, section.proyectos h2, section.clientes h2, .mision-vision .part2 h3, section.valores h2, section.tarj-contacto .content h2 {
     font-size: 30px;
     line-height: 32px; }
@@ -2661,9 +2995,6 @@ section.servicios .part2 .btn {
     margin-top: 22px; }
   footer .pie {
     flex-direction: column; }
-  a.whatsapp {
-    right: 18px;
-    bottom: 32px; }
   a.whatsapp img {
     width: 45px; }
   section.experiencias {
@@ -2699,7 +3030,7 @@ section.servicios .part2 .btn {
   .menu ul li.contacto {
     padding-left: 0; }
   .content-title h1 {
-    font-size: 32px; }
+    font-size: 40px; }
   .content-title {
     padding-top: 130px; }
   section.experiencias p, .content-title p, .mision-vision .part2 p, .services-info .info .part2 p, section.item-popup .content .parrafo-popup, section.contacto-page .container .content .part1 .info p {
@@ -2820,7 +3151,7 @@ section.servicios .part2 .btn {
     height: 13px;
     left: -21px; }
   section.contacto-page .container .content .part1 .info {
-    margin: 65px 0px 70px 25px; }
+    margin: 65px 0px 0px 25px; }
   section.contacto-page .container .content .part1 .info p {
     padding-right: 23px; }
   section.thanks-page .container .content h1 {
@@ -2842,7 +3173,15 @@ section.servicios .part2 .btn {
   section.thanks-page .container .content div {
     padding-left: 36px; } }
 
+@media (max-width: 405px) {
+  section.home {
+    height: 165vw; } }
+
 @media (max-width: 375px) {
   header nav .menu ul li.menu-responsive {
     padding-left: 16px;
     padding-right: 0; } }
+
+@media (max-width: 393px) {
+  section.home .content h1 {
+    font-size: 35px; } }
