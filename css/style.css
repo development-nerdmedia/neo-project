@@ -2441,7 +2441,7 @@ section.servicios .part2 .btn {
   header {
     padding: 30px 0; }
   header.sticky {
-    padding: 30px 0; }
+    padding: 25px 0; }
   section.home .content h1 {
     font-size: 50px; }
   section.home .content {
@@ -2864,9 +2864,9 @@ section.servicios .part2 .btn {
   header nav {
     align-items: flex-start; }
   header {
-    padding: 28px 0; }
+    padding: 25px 0; }
   header::before {
-    height: 89px; }
+    height: 73px; }
   header nav .logo img {
     width: 180px; }
   header nav .menu ul li.menu-responsive img {
