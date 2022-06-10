@@ -2152,7 +2152,8 @@ section.servicios .part2 .btn {
     padding: 43px 0; }
   section.menupage {
     padding: 58px 0; }
-  section.contacto-page {
+  section.contacto-page,
+  section.thanks-page {
     background-image: url(../img/fondo_contacto_tablet.jpg); }
   section.servicios .part1 a {
     padding: 11px 14px; }
@@ -2922,7 +2923,7 @@ section.servicios .part2 .btn {
   section.interna {
     background-image: url(../img/fondointerna_movil.jpg);
     background-position: left top; }
-  section.contacto-page {
+  section.contacto-page, section.thanks-page {
     background-image: url(../img/fondocontacto_movil.jpg);
     background-position: left top; }
   section.home .content {
@@ -2966,8 +2967,8 @@ section.servicios .part2 .btn {
     font-size: 13px; }
   section.servicios .slick-dots li.slick-active button:before {
     content: "•";
-    font-size: 6.5px;
-    top: 4px; }
+    font-size: 6.8px;
+    top: 4.57px; }
   section.servicios .part2 .slick-slider {
     margin-bottom: 80px; }
   section.proyectos .slider-proyectos .item-proyectos .filtro {
@@ -2985,8 +2986,8 @@ section.servicios .part2 .btn {
     opacity: 1; }
   section.proyectos .slick-dots li.slick-active button:before {
     content: "•";
-    font-size: 6.5px;
-    top: 4px; }
+    font-size: 6.8px;
+    top: 4.57px; }
   section.proyectos .slick-dots {
     bottom: -50px; }
   :root {

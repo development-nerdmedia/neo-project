@@ -2801,7 +2801,8 @@ section.servicios .part2 .btn{
     section.menupage{
         padding: 58px 0;
     }
-    section.contacto-page{
+    section.contacto-page,
+    section.thanks-page{
         background-image: url(../img/fondo_contacto_tablet.jpg);
     }
     section.servicios .part1 a{
@@ -3839,7 +3840,7 @@ section.servicios .part2 .btn{
         background-image: url(../img/fondointerna_movil.jpg);
         background-position: left top;
     }
-    section.contacto-page{
+    section.contacto-page, section.thanks-page{
         background-image: url(../img/fondocontacto_movil.jpg);
         background-position: left top;
     }
@@ -3901,8 +3902,8 @@ section.servicios .part2 .btn{
     }
     section.servicios .slick-dots li.slick-active button:before{
         content: "•";
-        font-size: 6.5px;
-        top: 4px;
+        font-size: 6.8px;
+        top: 4.57px;
     }
     section.servicios .part2 .slick-slider {
         margin-bottom: 80px;
@@ -3930,8 +3931,8 @@ section.servicios .part2 .btn{
     }  
     section.proyectos .slick-dots li.slick-active button:before{
         content: "•";
-        font-size: 6.5px;
-        top: 4px;
+        font-size: 6.8px;
+        top: 4.57px;
     }
     section.proyectos .slick-dots{
         bottom: -50px;
