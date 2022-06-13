@@ -213,7 +213,7 @@ header::before {
   position: fixed;
   left: 0;
   top: 0;
-  height: 96px;
+  height: 107px;
   width: 100%;
   background: linear-gradient(90deg, #2D889F 35.66%, #38326C 114.11%);
   z-index: -2;
@@ -780,7 +780,7 @@ footer {
     footer .content div:nth-child(2) p:first-child {
       padding-bottom: 0; }
     footer .content div:nth-child(3) {
-      max-width: 293px; }
+      max-width: 296px; }
   footer .pie {
     position: relative;
     padding-top: 10px;
@@ -2018,7 +2018,7 @@ section.servicios .part2 .btn {
   footer .content div:nth-child(1) {
     max-width: 374px; }
   footer .content div:nth-child(3) {
-    max-width: 237px; } }
+    max-width: 263px; } }
 
 @media (max-width: 1500px) {
   section.home .content img {
@@ -2033,6 +2033,10 @@ section.servicios .part2 .btn {
     margin: 0 20px; } }
 
 @media (max-width: 1280px) {
+  footer .content div:nth-child(3) {
+    max-width: 100%; }
+  footer .content div:nth-child(1) {
+    max-width: 100%; }
   a.whatsapp {
     right: 96px; }
   footer .content div {
