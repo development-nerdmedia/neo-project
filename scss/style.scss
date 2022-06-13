@@ -73,6 +73,19 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .logo{
+            lottie-player{
+                display: none;
+            }
+            a:hover{
+                img{
+                    display: none;
+                }
+                lottie-player{
+                    display: block;
+                }
+            }
+        }
         .menu{
             display: flex;
             ul{
@@ -1167,7 +1180,7 @@ section.valores{
             display: flex;
             align-items: center;
             flex-direction: column;
-            img{
+            lottie-player{
                 transition: 0.2s linear;
                 &:hover{
                     transform: translatey(-10px);
@@ -2374,6 +2387,7 @@ section.servicios .part2 .btn{
     }
     section.servicios .part2 .item-servicios p{
         padding: 20px 49px;
+        font-size: 25px;
     }
     header{
         padding: 25px 0;
@@ -2414,8 +2428,9 @@ section.servicios .part2 .btn{
     section.contacto-page .container .content .part1 .info p{
         font-size: 20px;
     }
-    section.valores .content-valores div img{
-        width: 200px;
+    section.valores .content-valores div img,
+    section.valores .content-valores div lottie-player{
+        width: 200px !important;
     }
     section.valores .content-valores div p{
         font-size: 25px;    
@@ -2624,6 +2639,60 @@ section.servicios .part2 .btn{
     }
 }
 
+@media (max-width: 1355px) {
+    section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next, section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next, section.item-popup .content .slider-fotos .slick-next, section.item-popup .content .slider-fotos .slick-prev {
+        width: 45px;
+    }
+    section.servicios .part2 .item-servicios p {
+        font-size: 25px;
+    }
+    .servicios-grid .servicios-item p {
+        font-size: 25px;
+    }
+    .servicios-grid .servicios-item p::before {
+        left: -28px;
+        top: 7px;
+    }
+    .proyectos-list .items-category .item-category .info h4 {
+        font-size: 25px;
+    }       
+    .proyectos-list .items-category .item-category .info p {
+        font-size: 22px;
+    }
+    .proyectos-list .items-category .item-category .info h4::before{
+        left: -26px;
+    }
+    @media (max-height: 610px) {
+        section.item-popup .content .info {
+            width: 48%;
+        }
+        section.item-popup .content .slider-fotos .slick-prev {
+            left: -62px;
+        }
+        section.item-popup .content .slider-fotos .slick-next {
+            right: -62px;
+        }
+        section.item-popup .content h4{
+            font-size: 30px;
+        }
+        section.item-popup .content p {
+            font-size: 25px;
+        }
+        section.item-popup{
+            padding: 50px 0;
+        }
+        section.contacto-page .container .content .part1 form{
+            margin-top: 25px;
+        }
+        section.contacto-page .container .content .part1 form fieldset .form-group textarea{
+            height: 100px;
+        }
+        section.contacto-page .container .content .part1 form fieldset .form-group input{
+            height: 59px;
+        }
+    }
+}
+
 @media (max-width: 1280px) {
     footer .content div:nth-child(3){
         max-width: 100%;
@@ -2748,9 +2817,9 @@ section.servicios .part2 .btn{
         padding-top: 272px;
         max-width: 538px;
     }
-    section.home .content img{
-        top: 285px;
-    }
+    // section.home .content img{
+    //     top: 285px;
+    // }
 }
 
 @media (max-width: 1090px) {
@@ -2798,6 +2867,21 @@ section.servicios .part2 .btn{
 }
 
 @media (max-width: 1024px) {
+    section.contacto-page .container .content .part1 form button::before{
+        transition: 0s linear;        
+        background-color: none;
+    }
+    section.contacto-page .container .content .part1 form button:focus{
+        color: #fff;
+        background-color: var(--color-morado);
+    }
+    section.thanks-page .container .content a:focus{
+        color: #fff;
+        background-color: var(--color-morado);
+    }
+    section.thanks-page .container .content a::before{
+        transition: 0s linear; 
+    }
     section.menupage .content ul li a{
         font-size: 50px;
     }
@@ -2908,6 +2992,7 @@ section.servicios .part2 .btn{
     }
     section.proyectos .slider-proyectos .slick-prev {
         right: 120px;
+        right: 12vw;
     }
     section.proyectos .slider-proyectos .slick-prev,
     section.proyectos .slider-proyectos .slick-next{
@@ -2971,8 +3056,9 @@ section.servicios .part2 .btn{
     .mision-vision .part2 {
         padding-left: 50px;
     }
-    section.valores .content-valores div img {
-        width: 172px;
+    section.valores .content-valores div img,    
+    section.valores .content-valores div lottie-player {
+        width: 172px !important;
     }
     .marquee-content{
         font-size: 60px;
@@ -3126,7 +3212,10 @@ section.servicios .part2 .btn{
             display: none;
         }
     }
-    @media (max-width: 890px) {    
+    @media (max-width: 890px) {   
+        section.proyectos .slider-proyectos .slick-prev{
+            right: 13vw;
+        } 
         section.home .content img {
             top: 524px;
         }
@@ -3246,10 +3335,10 @@ section.servicios .part2 .btn{
     }
     section.servicios .part2 {
         width: 100%;
-        padding-left: 30px;
+        // padding-left: 30px;
     }
     section.servicios .part2 .item-servicios {
-        margin: 0 10px;
+        margin: 0 12px;
     }
     section.servicios .part2 .item-servicios p::before{
         width: 12.5px; 
@@ -3327,6 +3416,11 @@ section.servicios .part2 .btn{
     }
     section.servicios .part2 .slick-slider{
         margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        .slick-list{
+            max-width: 90%;
+        }
     }
     section.proyectos .slider-proyectos .item-proyectos {
         margin: 0 50px;
@@ -3379,8 +3473,9 @@ section.servicios .part2 .btn{
     section.valores h2{
         text-align: start;
     }
-    section.valores .content-valores div img {
-        width: 150px;
+    section.valores .content-valores div img,    
+    section.valores .content-valores div lottie-player {
+        width: 150px !important;
     }
     .servicios-grid .servicios-cards{
         grid-template-columns: repeat(1, 1fr);
@@ -3663,9 +3758,9 @@ section.servicios .part2 .btn{
 }
 
 @media (max-width: 1024px) and (min-height: 1000px) {
-    section.home .content img {
-        top: 285px;
-    }
+    // section.home .content img {
+    //     top: 285px;
+    // }
     section.menupage{
         padding: 58px 0;
     }
@@ -3700,6 +3795,14 @@ section.servicios .part2 .btn{
     section.servicios .part2 .item-servicios p{
         font-size: 30px;
     }
+    section.servicios .part2 .slick-slider .slick-list {
+        max-width: 100%;
+    }
+    section.servicios .part2 .slick-slider {
+        margin-bottom: 50px;
+        display: block;
+        justify-content: initial;
+    }
     section.servicios .part2 .item-servicios p::before {
         width: 12.5px;
         left: 21px;
@@ -3730,19 +3833,17 @@ section.servicios .part2 .btn{
         justify-content: center;
         align-items: center;
         z-index: 5;
+        font-family: var(--fuente-prompt);
+        color: var(--color-morado);
+        font-weight: 500;
+        font-size: 18px;
+        display: flex;  
+        align-items: center;
         box-shadow: 0px -2px 4px rgba(58, 42, 104, 0.22);
-        a{
-            font-family: var(--fuente-prompt);
-            color: var(--color-morado);
-            font-weight: 500;
-            font-size: 18px;
-            display: flex;  
-            align-items: center;
-            text-decoration: none;
-            img{
-                margin-left: 10px;
-                margin-top: 3px;
-            }
+        text-decoration: none;
+        img{
+            margin-left: 10px;
+            margin-top: 3px;
         }
     }
     footer .pie {
@@ -3895,24 +3996,27 @@ section.servicios .part2 .btn{
     }    
     section.servicios .slick-dots li button:before {
         // color: #fff !important;
-        transform: scale(2.5) !important;
+        // transform: scale(2.5) !important;
         opacity: 1;
     } 
-    section.servicios .slick-dots li.slick-active button:before {
-        color: var(--color-morado) !important;
-        opacity: 1;
-    }  
+    // section.servicios .slick-dots li.slick-active button:before {
+    //     color: var(--color-morado) !important;
+    //     opacity: 1;
+    // }  
     .slick-dots li button:before{
-        content: '○';
-        font-size: 13px;
+        content: url(../icons/ellipse.svg);
+        // font-size: 13px;
     }
     section.servicios .slick-dots li.slick-active button:before{
-        content: "•";
-        font-size: 6.8px;
-        top: 4.57px;
+        content: url(../icons/ellipse-active.svg);
+        // font-size: 6.8px;
+        // top: 4.57px;
     }
     section.servicios .part2 .slick-slider {
         margin-bottom: 80px;
+    }
+    section.servicios .part2 .slick-slider .slick-dots{
+        bottom: -40px;
     }
     section.proyectos .slider-proyectos .item-proyectos{
         .filtro{
@@ -3928,17 +4032,17 @@ section.servicios .part2 .btn{
     /***/
     section.proyectos .slick-dots li button:before {
         // color: #fff !important;
-        transform: scale(2.5) !important;
+        // transform: scale(2.5) !important;
         opacity: 1;
     } 
-    section.proyectos .slick-dots li.slick-active button:before {
-        color: var(--color-morado) !important;
-        opacity: 1;
-    }  
+    // section.proyectos .slick-dots li.slick-active button:before {
+    //     color: var(--color-morado) !important;
+    //     opacity: 1;
+    // }  
     section.proyectos .slick-dots li.slick-active button:before{
-        content: "•";
-        font-size: 6.8px;
-        top: 4.57px;
+        content: url(../icons/ellipse-active.svg);
+        // font-size: 6.8px;
+        // top: 4.57px;
     }
     section.proyectos .slick-dots{
         bottom: -50px;

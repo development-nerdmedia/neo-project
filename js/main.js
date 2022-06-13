@@ -217,9 +217,9 @@ MyApp = {
             var categoria2 = "";
             var categoriaServices = localStorage.getItem("ItemServices");
             var selection = document.getElementById("categoryPortfolio");
-            const options = selection.options[selection.selectedOptions].value;
+            // const options = selection.options[selection.selectedOptions].value;
             console.log(categoriaServices); 
-            console.log(options); 
+            // console.log(options);    
             select.addEventListener('change', function () {
                 var selectedOption = this.options[select.selectedIndex];
                 var cateSelect = selectedOption.text.trimStart().trimEnd();
@@ -283,21 +283,28 @@ $('.slider-servicios').slick({
         {
             breakpoint: 1601,
             settings: {
-                slidesToShow: 1.94,
-                slidesToScroll: 2,
+                slidesToShow: 3,/* 1.94 */
+                slidesToScroll: 1,
+            }
+        },        
+        {
+            breakpoint: 1440,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
         },
         {
             breakpoint: 1025,
             settings: {
-                slidesToShow: 1.99,
-                slidesToScroll: 2,
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
         },
         {
             breakpoint: 769,
             settings: {
-                slidesToShow: 2.3,
+                slidesToShow: 2,
                 slidesToScroll: 1
             }
         },
