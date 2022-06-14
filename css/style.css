@@ -1493,13 +1493,8 @@ section.contacto-page {
                 font-family: var(--fuente-barlow);
                 font-size: 18px;
                 font-weight: 400;
-                cursor: text;
                 transition: 0.1s linear;
                 z-index: 1; }
-              section.contacto-page .container .content .part1 form fieldset .form-group input:valid ~ label, section.contacto-page .container .content .part1 form fieldset .form-group input:focus ~ label, section.contacto-page .container .content .part1 form fieldset .form-group textarea:valid ~ label, section.contacto-page .container .content .part1 form fieldset .form-group textarea:focus ~ label {
-                font-size: 14px;
-                left: 20px;
-                top: 6px; }
               section.contacto-page .container .content .part1 form fieldset .form-group textarea {
                 font-family: var(--fuente-barlow);
                 margin-bottom: 50px;
@@ -1514,6 +1509,11 @@ section.contacto-page {
                 padding-top: 22px; }
                 section.contacto-page .container .content .part1 form fieldset .form-group textarea:focus {
                   outline-style: none; }
+            section.contacto-page .container .content .part1 form fieldset .form-group.focusin label,
+            section.contacto-page .container .content .part1 form fieldset .form-group.ok label {
+              font-size: 14px;
+              left: 20px;
+              top: 6px; }
           section.contacto-page .container .content .part1 form button {
             padding: 11px 25px;
             font-family: var(--fuente-prompt);
@@ -3202,6 +3202,10 @@ section.servicios .part2 .btn {
     height: 57px; }
   section.contacto-page .container .content .part1 form fieldset .form-group .form-label {
     top: 16px; }
+  section.contacto-page .container .content .part1 form fieldset .form-group.focusin label {
+    font-size: 14px;
+    left: 20px;
+    top: 6px; }
   section.contacto-page .container .content .part1 form {
     width: 100%;
     margin-right: 11px; }

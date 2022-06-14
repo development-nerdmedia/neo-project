@@ -1902,15 +1902,16 @@ section.contacto-page{
                                 color: var(--color-morado);
                                 font-family: var(--fuente-barlow);
                                 font-size: 18px;
-                                font-weight: 400;                                cursor: text;
+                                font-weight: 400;                                
+                                // cursor: text;
                                 transition: 0.1s linear;
                                 z-index: 1;
-                            }
-                            input:valid ~ label, input:focus ~ label, textarea:valid ~ label, textarea:focus ~ label {
-                                font-size: 14px;
-                                left: 20px;
-                                top: 6px;
-                            }
+                            }                            
+                            // input:valid ~ label, input:focus ~ label, textarea:valid ~ label, textarea:focus ~ label {
+                            //     font-size: 14px;
+                            //     left: 20px;
+                            //     top: 6px;
+                            // }
                             textarea {
                                 font-family: var(--fuente-barlow);
                                 margin-bottom: 50px;
@@ -1927,6 +1928,12 @@ section.contacto-page{
                                     outline-style: none;
                                   } 
                             }
+                        }
+                        .form-group.focusin label,
+                        .form-group.ok label{
+                            font-size: 14px;
+                            left: 20px;
+                            top: 6px;
                         }
                     }
                     button{
@@ -4266,6 +4273,11 @@ section.servicios .part2 .btn{
     }
     section.contacto-page .container .content .part1 form fieldset .form-group .form-label{
         top: 16px;
+    }    
+    section.contacto-page .container .content .part1 form fieldset .form-group.focusin label{
+        font-size: 14px;
+        left: 20px;
+        top: 6px;
     }
     section.contacto-page .container .content .part1 form {
         width: 100%;

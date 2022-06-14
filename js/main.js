@@ -50,6 +50,7 @@ MyApp = {
     },
     categorias: {
         init: function () {
+            
             document.querySelector("#categorias2 a").classList.add("select");
             var categoriaServices = localStorage.getItem("ItemServices").toLowerCase();
             if (categoriaServices == "none") {
@@ -88,6 +89,13 @@ MyApp = {
                     $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 6).show(0);
                 });
             });
+
+            var nameCategory = $(`.item-category[data-categoria="${categoryMain}"]`).attr("data-categoria");
+            console.log(nameCategory);
+            localStorage.setItem('ItemCategory', `${nameCategory}`);
+            var select = $(`#categoryPortfolio`)
+            $("#categoryPortfolio").val(`${nameCategory}`)
+
             $("#cargarMasModulo").click(function (e) {
                 e.preventDefault();
                 const categoryMain2 = document.querySelector('#categorias2 a.select').innerHTML;
@@ -167,38 +175,43 @@ MyApp = {
     },
     contador: {
         init: function () {
-            const numero = document.querySelector(".experiencias .numero h3")
-            const numero1 = document.querySelector(".experiencias .numero h4").textContent
+            
+            const inicio = document.querySelectorAll('.card-info h3');
+            const meta = document.querySelectorAll('.card-info .numero h4');
+
+            const numero = inicio[0];
+            const numero1 = meta[0].textContent;
             let cantidad = 0;
             let tiempo = setInterval(() => {
                 cantidad += 9;
                 numero.textContent = cantidad
                 if (cantidad >= numero1) {
                     clearInterval(tiempo)
+                    numero.textContent = numero1
                 }
             }, 120)
-            const numero2 = document.querySelector(".experiencias .numero h3.mil1")
-            const numero3 = document.querySelector(".experiencias .numero h4.mil").textContent
+            const numero2 = inicio[1]
+            const numero3 = meta[1].textContent;
             let cantidad1 = 0;
             let tiempo1 = setInterval(() => {
                 cantidad1 += 9;
                 numero2.textContent = cantidad1
                 if (cantidad1 >= numero3) {
                     clearInterval(tiempo1)
-                    numero2.textContent = 10000
+                    numero2.textContent = numero3
                 }
             }, 2)
-            const numero4 = document.querySelector(".experiencias .numero h3.tres1")
-            const numero5 = document.querySelector(".experiencias .numero h4.tres").textContent
+            const numero4 = inicio[2]
+            const numero5 = meta[2].textContent;
             let cantidad2 = 0;
             let tiempo2 = setInterval(() => {
                 cantidad2 += 9;
                 numero4.textContent = cantidad2
                 if (cantidad2 >= numero5) {
                     clearInterval(tiempo2)
-                    numero4.textContent = 3000
+                    numero4.textContent = numero5
                 }
-            }, 15)
+            }, 15);
         }
     },
     internaBtn: {
@@ -236,8 +249,59 @@ MyApp = {
                 }
             });
         }
-    }
+    },
+    labelcontactopage: {
+        init: function () {
+            document.addEventListener("click", function (e) {
+                if (e.target.closest(".formname")) {
+                    document.querySelector(".formname").classList.add("focusin");
+                } else {
+                    document.querySelector(".formname").classList.remove("focusin");
+                    nombre = document.getElementById('name').value;
+                    if (!nombre) {
+                        document.querySelector(".formname").classList.remove("ok");
+                    } else {
+                        document.querySelector(".formname").classList.add("ok");
+                    }
+                }
+                if (e.target.closest(".formcorreo")) {
+                    document.querySelector(".formcorreo").classList.add("focusin");
+                } else {
+                    document.querySelector(".formcorreo").classList.remove("focusin");
+                    email = document.getElementById('email').value;
+                    if (!email) {
+                        document.querySelector(".formcorreo").classList.remove("ok");
+                    } else {
+                        document.querySelector(".formcorreo").classList.add("ok");
+                    }
+                }
+                if (e.target.closest(".formasunto")) {
+                    document.querySelector(".formasunto").classList.add("focusin");
+                } else {
+                    document.querySelector(".formasunto").classList.remove("focusin");
+                    asunto = document.getElementById('asunto').value;
+                    if (!asunto) {
+                        document.querySelector(".formasunto").classList.remove("ok");
+                    } else {
+                        document.querySelector(".formasunto").classList.add("ok");
+                    }
+                }
+                if (e.target.closest(".formtextarea")) {
+                    document.querySelector(".formtextarea").classList.add("focusin");
+                } else {
+                    document.querySelector(".formtextarea").classList.remove("focusin");
+                    textarea = document.getElementById('textarea').value;
+                    if (!textarea) {
+                        document.querySelector(".formtextarea").classList.remove("ok");
+                    } else {
+                        document.querySelector(".formtextarea").classList.add("ok");
+                    }
+                }
+            })
+        }
+    }    
 }
+
 if ($('header').length > 0) {
     MyApp.scroll.init();
 }
@@ -247,7 +311,7 @@ if ($('.slider ').length > 0) {
 if ($('.sliderClientes ').length > 0) {
     MyApp.sliderClientes.init();
 }
-if ($('#categorias2 ').length > 0) {
+if ($('.category').length > 0) {
     MyApp.categorias.init();
     MyApp.popUp.init();
 }
@@ -262,6 +326,9 @@ if ($('.services-info ').length > 0) {
 }
 if ($('.category form').length > 0) {
     MyApp.select.init();
+}
+if ($('.contacto-page ').length > 0) {
+    MyApp.labelcontactopage.init();
 }
 
 document.addEventListener("click", (e) => {
