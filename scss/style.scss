@@ -1974,6 +1974,9 @@ section.contacto-page{
                         }
                     }
                     button{
+                        border-radius: 0px;
+                        -webkit-border-radius: 0;
+                        -webkit-appearance: none;
                         padding: 11px 25px;
                         font-family: var(--fuente-prompt);
                         font-weight: 500;
