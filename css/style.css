@@ -1501,7 +1501,10 @@ section.contacto-page {
                 background: transparent;
                 padding: 0 20px;
                 padding-top: 8px;
-                border: 2px solid var(--color-morado); }
+                border: 2px solid var(--color-morado);
+                border-radius: 0px;
+                -webkit-border-radius: 0;
+                -webkit-appearance: none; }
                 section.contacto-page .container .content .part1 form fieldset .form-group input:focus {
                   outline-style: none; }
               section.contacto-page .container .content .part1 form fieldset .form-group .form-label {
@@ -1525,7 +1528,10 @@ section.contacto-page {
                 border: 2px solid var(--color-morado);
                 background: transparent;
                 padding: 0 20px;
-                padding-top: 22px; }
+                padding-top: 22px;
+                border-radius: 0px;
+                -webkit-border-radius: 0;
+                -webkit-appearance: none; }
                 section.contacto-page .container .content .part1 form fieldset .form-group textarea:focus {
                   outline-style: none; }
             section.contacto-page .container .content .part1 form fieldset .form-group.focusin label,
