@@ -1006,7 +1006,7 @@ section.valores {
     .servicios-grid .servicios-item p {
       font-family: var(--fuente-barlow);
       font-weight: 500;
-      font-size: 35px;
+      font-size: 30px;
       color: #fff;
       position: relative; }
       .servicios-grid .servicios-item p::before {
@@ -1019,7 +1019,7 @@ section.valores {
         background-size: 100%;
         background-repeat: no-repeat;
         left: -31px;
-        top: 13px; }
+        top: 11px; }
     .servicios-grid .servicios-item:hover {
       transform: translateY(-5px); }
 
@@ -3258,7 +3258,8 @@ section.servicios .part2 .btn {
   section.item-popup .content .slider-fotos .item-foto {
     margin: 0 5px; }
   section.item-popup .content .parrafo-popup {
-    padding-left: 5px; }
+    padding-left: 5px;
+    text-align: center; }
   section.item-popup .content .info .text {
     padding-left: 30px; }
   section.contacto-page .container .top a img {

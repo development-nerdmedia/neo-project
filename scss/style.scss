@@ -1297,7 +1297,7 @@ section.valores{
         p{            
             font-family: var(--fuente-barlow);
             font-weight: 500;
-            font-size: 35px;
+            font-size: 30px;
             color: #fff;
             position: relative;
             &::before{
@@ -1310,7 +1310,7 @@ section.valores{
                 background-size: 100%;
                 background-repeat: no-repeat;
                 left: -31px;
-                top: 13px;
+                top: 11px;
             }
         }
         &:hover{
@@ -4057,6 +4057,7 @@ section.servicios .part2 .btn{
 }
 
 @media (max-width: 425px) {    
+
     .mision-vision .part1 .content-img {
         max-width: 100%;
     }
@@ -4377,6 +4378,7 @@ section.servicios .part2 .btn{
     }
     section.item-popup .content .parrafo-popup{
         padding-left: 5px;
+        text-align: center;
     }
     section.item-popup .content .info .text {
         padding-left: 30px;
