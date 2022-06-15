@@ -68,7 +68,10 @@ header {
     header nav .logo a:hover img {
       display: none; }
     header nav .logo a:hover lottie-player {
-      display: block; }
+      display: block;
+      position: relative;
+      top: -2px;
+      left: -1px; }
     header nav .menu {
       display: flex; }
       header nav .menu ul {
@@ -437,7 +440,7 @@ section.servicios {
     align-items: center; }
   section.servicios .part1 {
     width: 35%;
-    transform: translateY(-86px); }
+    transform: translateY(-54px); }
     section.servicios .part1 .container {
       margin-right: 0;
       width: 65%; }
@@ -537,6 +540,8 @@ section.servicios {
       background-size: 100% !important;
       width: 54px;
       height: 63px; }
+      section.servicios .part2 .slick-prev:hover {
+        background-image: url(../icons/flechaizqhover.svg); }
     section.servicios .part2 .slick-next {
       left: -18.5vw;
       background-image: url(../icons/flecha-de.svg);
@@ -544,10 +549,12 @@ section.servicios {
       background-size: 100% !important;
       width: 54px;
       height: 63px; }
+      section.servicios .part2 .slick-next:hover {
+        background-image: url(../icons/flechaderhover.svg); }
     section.servicios .part2 .slick-prev:before, section.servicios .part2 .slick-next:before {
       display: none; }
     section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
-      top: 70%; }
+      top: 76%; }
     section.servicios .part2 .slick-arrow.slick-disabled {
       opacity: 0.5; }
 
@@ -640,6 +647,8 @@ section.proyectos {
       background-size: 100% !important;
       width: 54px;
       height: 63px; }
+      section.proyectos .slider-proyectos .slick-prev:hover {
+        background-image: url(../icons/flechaizqhover.svg); }
     section.proyectos .slider-proyectos .slick-next {
       right: 235px;
       background-image: url(../icons/flecha-de.svg);
@@ -647,6 +656,8 @@ section.proyectos {
       background-size: 100% !important;
       width: 54px;
       height: 63px; }
+      section.proyectos .slider-proyectos .slick-next:hover {
+        background-image: url(../icons/flechaderhover.svg); }
     section.proyectos .slider-proyectos .slick-prev:before, section.proyectos .slider-proyectos .slick-next:before {
       display: none; }
     section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next {
@@ -1384,12 +1395,16 @@ section.item-popup {
         background-size: 100% !important;
         width: 54px;
         height: 63px; }
+        section.item-popup .content .slider-fotos .slick-prev:hover {
+          background-image: url(../icons/flechaizqhover.svg); }
       section.item-popup .content .slider-fotos .slick-next {
         background-image: url(../icons/flecha-de-blanco.svg);
         background-repeat: no-repeat !important;
         background-size: 100% !important;
         width: 54px;
         height: 63px; }
+        section.item-popup .content .slider-fotos .slick-next:hover {
+          background-image: url(../icons/flechaderhover.svg); }
       section.item-popup .content .slider-fotos .slick-prev:before, section.item-popup .content .slider-fotos .slick-next:before {
         display: none; }
       section.item-popup .content .slider-fotos .slick-prev {
@@ -1398,6 +1413,10 @@ section.item-popup {
         right: -91px; }
       section.item-popup .content .slider-fotos .slick-prev.slick-disabled, section.item-popup .content .slider-fotos .slick-next.slick-disabled {
         opacity: 0.5; }
+      section.item-popup .content .slider-fotos .slick-prev.slick-disabled:hover {
+        background-image: url(../icons/flecha-izq-blanco.svg); }
+      section.item-popup .content .slider-fotos .slick-next.slick-disabled:hover {
+        background-image: url(../icons/flecha-de-blanco.svg); }
     section.item-popup .content .parrafo-popup {
       padding-top: 15px;
       font-family: var(--fuente-barlow);
@@ -1413,7 +1432,7 @@ section.contacto-page {
   height: 100vh;
   padding: 80px 0;
   position: relative;
-  background-image: url(../img/fondo-contacto_1.jpg);
+  background-image: url(../img/fondo_contacto_2.jpg);
   background-repeat: no-repeat;
   background-position: top; }
   section.contacto-page .fondo {
@@ -1597,7 +1616,7 @@ section.thanks-page {
   height: 100vh;
   padding: 80px 0;
   position: relative;
-  background-image: url(../img/fondo-contacto_1.jpg);
+  background-image: url(../img/fondo_contacto_2.jpg);
   background-repeat: no-repeat;
   background-position: top; }
   section.thanks-page .fondo {
@@ -1705,76 +1724,7 @@ section.thanks-page {
             animation: desplazamiento 1.3s infinite; }
 
 section.menupage {
-  background-color: #fff;
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  z-index: 99;
-  padding: 100px 0;
-  overflow: hidden;
-  background-image: url(../img/fondo-menu.jpg);
-  background-repeat: no-repeat;
-  background-position: top;
-  transition: 0.3s linear;
-  transform: translateX(100%); }
-  section.menupage .container {
-    position: relative;
-    height: 100%;
-    width: 85%; }
-  section.menupage .top {
-    position: absolute;
-    right: 0; }
-    section.menupage .top button {
-      background-color: transparent;
-      border: none; }
-  section.menupage .content {
-    display: flex;
-    align-items: center;
-    height: 100%; }
-    section.menupage .content ul li {
-      margin-left: 42px;
-      list-style: none;
-      padding: 20px 0;
-      width: fit-content; }
-      section.menupage .content ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-family: var(--fuente-barlow);
-        font-weight: 900;
-        font-size: 70px;
-        position: relative; }
-        section.menupage .content ul li a:hover {
-          color: var(--color-morado); }
-        section.menupage .content ul li a::before {
-          content: '';
-          background-image: url(../icons/flecha-morada.svg);
-          width: 29.5px;
-          height: 31px;
-          position: absolute;
-          background-size: 100%;
-          background-repeat: no-repeat;
-          left: -40px;
-          top: 50%;
-          transform: translateY(-40%); }
-    section.menupage .content ul li.contacto {
-      margin-left: 0px;
-      padding-top: 60px; }
-      section.menupage .content ul li.contacto a {
-        font-family: var(--fuente-prompt);
-        font-weight: 500;
-        font-size: 50px;
-        color: var(--color-morado);
-        border: 3px solid var(--color-morado);
-        border-bottom: 8px solid var(--color-morado);
-        padding: 11px 25px;
-        display: flex;
-        align-items: center; }
-        section.menupage .content ul li.contacto a img {
-          margin-left: 10px;
-          margin-top: 9px;
-          width: 30px; }
-      section.menupage .content ul li.contacto a::before {
-        display: none; }
+  display: none; }
 
 section.menupage.open {
   transform: translateX(0%); }
@@ -1908,7 +1858,8 @@ section.servicios .part2 .btn {
     padding: 50px 0;
     padding-bottom: 100px; }
   section.servicios .part1 {
-    transform: translateY(-65px); }
+    transform: translateY(-54px);
+    /*65*/ }
   section.servicios .part1 a,
   section.proyectos .btn a,
   section.tarj-contacto .content a,
@@ -1922,7 +1873,7 @@ section.servicios .part2 .btn {
   section.thanks-page .container .content p {
     font-size: 40px; }
   section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
-    top: 70%; }
+    top: 78%; }
   section.clientes {
     padding: 100px 0; }
   section.experiencias .info .card-info h3 {
@@ -2040,7 +1991,13 @@ section.servicios .part2 .btn {
   section.servicios .part2 .item-servicios {
     margin: 0 20px; } }
 
+@media (max-width: 1500px) and (max-width: 1439px) {
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 70%; } }
+
 @media (max-width: 1355px) {
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 71.5%; }
   section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next, section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next, section.item-popup .content .slider-fotos .slick-next, section.item-popup .content .slider-fotos .slick-prev {
     width: 45px; }
   section.servicios .part2 .item-servicios p {
@@ -2078,6 +2035,8 @@ section.servicios .part2 .btn {
     height: 59px; } }
 
 @media (max-width: 1280px) {
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 72.5%; }
   footer .content div:nth-child(3) {
     max-width: 100%; }
   footer .content div:nth-child(1) {
@@ -2092,6 +2051,8 @@ section.servicios .part2 .btn {
     height: 80vw; }
   header nav .logo img {
     width: 245px; }
+  header nav .logo lottie-player {
+    width: 245px !important; }
   section.home .content img {
     top: 260px; }
   section.home {
@@ -2140,7 +2101,13 @@ section.servicios .part2 .btn {
   section.home {
     height: 81vw; } }
 
+@media (max-width: 1220px) {
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 74%; } }
+
 @media (max-width: 1160px) {
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 76%; }
   section.experiencias .info .card-info:nth-child(1) {
     width: 142.5px; }
   section.experiencias .info .card-info:nth-child(2) {
@@ -2162,6 +2129,81 @@ section.servicios .part2 .btn {
     max-width: 538px; } }
 
 @media (max-width: 1090px) {
+  section.menupage {
+    display: block;
+    background-color: #fff;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+    padding: 100px 0;
+    overflow: hidden;
+    background-image: url(../img/fondo-menu.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    transition: 0.3s linear;
+    transform: translateX(100%); }
+    section.menupage .container {
+      position: relative;
+      height: 100%;
+      width: 85%; }
+    section.menupage .top {
+      position: absolute;
+      right: 0; }
+      section.menupage .top button {
+        background-color: transparent;
+        border: none; }
+    section.menupage .content {
+      display: flex;
+      align-items: center;
+      height: 100%; }
+      section.menupage .content ul li {
+        margin-left: 42px;
+        list-style: none;
+        padding: 20px 0;
+        width: fit-content; }
+        section.menupage .content ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-family: var(--fuente-barlow);
+          font-weight: 900;
+          font-size: 70px;
+          position: relative; }
+          section.menupage .content ul li a:hover {
+            color: var(--color-morado); }
+          section.menupage .content ul li a::before {
+            content: '';
+            background-image: url(../icons/flecha-morada.svg);
+            width: 29.5px;
+            height: 31px;
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-40%); }
+      section.menupage .content ul li.contacto {
+        margin-left: 0px;
+        padding-top: 60px; }
+        section.menupage .content ul li.contacto a {
+          font-family: var(--fuente-prompt);
+          font-weight: 500;
+          font-size: 50px;
+          color: var(--color-morado);
+          border: 3px solid var(--color-morado);
+          border-bottom: 8px solid var(--color-morado);
+          padding: 11px 25px;
+          display: flex;
+          align-items: center; }
+          section.menupage .content ul li.contacto a img {
+            margin-left: 10px;
+            margin-top: 9px;
+            width: 30px; }
+        section.menupage .content ul li.contacto a::before {
+          display: none; }
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 78%; }
   a.whatsapp {
     right: 45px;
     bottom: 43px; }
@@ -2180,6 +2222,8 @@ section.servicios .part2 .btn {
     align-items: center; }
   header nav .logo img {
     width: 254px; }
+  header nav .logo lottie-player {
+    width: 254px !important; }
   .container {
     width: 91.4%; }
   header nav .menu ul li {
@@ -2193,6 +2237,8 @@ section.servicios .part2 .btn {
     padding-left: 49px; } }
 
 @media (max-width: 1024px) {
+  section.menupage {
+    background-size: initial; }
   section.contacto-page .container .content .part1 form button::before {
     transition: 0s linear;
     background-color: none; }
@@ -2215,10 +2261,6 @@ section.servicios .part2 .btn {
     background-image: url(../img/fondo_contacto_tablet.jpg); }
   section.servicios .part1 a {
     padding: 11px 14px; }
-  section.servicios .part1 {
-    transform: translateY(-55px); }
-  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
-    top: 74%; }
   section.contacto-page .container .content .part1 form {
     width: 60%; }
   section.home .content h1 {
@@ -2263,10 +2305,8 @@ section.servicios .part2 .btn {
     left: -31.2vw; }
   section.servicios .part2 .slick-next {
     left: -24vw; }
-  section.servicios .part1 {
-    transform: translateY(-79px); }
   section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
-    top: 73%; }
+    top: 76%; }
   section.servicios p {
     font-size: 25px; }
   section.proyectos h2 {
@@ -2404,6 +2444,8 @@ section.servicios .part2 .btn {
     top: 478px; } }
 
 @media (max-width: 990px) and (max-width: 952px) {
+  section.servicios h2 {
+    margin-bottom: 27px; }
   section.home {
     height: 111vw; }
   .proyectos-list .category form {
@@ -2457,6 +2499,8 @@ section.servicios .part2 .btn {
     align-items: flex-start; } }
 
 @media (max-width: 990px) and (max-width: 848px) {
+  section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
+    top: 78%; }
   section.home {
     height: 125vw; }
   .services-info .info {
@@ -2893,11 +2937,33 @@ section.servicios .part2 .btn {
   section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
     display: none !important; } }
 
+@media (max-width: 649px) {
+  section.servicios .slick-dots li button:before {
+    content: url(../icons/ellipse.svg); }
+  section.servicios .slick-dots li.slick-active button:before {
+    content: url(../icons/ellipse-active.svg); }
+  section.servicios .slick-dots li button:before {
+    opacity: 1; }
+  section.servicios .slick-dots {
+    bottom: -50px; }
+  section.servicios .part2 .slick-slider {
+    margin-bottom: 80px; } }
+
 @media (max-width: 600px) {
   section.proyectos .slider-proyectos .item-proyectos .filtro {
     display: none; }
   section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next {
-    display: none !important; } }
+    display: none !important; }
+  section.proyectos .slick-dots li button:before {
+    content: url(../icons/ellipse.svg); }
+  section.proyectos .slick-dots li.slick-active button:before {
+    content: url(../icons/ellipse-active.svg); }
+  section.proyectos .slick-dots li button:before {
+    opacity: 1; }
+  section.proyectos .slick-dots {
+    bottom: -50px; }
+  section.proyectos .slick-slider {
+    margin-bottom: 80px; } }
 
 @media (max-width: 584px) {
   .btn-contacto {
@@ -2938,6 +3004,10 @@ section.servicios .part2 .btn {
     height: 73px; }
   header nav .logo img {
     width: 180px; }
+  header nav .logo a:hover lottie-player {
+    width: 180px !important;
+    top: 0px;
+    left: 0; }
   header nav .menu ul li.menu-responsive img {
     width: 30.9px;
     position: relative;
@@ -3177,15 +3247,14 @@ section.servicios .part2 .btn {
   section.item-popup .content .info {
     width: 100%; }
   section.item-popup .slick-dots li button:before {
-    transform: scale(2.5) !important;
     opacity: 1; }
   section.item-popup .slick-dots li.slick-active button:before {
     color: var(--color-morado) !important;
     opacity: 1; }
   section.item-popup .slick-dots li.slick-active button:before {
-    content: "•";
-    font-size: 6.5px;
-    top: 4px; }
+    content: url(../icons/ellipse-active.svg); }
+  section.item-popup .slick-dots {
+    bottom: -35px; }
   section.item-popup .content .slider-fotos .item-foto {
     margin: 0 5px; }
   section.item-popup .content .parrafo-popup {
