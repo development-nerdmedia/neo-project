@@ -2519,6 +2519,15 @@ section.servicios .part2 .btn {
     display: none; }
   .services-info .info .part1 img:nth-child(2) {
     display: block; }
+  .services-info .info .part1 .btn img:nth-child(1) {
+    display: block; }
+  .services-info .info .part1 .btn img:nth-child(2) {
+    display: none; }
+  .services-info .info .part1 .btn img {
+    display: block;
+    margin-left: 10px;
+    width: 13px;
+    margin-top: 3px; }
   .services-info .info .part2 .btn {
     display: none; }
   .services-info .info .part1 a {
@@ -2604,46 +2613,6 @@ section.servicios .part2 .btn {
     width: 100%;
     display: flex;
     justify-content: center; }
-  section.servicios .part2 .btn a {
-    font-family: var(--fuente-prompt);
-    font-weight: 500;
-    font-size: 18px;
-    padding: 11px 25px;
-    border: 2px solid var(--color-morado);
-    border-bottom: 4px solid var(--color-morado);
-    color: var(--color-morado);
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    position: relative;
-    overflow: hidden;
-    transition: 0.2s linear;
-    text-decoration: none; }
-    section.servicios .part2 .btn a img {
-      width: 13px;
-      margin-top: 3px;
-      margin-left: 10px; }
-    section.servicios .part2 .btn a img:nth-child(2) {
-      display: none; }
-    section.servicios .part2 .btn a:hover {
-      color: #fff; }
-      section.servicios .part2 .btn a:hover::before {
-        transform: translateY(0); }
-      section.servicios .part2 .btn a:hover img:nth-child(1) {
-        display: none; }
-      section.servicios .part2 .btn a:hover img:nth-child(2) {
-        display: block; }
-  section.servicios .part2 .btn a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-morado);
-    height: 100%;
-    transform: translateY(100%);
-    transition: 0.2s linear;
-    z-index: -2; }
   section.servicios .part2 .slick-slider {
     margin-bottom: 50px;
     display: flex;
@@ -2716,10 +2685,6 @@ section.servicios .part2 .btn {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-    .services-info .info .part1 img:nth-child(1) {
-      display: none; }
-    .services-info .info .part1 img:nth-child(2) {
-      display: block; }
     .services-info .info .part1 img {
       max-width: 452px; }
     .services-info .info .part1 a {
@@ -2737,14 +2702,14 @@ section.servicios .part2 .btn {
       position: relative;
       overflow: hidden;
       transition: 0.2s linear; }
-      .services-info .info .part1 a img:nth-child(1) {
-        display: block; }
       .services-info .info .part1 a img {
         margin-left: 10px;
         width: 13px;
         margin-top: 3px; }
       .services-info .info .part1 a img:nth-child(2) {
         display: none; }
+      .services-info .info .part1 a img:nth-child(1) {
+        display: block; }
       .services-info .info .part1 a::before {
         content: "";
         position: absolute;
@@ -3304,7 +3269,11 @@ section.servicios .part2 .btn {
   section.thanks-page .container .top a img {
     width: 34px; }
   section.thanks-page .container .content div {
-    padding-left: 36px; } }
+    padding-left: 36px; }
+  section.thanks-page .content a img:nth-child(2) {
+    display: block; }
+  section.thanks-page .content a img:nth-child(2) {
+    display: none; } }
 
 @media (max-width: 405px) {
   section.home {
