@@ -842,7 +842,8 @@ section.interna {
   overflow: hidden;
   background-image: url(../img/fondo-internas_1.jpg);
   background-repeat: no-repeat;
-  background-position: top; }
+  background-position: top;
+  background-size: 100%; }
 
 .interna-bg {
   position: absolute;
@@ -1444,7 +1445,8 @@ section.contacto-page {
   position: relative;
   background-image: url(../img/fondo_contacto_2.jpg);
   background-repeat: no-repeat;
-  background-position: top; }
+  background-position: top;
+  background-size: 100%; }
   section.contacto-page .fondo {
     position: absolute;
     top: 0;
@@ -1656,7 +1658,8 @@ section.thanks-page {
   position: relative;
   background-image: url(../img/fondo_contacto_2.jpg);
   background-repeat: no-repeat;
-  background-position: top; }
+  background-position: top;
+  background-size: 100%; }
   section.thanks-page .fondo {
     position: absolute;
     top: 0;
@@ -1784,6 +1787,12 @@ section.servicios .part2 .btn {
 
 .btn-contacto {
   display: none; }
+
+@media (max-width: 1920px) {
+  section.interna,
+  section.contacto-page,
+  section.thanks-page {
+    background-size: initial; } }
 
 @media (max-width: 1875px) {
   section.proyectos .slider-proyectos .slick-next {

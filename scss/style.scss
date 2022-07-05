@@ -1091,6 +1091,7 @@ section.interna{
     background-image: url(../img/fondo-internas_1.jpg);
     background-repeat: no-repeat;
     background-position: top;
+    background-size: 100%;
 }
 
 .interna-bg{
@@ -1857,6 +1858,7 @@ section.contacto-page{
     background-image: url(../img/fondo_contacto_2.jpg);
     background-repeat: no-repeat;
     background-position: top;
+    background-size: 100%;
     .fondo{
         position: absolute;
         top: 0;
@@ -2127,6 +2129,7 @@ section.thanks-page{
     background-image: url(../img/fondo_contacto_2.jpg);
     background-repeat: no-repeat;
     background-position: top;
+    background-size: 100%;
     .fondo{
         position: absolute;
         top: 0;
@@ -2290,6 +2293,13 @@ section.servicios .part2 .btn{
     display: none;
 }
 
+@media (max-width: 1920px) {
+    section.interna,
+    section.contacto-page,
+    section.thanks-page{
+        background-size: initial;
+    }
+}
 
 @media (max-width: 1875px) {
     section.proyectos .slider-proyectos .slick-next{

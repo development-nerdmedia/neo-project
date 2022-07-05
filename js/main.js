@@ -9,7 +9,7 @@ document.addEventListener("click", (e) => {
     if (e.target.closest("section.menupage .top button")) {
         document.querySelector(".menupage").classList.toggle("open");
     }
-    if (e.target.closest(".contacto a") || e.target.closest(".tarj-contacto a")) {
+    if (e.target.closest(".contacto a") || e.target.closest(".tarj-contacto a") || e.target.closest(".btn-contacto")) {
         localStorage.setItem('url-actual', `${URLactual}`);
     }
     if ($('.top a').length > 0) {
