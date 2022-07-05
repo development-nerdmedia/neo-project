@@ -810,7 +810,7 @@ footer {
       max-width: 296px; }
   footer .pie {
     position: relative;
-    padding-top: 10px;
+    padding: 12px 0;
     display: flex;
     justify-content: space-between; }
     footer .pie::before {
