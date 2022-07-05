@@ -992,6 +992,11 @@ footer{
         p{
             padding-bottom: 10px;
         }
+        div:nth-child(1){
+            a{
+                padding-bottom: 10px;
+            }
+        }
         .redes{
             a{
                 margin: 0 5px;
@@ -1012,6 +1017,13 @@ footer{
             font-family: var(--fuente-prompt);
             font-weight: 500;
             font-size: 18px;  
+        }
+        a{
+            font-family: var(--fuente-prompt);
+            font-weight: 500;
+            font-size: 18px; 
+            color: var(--color-morado);
+            text-decoration: none;
         }
         div{
             position: relative;
@@ -2057,6 +2069,27 @@ section.contacto-page{
                             top: 8px;
                         }
                     }
+                    a.direction{
+                        font-family: var(--fuente-prompt);
+                        font-weight: 400;
+                        font-size: 22px;
+                        color: var(--color-morado);
+                        position: relative;
+                        padding-bottom: 33px;
+                        text-decoration: none;
+                        &::before {
+                            content: '';
+                            background-image: url(../icons/flecha-morada.svg);
+                            width: 16px;
+                            height: 16px;
+                            font-size: 20px;
+                            position: absolute;
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            left: -30px;
+                            top: 8px;
+                        }
+                    }
                     div{
                         p{
                             padding-bottom: 10px;
@@ -2392,7 +2425,8 @@ section.servicios .part2 .btn{
     .mision-vision .part2 p,
     .services-info .info .part2 p,
     section.item-popup .content .parrafo-popup,
-    section.contacto-page .container .content .part1 .info p{
+    section.contacto-page .container .content .part1 .info p,
+    section.contacto-page .container .content .part1 .info a.direction{
         font-size: 20px;
     }
     section.valores .content-valores div img,
@@ -2472,6 +2506,9 @@ section.servicios .part2 .btn{
         --marquee-elements-displayed2: 3;
     }
     footer .content p{
+        font-size: 16px;
+    }
+    footer .content a{
         font-size: 16px;
     }
     footer .content .redes a img{
@@ -3478,6 +3515,56 @@ section.servicios .part2 .btn{
         width: 100%;
         display: flex;
         justify-content: center;
+        a{
+            padding: 11px 25px;
+            color: var(--color-morado);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: var(--fuente-prompt);
+            font-weight: 500;
+            font-size: 20px;
+            border: 2px solid var(--color-morado);
+            border-bottom: 4px solid var(--color-morado);
+            position: relative;
+            overflow: hidden;
+            margin-top: 18px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-morado);
+                height: 100%;
+                transform: translateY(100%);
+                transition: 0.2s linear;
+                z-index: -2;
+            }
+            &:hover::before {
+                transform: translateY(0);
+            }
+            &:hover {
+                color: #fff;
+                img {
+                    animation: desplazamiento 1.3s infinite;
+                }
+                img:nth-child(1) {
+                    display: none;
+                }
+                img:nth-child(2) {
+                    display: block;
+                }
+            }
+            img {
+                margin-top: 2px;
+                width: 13px;
+                margin-left: 10px;
+            }
+            img:nth-child(2) {
+                display: none;
+            }
+        }
     }
     
     section.servicios .part2 .slick-slider{
@@ -4000,6 +4087,61 @@ section.servicios .part2 .btn{
     }
 }
 
+@media (max-width: 500px) {
+    section.contacto-page .container .content .part1 form{
+        width: 100%;
+        margin-right: 0;
+    }
+    section.contacto-page .container .content .part1 .info p,
+    section.contacto-page .container .content .part1 .info a.direction {
+        padding-right: 23px;
+    }
+    section.item-popup .top button img {
+        width: 34px;
+    }
+    section.item-popup .content .info {
+        width: 100%;
+    }
+    section.item-popup .content .info .text {
+        padding-left: 30px;
+    }
+    section.item-popup .content h4 {
+        font-size: 25px;
+    }
+    section.item-popup .content p {
+        font-size: 22px;
+    }
+    section.item-popup .content .slider-fotos .slick-next, section.item-popup .content .slider-fotos .slick-prev {
+        display: none !important;
+    }
+    section.item-popup .content .slider-fotos .item-foto {
+        margin: 0 5px;
+    }
+    section.item-popup .slick-dots {
+        bottom: -35px;
+    }
+    section.item-popup .slick-dots li.slick-active button:before {
+        color: var(--color-morado) !important;
+        opacity: 1;
+    }
+    section.item-popup .slick-dots li.slick-active button:before {
+        content: url(../icons/ellipse-active.svg);
+    }
+    .slick-dots li button:before {
+        content: url(../icons/ellipse.svg);
+    }
+    section.item-popup .slick-dots li button:before {
+        opacity: 1;
+    }
+    section.item-popup .content .parrafo-popup{
+        font-size: 18px;
+    }
+    section.item-popup .content .parrafo-popup {
+        padding-left: 5px;
+        text-align: center;
+    }       
+}
+
 @media (max-width: 490px) {
     :root{
         --marquee-elements-displayed2: 2.2;
@@ -4210,7 +4352,8 @@ section.servicios .part2 .btn{
     .content-title {
         padding-top: 130px;
     }
-    section.experiencias p, .content-title p, .mision-vision .part2 p, .services-info .info .part2 p, section.item-popup .content .parrafo-popup, section.contacto-page .container .content .part1 .info p {
+    section.experiencias p, .content-title p, .mision-vision .part2 p, .services-info .info .part2 p, section.item-popup .content .parrafo-popup, section.contacto-page .container .content .part1 .info p,
+    section.contacto-page .container .content .part1 .info a.direction {
         font-size: 18px;
     }
     .mision-vision .content{
