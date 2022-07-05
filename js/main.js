@@ -1,11 +1,20 @@
 AOS.init();
 
+const URLactual = window.location;
+
 document.addEventListener("click", (e) => {
     if (e.target.closest(".menu-responsive")) {
         document.querySelector(".menupage").classList.toggle("open");
     }
     if (e.target.closest("section.menupage .top button")) {
         document.querySelector(".menupage").classList.toggle("open");
+    }
+    if (e.target.closest(".contacto a") || e.target.closest(".tarj-contacto a")) {
+        localStorage.setItem('url-actual', `${URLactual}`);
+    }
+    if ($('.top a').length > 0) {
+        var link = localStorage.getItem("url-actual");
+        $('.top a').attr("href", link);
     }
 })
 
@@ -161,7 +170,7 @@ MyApp = {
                     slidesToScroll: 1,
                     responsive: [
                         {
-                            breakpoint: 426,
+                            breakpoint: 501,
                             settings: {
                                 slidesToShow: 1,
                                 slidesToScroll: 1,
