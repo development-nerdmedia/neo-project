@@ -775,6 +775,8 @@ footer {
       padding-bottom: 10px; }
     footer .content div:nth-child(1) a {
       padding-bottom: 10px; }
+      footer .content div:nth-child(1) a:hover {
+        text-decoration: underline; }
     footer .content .redes a {
       margin: 0 5px; }
       footer .content .redes a img {
@@ -1639,6 +1641,8 @@ section.contacto-page {
               background-repeat: no-repeat;
               left: -30px;
               top: 8px; }
+            section.contacto-page .container .content .part1 .info a.direction:hover {
+              text-decoration: underline; }
           section.contacto-page .container .content .part1 .info div {
             position: relative; }
             section.contacto-page .container .content .part1 .info div p {

@@ -995,6 +995,9 @@ footer{
         div:nth-child(1){
             a{
                 padding-bottom: 10px;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
         .redes{
@@ -2090,6 +2093,9 @@ section.contacto-page{
                             background-repeat: no-repeat;
                             left: -30px;
                             top: 8px;
+                        }
+                        &:hover{
+                            text-decoration: underline;
                         }
                     }
                     div{
