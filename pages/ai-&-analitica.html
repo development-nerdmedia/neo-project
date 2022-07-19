@@ -10,7 +10,7 @@
     <link  rel="icon"   href="../img/favicon.png" type="image/png" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <title>ITG | Nosotros</title>
+    <title>ITG | Ai & Analitica</title>
 </head>
 <body>
     <header>
@@ -24,8 +24,8 @@
                 </div>
                 <div class="navigation">
                     <ul>
-                        <li><a class="select hvr-underline-from-left" href="nosotros.html">Nosotros</a></li>
-                        <li class="fex"><a class="hvr-underline-from-left"href="#">Soluciones</a>
+                        <li><a class="hvr-underline-from-left" href="nosotros.html">Nosotros</a></li>
+                        <li class="fex"><a class="select hvr-underline-from-left" href="">Soluciones</a>
                             <ul>
                                 <li>
                                     <a href="soluciones-en-la-nube.html">                                        
@@ -57,8 +57,7 @@
                                         <p>Servicios Gestionados</p>
                                     </a>
                                 </li>
-                            </ul>
-                        </li>
+                            </ul></li>
                         <li><a class="hvr-underline-from-left" href="socios.html">Socios</a></li>
                         <li><a class="hvr-underline-from-left" href="novedades.html">Novedades</a></li>
                         <li><a class="hvr-underline-from-left" href="trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
@@ -77,7 +76,7 @@
                 </div>
                 <div class="content">
                     <ul>
-                        <li class="select"><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
                         <li class="container-submenu">Soluciones<span class="submenu-btn">
                                 <img src="../icons/flechasubmenu.svg" alt="">
                             </span>
@@ -85,7 +84,7 @@
                                 <li><a href="soluciones-en-la-nube.html">Soluciones en la nube</a></li>
                                 <li><a href="colaboracion-y-productividad.html">Colaboración y productividad</a></li>
                                 <li><a href="seguridad.html">Seguridad</a></li>
-                                <li><a href="ai-&-analitica.html">Ai & Analítica</a></li>
+                                <li class="select"><a href="ai-&-analitica.html">Ai & Analítica</a></li>
                                 <li><a href="servicios-gestionados.html">Servicios Gestionados</a></li>
                             </ul>
                         </li>
@@ -96,73 +95,91 @@
                 </div>
             </div>
         </section>
-        <section class="fondo-interna home-nosotros">
+        <section class="fondo-interna home-servicios-interna" id="inicio">
             <div class="bg-interna">
                 <img src="../img/fondo-internas.png" alt="">
-            </div>
+                </div>
             <div class="container">
                 <div class="content">
                     <div class="part1" data-aos="fade-right" data-aos-once="true">
-                        <h1>Líderes en brindar Soluciones TI</h1>
-                        <p>Con más de 20 años de experiencia implementando soluciones tecnológicas a empresas de diversas industrias, grandes y medianas, para el sector público y privado. </p>
-                        <p>Contamos con el nivel GOLD MEMBERSHIP, el más alto de asociación de Partners con Microsoft, y estamos certificados en 9 competencias GOLD y 6 competencias SILVER. Asimismo, somos socio SELECT de AWS gracias a nuestro equipo capacitado y certificado, además de la experiencia con los clientes.</p>
+                        <div class="contenido">
+                            <lottie-player src="../json/Servicio4interna_nuevo.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+                        <h1>AI & Analítica</h1>
+                        <p>Con nuestro servicio de AI & Analítica ayudamos a las empresas a conocer el valor real de sus datos para tomar decisiones efectivas, mediante el análisis de grandes volúmenes de datos. De esta manera, podrá construir modelos predictivos con análisis estadísticos, mediante soluciones de optimización y machine learning.</p>
+                        </div>                        
                     </div>
                     <div class="part2" data-aos="fade-left" data-aos-once="true">
-                        <lottie-player src="../json/Banner-nosotros2.json"  background="transparent"  speed="1" loop autoplay>
-                        </lottie-player>
+                        <div class="formulario">
+                            <h3>Estamos para ayudarte</h3>
+                            <form action="thanks.html" method="">
+                                <div class="form-group formname">
+                                    <label for="name">Nombres y Apellidos:</label>
+                                    <input type="text" required="true" name="name" id="name" class="input_text">
+                                    <span></span>
+                                </div>
+                                <div class="form-group formaempresa">
+                                    <label for="name-empresa">Empresa:</label>
+                                    <input type="text" required="true" name="name-empresa" id="name-empresa" class="input_text">
+                                    <span></span>
+                                </div>
+                                <div class="form-group formcorreo">
+                                    <label for="email">Email:</label>
+                                    <input type="text" required="true" name="email" id="email" class="input_text">
+                                    <span></span>
+                                </div>
+                                <div class="form-group formtel">
+                                    <label for="telephone">Teléfono:</label>
+                                    <input type="text" required="true" name="telephone" id="telephone" class="input_text">
+                                    <span></span>
+                                </div>
+                                <div class="checkbox-box">                        
+                                    <input checked type="checkbox" required="" id="terminos"> 
+                                    <p>Acepto los <a href="proteccion-de-datos.html">términos y condiciones</a> legales.</p>
+                                </div> 
+                                <button class="shiny enviar" type="submit"><span>Enviar</span></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="filosofia">
-            <div class="container">
-                <h2 data-aos="fade-right" data-aos-once="true">Filosofía de trabajo </h2>
-                <div data-aos="fade-left" data-aos-once="true">
-                    <p>En ITG Solutions tenemos un enfoque centrado en el cliente y vocación de servicio como parte de nuestro ADN organizacional. Asimismo, contamos con un equipo humano capacitado, certificado y con experiencia para ofrecerte las mejores soluciones tecnológicas.</p>
-                    <p>La transformación digital se ha vuelto fundamental para el éxito de las empresas, convirtiéndose en una necesidad en la actualidad. Es por ello que estamos comprometidos a acompañarte en este proceso; brindándole nuevas e innovadoras experiencias a tus clientes, así como a tener un capital humano más productivo y capaz de optimizar procesos y operaciones. </p>
-                </div>                
-            </div>
-        </section>
-        <section class="mision-vision">
+        <section class="beneficios">
             <div class="container">
                 <div class="content">
                     <div class="part1" data-aos="fade-right" data-aos-once="true">
-                        <h2>Misión</h2>
-                        <p>Brindar soluciones tecnológicas estratégicas que permitan la transformación digital de nuestros clientes, logrando alta satisfacción y fidelización.</p>
-                        <lottie-player src="../json/Mision.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+                        <!-- <img src="../img/beneficios-ai.png" alt=""> -->
+                        <lottie-player src="../json/Servicio4_interna_main.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+                        <h2>Nuestros beneficios están pensados en tu negocio.</h2>
                     </div>
                     <div class="part2" data-aos="fade-left" data-aos-once="true">
-                        <h2>Visión</h2>
-                        <p>Ser el asesor de Soluciones TI más influyente y respetado por las empresas de la región.</p>
-                        <lottie-player src="../json/Vision.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+                        <ul>
+                            <li>Automatice los procesos de una manera automática y sin intervención humana.</li>
+                            <li>Libere a su equipo de tareas rutinarias y repetitivas y permíteles que puedan destinar más tiempo a desarrollar funciones creativas.</li>
+                            <li>Reduzca las fallas provocadas por las limitaciones del ser humano.</li>
+                            <li>Analice los datos derivados de producción en tiempo real.</li>
+                            <li>Mejore la toma de decisiones tanto a nivel de producción como de negocio.</li>
+                        </ul>
+                        <lottie-player class="mostrar"
+                src="../json/Servicio4_interna_main.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="valores">
+        <section class="tarjeta-contacto">
             <div class="container">
-                <h2 data-aos="fade-right" data-aos-once="true">Valores</h2>
-                <div class="grid-valores" data-aos="fade-left" data-aos-once="true">
-                    <div class="item">
-                        <lottie-player src="../json/Valor1.json" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
-                        <h3>Pasión por la innovación tecnológica</h3>
-                        <p>Nuestro equipo de expertos te ayudará a descubrir los beneficios de la nube así como guiarte a la adopción de Cloud Computing.</p>
+                <div class="content" data-aos="fade-right" data-aos-once="true">
+                    <div class="part1">
+                        <h3>Tenemos la solución tecnológica ideal 
+                        para tu empresa</h3>
                     </div>
-                    <div class="item">
-                        <lottie-player src="../json/Valor2.json" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
-                        <h3>Compromiso con <br> los clientes</h3>
-                        <p>Tenemos un compromiso total antes, durante y después de cada proyecto para alcanzar los resultados esperados.</p>
-                    </div>
-                    <div class="item">
-                        <lottie-player src="../json/Valor3.json" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
-                        <h3>Trabajo en <br> equipo</h3>
-                        <p>Fomentamos la colaboración y el intercambio de ideas en equipo, asumiendo responsabilidades alineadas a un objetivo común.</p>
-                    </div>
-                    <div class="item">
-                        <lottie-player src="../json/Valor4.json" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
-                        <h3>Responsabilidad e <br> integridad</h3>
-                        <p>Conducimos nuestros procesos de manera transparente manteniendo altos estándares de integridad.</p>
-                    </div>
+                        <a class="contacto" href="#inicio"><button class="shiny">
+                            <span>Contáctanos</span>
+                        </button></a></a>
                 </div>
             </div>
         </section>
@@ -247,7 +264,6 @@
   <script src="https://cdn.jsdelivr.net/gh/leafo/sticky-kit@v1.1.2/jquery.sticky-kit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    
   <script src="../js/main.js"></script>
 </body>
 </html>
