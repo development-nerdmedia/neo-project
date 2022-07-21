@@ -877,7 +877,7 @@ section.proyecto-destacado{
                     position: relative;
                     font-family: var(--fuente-barlow);
                     font-weight: 800;
-                    font-size: 35px;
+                    font-size: 30px;
                     color: #fff;
                     &::before{
                         content: '';
@@ -897,7 +897,7 @@ section.proyecto-destacado{
                     padding-top: 10px;
                     font-family: var(--fuente-prompt);
                     font-weight: 400;
-                    font-size: 25px;
+                    font-size: 22px;
                     color: #fff;
                 }
             }
@@ -907,6 +907,7 @@ section.proyecto-destacado{
             iframe{
                 width: 100%;
                 height: 405px;
+                border-radius: 20px;
             }
         }
     }
@@ -2602,6 +2603,7 @@ section.servicios .part2 .btn{
 }
 
 @media (max-width: 1600px) {
+
     section.home-slider .slick-prev,
     section.home-slider .slick-next{
         top: 70%;
@@ -2771,7 +2773,8 @@ section.servicios .part2 .btn{
     a.whatsapp img{
         width: 60px;
     }
-    section.proyectos .slider-proyectos .item-proyectos .info h4{
+    section.proyectos .slider-proyectos .item-proyectos .info h4,
+    section.proyecto-destacado .content .part1 div h3{
         font-size: 25px;
     }
     section.proyectos .slider-proyectos .item-proyectos .info p{
@@ -3329,6 +3332,12 @@ section.servicios .part2 .btn{
         padding-right: 0;
         padding-left: 49px;
     }
+    header.sticky {
+        padding: 21px 0;
+    }
+    header::before {
+        height: 100px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -3345,7 +3354,7 @@ section.servicios .part2 .btn{
     }
     section.home-slider .content{
         flex-direction: column;
-        padding-top: 180px;
+        padding-top: 140px;
     }
     section.home-slider .content .part1 {
         max-width: 100%;
