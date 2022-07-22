@@ -601,6 +601,9 @@ section.home-slider{
             opacity: 1;
         }
     }
+    .slick-prev, .slick-next{
+        display: none !important;
+    }
     // .slick-prev {
     //     left: initial;
     //     right: initial;
@@ -716,6 +719,7 @@ section.experiencias{
 section.servicios{
     // background: linear-gradient(180deg, #4DE7DB 0%, #4B99B1 100%);
     padding: 70px 0;
+    padding-bottom: 140px;
     h2{
         font-family: var(--fuente-barlow);
         font-weight: 500;
@@ -893,7 +897,7 @@ section.servicios{
 }
 
 section.proyecto-destacado{
-    padding: 70px 0;
+    padding: 140px 0;
     background-color: var(--color-morado);
     .content{
         display: flex;
@@ -955,7 +959,7 @@ section.proyecto-destacado{
 }
 
 section.proyectos{
-    padding: 70px 0;
+    padding: 140px 0;
     padding-bottom: 140px;
     h2{
         color: var(--color-morado);
@@ -2644,6 +2648,7 @@ section.servicios .part2 .btn{
 }
 
 @media (max-width: 1600px) {
+
     section.home-slider .home-bg lottie-player{
         left: 51%;
         top: -55px;
@@ -2735,13 +2740,15 @@ section.servicios .part2 .btn{
     section.experiencias{
         padding-bottom: 50px;
     }
-    section.servicios,
-    section.proyecto-destacado {
-        padding: 50px 0;
-    }
-    section.proyectos{
+    section.servicios{
         padding: 50px 0;
         padding-bottom: 100px;
+    }
+    section.proyecto-destacado {
+        padding: 100px 0;
+    }
+    section.proyectos{
+        padding: 100px 0;
     }
     section.servicios .part1{
         transform: translateY(-54px); /*65*/
@@ -4637,6 +4644,15 @@ section.servicios .part2 .btn{
 }
 
 @media (max-width: 490px) {
+    section.servicios{
+        padding: 60px 0;
+    }
+    section.proyecto-destacado {
+        padding: 60px 0;
+    }
+    section.proyectos {
+        padding: 60px 0;
+    }
     :root{
         --marquee-elements-displayed2: 2.2;
     }
@@ -4812,11 +4828,10 @@ section.servicios .part2 .btn{
     section.experiencias {
         padding-bottom: 30px;
     }
-    section.servicios {
-        padding: 30px 0;
-    }
+    // section.servicios {
+    //     padding: 30px 0;
+    // }
     section.proyectos {
-        padding: 30px 0;
         padding-bottom: 60px;
     }
     section.clientes {

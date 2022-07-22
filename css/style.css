@@ -452,6 +452,8 @@ section.home-slider {
     section.home-slider .slick-dots li.slick-active button:before {
       content: url(../icons/ellipse-active.svg);
       opacity: 1; }
+  section.home-slider .slick-prev, section.home-slider .slick-next {
+    display: none !important; }
 
 section.home-slider .slider-home {
   max-width: 1920px;
@@ -512,7 +514,8 @@ section.experiencias {
       width: 330.13px; }
 
 section.servicios {
-  padding: 70px 0; }
+  padding: 70px 0;
+  padding-bottom: 140px; }
   section.servicios h2 {
     font-family: var(--fuente-barlow);
     font-weight: 500;
@@ -655,7 +658,7 @@ section.servicios {
       opacity: 0.5; }
 
 section.proyecto-destacado {
-  padding: 70px 0;
+  padding: 140px 0;
   background-color: var(--color-morado); }
   section.proyecto-destacado .content {
     display: flex;
@@ -706,7 +709,7 @@ section.proyecto-destacado {
         border-radius: 20px; }
 
 section.proyectos {
-  padding: 70px 0;
+  padding: 140px 0;
   padding-bottom: 140px; }
   section.proyectos h2 {
     color: var(--color-morado);
@@ -2086,12 +2089,13 @@ section.servicios .part2 .btn {
     font-size: 25px; }
   section.experiencias {
     padding-bottom: 50px; }
-  section.servicios,
-  section.proyecto-destacado {
-    padding: 50px 0; }
-  section.proyectos {
+  section.servicios {
     padding: 50px 0;
     padding-bottom: 100px; }
+  section.proyecto-destacado {
+    padding: 100px 0; }
+  section.proyectos {
+    padding: 100px 0; }
   section.servicios .part1 {
     transform: translateY(-54px);
     /*65*/ }
@@ -3449,6 +3453,12 @@ section.servicios .part2 .btn {
     text-align: center; } }
 
 @media (max-width: 490px) {
+  section.servicios {
+    padding: 60px 0; }
+  section.proyecto-destacado {
+    padding: 60px 0; }
+  section.proyectos {
+    padding: 60px 0; }
   :root {
     --marquee-elements-displayed2: 2.2; }
   section.clientes {
@@ -3558,10 +3568,7 @@ section.servicios .part2 .btn {
     width: 45px; }
   section.experiencias {
     padding-bottom: 30px; }
-  section.servicios {
-    padding: 30px 0; }
   section.proyectos {
-    padding: 30px 0;
     padding-bottom: 60px; }
   section.clientes {
     padding: 60px 0; }
