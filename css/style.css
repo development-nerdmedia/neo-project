@@ -3405,7 +3405,7 @@ section.servicios .part2 .btn {
 
 @media (max-width: 500px) {
   section.home-slider .home-bg img {
-    top: 43%; }
+    height: 100%; }
   section.home-slider {
     padding-top: 0px; }
   section.home-slider lottie-player.responsive {
