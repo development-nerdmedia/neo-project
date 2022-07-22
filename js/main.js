@@ -349,9 +349,9 @@ document.addEventListener("click", (e) => {
 $('.slider-home').slick({
     dots: true,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 1000,
-    dots: false,
+    dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
