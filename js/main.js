@@ -1,3 +1,5 @@
+const { FALSE } = require("node-sass");
+
 AOS.init();
 
 const URLactual = window.location;
@@ -350,8 +352,8 @@ $('.slider-home').slick({
     dots: true,
     infinite: true,
     autoplay: true,
-    speed: 1000,
-    dots: true,
+    speed: 2000,
+    dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
