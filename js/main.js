@@ -351,10 +351,22 @@ $('.slider-home').slick({
     infinite: true,
     autoplay: true,
     speed: 2000,
-    dots: false,
+    dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
+        {
+            breakpoint: 1025,
+            settings: {
+                speed: 1000,
+            }
+        },
+        {
+            breakpoint: 5001,
+            settings: {
+                speed: 500,
+            }
+        },
     ]
 });
 

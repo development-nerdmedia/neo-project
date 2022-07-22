@@ -444,34 +444,14 @@ section.home-slider {
   section.home-slider .slick-list,
   section.home-slider .slick-track {
     height: 100%; }
-  section.home-slider .slick-prev {
-    left: initial;
-    right: initial;
-    left: 237px;
-    background-image: url(../icons/flecha-izq.svg);
-    background-repeat: no-repeat !important;
-    background-size: 100% !important;
-    width: 42px;
-    height: 50px;
-    z-index: 3;
-    top: 72%; }
-  section.home-slider .slick-prev:hover {
-    background-image: url(../icons/flechaizqhover.svg); }
-  section.home-slider .slick-next {
-    right: initial;
-    left: 312px;
-    background-image: url(../icons/flecha-de.svg);
-    background-repeat: no-repeat !important;
-    background-size: 100% !important;
-    width: 42px;
-    height: 50px;
-    z-index: 3;
-    top: 72%; }
-  section.home-slider .slick-next:hover {
-    background-image: url(../icons/flechaderhover.svg); }
-  section.home-slider .slick-prev:before,
-  section.home-slider .slick-next:before {
-    content: none; }
+  section.home-slider .slick-dots {
+    bottom: 171px; }
+    section.home-slider .slick-dots li button:before {
+      content: url(../icons/ellipse.svg);
+      opacity: 1; }
+    section.home-slider .slick-dots li.slick-active button:before {
+      content: url(../icons/ellipse-active.svg);
+      opacity: 1; }
 
 section.home-slider .slider-home {
   max-width: 1920px;
@@ -2258,6 +2238,8 @@ section.servicios .part2 .btn {
     top: 70%; } }
 
 @media (max-width: 1440px) {
+  section.home-slider .slick-dots {
+    bottom: 136px; }
   section.home-slider .home-bg lottie-player {
     top: -125px;
     width: 1203px;
@@ -2314,6 +2296,8 @@ section.servicios .part2 .btn {
     height: 59px; } }
 
 @media (max-width: 1300px) {
+  section.home-slider .slick-dots {
+    bottom: 86px; }
   section.home-slider .home-bg lottie-player {
     top: -146px; }
   section.home-slider .slick-prev {
@@ -2447,6 +2431,8 @@ section.servicios .part2 .btn {
     max-width: 538px; } }
 
 @media (max-width: 1090px) {
+  section.home-slider .slick-dots {
+    bottom: 104px; }
   section.home-slider .slick-prev {
     left: 4.5vw; }
   section.home-slider .slick-next {
@@ -2563,6 +2549,8 @@ section.servicios .part2 .btn {
     height: 100px; } }
 
 @media (max-width: 1024px) {
+  section.home-slider .slick-dots {
+    bottom: 43px; }
   section.home-slider .home-bg lottie-player {
     display: none; }
   section.home-slider lottie-player.responsive {
@@ -3416,6 +3404,8 @@ section.servicios .part2 .btn {
     height: 273px; } }
 
 @media (max-width: 500px) {
+  section.home-slider {
+    padding-top: 0px; }
   section.home-slider lottie-player.responsive {
     width: 160vw;
     bottom: -74px; }
