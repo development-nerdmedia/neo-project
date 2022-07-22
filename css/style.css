@@ -365,6 +365,7 @@ section.home {
 
 section.home-slider {
   overflow: hidden;
+  position: relative;
   height: 1096px; }
   section.home-slider .home-bg {
     position: absolute;
@@ -373,15 +374,29 @@ section.home-slider {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    z-index: -2;
-    height: 1350px; }
+    z-index: -2; }
     section.home-slider .home-bg lottie-player {
       min-width: 1920px;
-      min-height: 1350px;
+      min-height: 1200px;
+      position: absolute;
+      left: 54%;
+      top: -46px;
+      transform: translateX(-50%); }
+    section.home-slider .home-bg img {
+      min-width: 100%;
+      min-height: 100%;
       position: absolute;
       left: 50%;
-      top: -122px;
-      transform: translateX(-50%); }
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%); }
+  section.home-slider lottie-player.responsive {
+    display: none;
+    height: auto;
+    position: absolute;
+    bottom: -50px;
+    max-width: 800px;
+    left: 50%;
+    transform: translateX(-50%); }
   section.home-slider .content {
     height: 100%;
     display: flex;
@@ -457,6 +472,10 @@ section.home-slider {
   section.home-slider .slick-prev:before,
   section.home-slider .slick-next:before {
     content: none; }
+
+section.home-slider .slider-home {
+  max-width: 1920px;
+  margin: 0 auto; }
 
 section.experiencias {
   padding-bottom: 70px; }
@@ -2019,6 +2038,9 @@ section.servicios .part2 .btn {
     left: 12.5vw; } }
 
 @media (max-width: 1600px) {
+  section.home-slider .home-bg lottie-player {
+    left: 51%;
+    top: -55px; }
   section.home-slider .slick-prev,
   section.home-slider .slick-next {
     top: 70%; }
@@ -2236,14 +2258,17 @@ section.servicios .part2 .btn {
     top: 70%; } }
 
 @media (max-width: 1440px) {
+  section.home-slider .home-bg lottie-player {
+    top: -125px;
+    width: 1203px;
+    min-width: initial;
+    left: 56%; }
   section.home .content h1, section.home-slider .content h1 {
     font-size: 65px; }
   section.home-slider .content .part1 {
     max-width: 580px; }
   section.home-slider {
     height: 950px; }
-  section.home-slider .home-bg lottie-player {
-    top: -189px; }
   section.home-slider .slick-prev {
     left: 7.5vw; }
   section.home-slider .slick-next {
@@ -2289,6 +2314,8 @@ section.servicios .part2 .btn {
     height: 59px; } }
 
 @media (max-width: 1300px) {
+  section.home-slider .home-bg lottie-player {
+    top: -146px; }
   section.home-slider .slick-prev {
     left: 8vw; }
   section.home-slider .slick-next {
@@ -2301,9 +2328,7 @@ section.servicios .part2 .btn {
   section.home-slider .content h1 {
     font-size: 60px; }
   section.home-slider .content .part1 {
-    max-width: 541px; }
-  section.home-slider .home-bg lottie-player {
-    top: -219px; } }
+    max-width: 541px; } }
 
 @media (max-width: 1280px) {
   section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
@@ -2538,6 +2563,10 @@ section.servicios .part2 .btn {
     height: 100px; } }
 
 @media (max-width: 1024px) {
+  section.home-slider .home-bg lottie-player {
+    display: none; }
+  section.home-slider lottie-player.responsive {
+    display: block; }
   section.home-slider .slick-prev,
   section.home-slider .slick-next {
     display: none !important; }
@@ -2558,7 +2587,6 @@ section.servicios .part2 .btn {
     position: relative;
     width: 100%;
     right: initial;
-    padding: 0 30px;
     margin-bottom: 100px; }
   section.home-slider .content img {
     width: 100%;
@@ -2880,10 +2908,12 @@ section.servicios .part2 .btn {
     height: 130vw; } }
 
 @media (max-width: 768px) {
+  section.home-slider lottie-player.responsive {
+    bottom: -36px; }
   section.home-slider .content .part1 .marquee-with-options {
     width: 95%; }
   header::before {
-    height: 111px; }
+    height: 100px; }
   header {
     padding: 30px 0; }
   header.sticky {
@@ -3190,7 +3220,13 @@ section.servicios .part2 .btn {
   header nav .menu ul li.menu-responsive img {
     width: 35px; } }
 
+@media (max-width: 750px) {
+  section.home-slider lottie-player.responsive {
+    bottom: -28px; } }
+
 @media (max-width: 710px) {
+  section.home-slider lottie-player.responsive {
+    bottom: -3px; }
   section.proyecto-destacado .content .part2 iframe {
     height: 377px; }
   .mision-vision .content {
@@ -3222,7 +3258,13 @@ section.servicios .part2 .btn {
   section.home {
     height: 140vw; } }
 
+@media (max-width: 680px) {
+  section.home-slider lottie-player.responsive {
+    bottom: 7px; } }
+
 @media (max-width: 630px) {
+  section.home-slider lottie-player.responsive {
+    bottom: 34px; }
   section.home .content {
     padding-top: 213px; }
   section.home .content img {
@@ -3374,6 +3416,9 @@ section.servicios .part2 .btn {
     height: 273px; } }
 
 @media (max-width: 500px) {
+  section.home-slider lottie-player.responsive {
+    width: 160vw;
+    bottom: -74px; }
   section.contacto-page .container .content .part1 form {
     width: 100%;
     margin-right: 0; }
@@ -3434,6 +3479,9 @@ section.servicios .part2 .btn {
     height: 145vw; } }
 
 @media (max-width: 425px) {
+  section.home-slider lottie-player.responsive {
+    width: 160vw;
+    bottom: -45px; }
   section.home-slider .content {
     padding-top: 135px; }
   section.proyecto-destacado .content .part2 {
