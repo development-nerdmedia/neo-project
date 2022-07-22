@@ -1,5 +1,3 @@
-const { FALSE } = require("node-sass");
-
 AOS.init();
 
 const URLactual = window.location;
