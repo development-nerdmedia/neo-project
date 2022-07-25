@@ -1098,6 +1098,10 @@ section.valores {
         transition: 0.2s linear; }
         section.valores .content-valores div lottie-player:hover {
           transform: translatey(-10px); }
+      section.valores .content-valores div img {
+        transition: 0.2s linear; }
+        section.valores .content-valores div img:hover {
+          transform: translatey(-10px); }
       section.valores .content-valores div p {
         text-align: center;
         font-family: var(--fuente-prompt);

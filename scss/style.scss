@@ -1448,6 +1448,12 @@ section.valores{
                     transform: translatey(-10px);
                 }
             }
+            img{
+                transition: 0.2s linear;
+                &:hover{
+                    transform: translatey(-10px);
+                }
+            }
             p{
                 text-align: center;
                 font-family: var(--fuente-prompt);
