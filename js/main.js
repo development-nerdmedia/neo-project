@@ -261,51 +261,77 @@ MyApp = {
     },
     labelcontactopage: {
         init: function () {
+            var lisitaInputs = document.querySelectorAll('.form-group')
+            var formespacio = document.querySelectorAll('.form-group');
+
+            function inputcheck(){
+                for (let i = 0; i < lisitaInputs.length; i++) {
+                    console.log(lisitaInputs[i].querySelector(".form-input").value);
+                    if (!lisitaInputs[i].querySelector(".form-input").value) {
+                        lisitaInputs[i].classList.remove("ok");   
+                    }else{
+                        lisitaInputs[i].classList.add("ok");   
+                    }
+                }   
+            }
+
             document.addEventListener("click", function (e) {
-                if (e.target.closest(".formname")) {
-                    document.querySelector(".formname").classList.add("focusin");
-                } else {
-                    document.querySelector(".formname").classList.remove("focusin");
-                    nombre = document.getElementById('name').value;
-                    if (!nombre) {
-                        document.querySelector(".formname").classList.remove("ok");
-                    } else {
-                        document.querySelector(".formname").classList.add("ok");
-                    }
+                if (e.target.closest(".form-group")) {
+                    formespacio.forEach(function (shinyItem) {
+                        shinyItem.classList.remove("focusin");
+                    });
+                    e.target.parentElement.classList.add("focusin");  
+                    inputcheck();           
+                }else{
+                    formespacio.forEach(function (shinyItem) {
+                        shinyItem.classList.remove("focusin");
+                    });               
+                    inputcheck();     
                 }
-                if (e.target.closest(".formcorreo")) {
-                    document.querySelector(".formcorreo").classList.add("focusin");
-                } else {
-                    document.querySelector(".formcorreo").classList.remove("focusin");
-                    email = document.getElementById('email').value;
-                    if (!email) {
-                        document.querySelector(".formcorreo").classList.remove("ok");
-                    } else {
-                        document.querySelector(".formcorreo").classList.add("ok");
-                    }
-                }
-                if (e.target.closest(".formasunto")) {
-                    document.querySelector(".formasunto").classList.add("focusin");
-                } else {
-                    document.querySelector(".formasunto").classList.remove("focusin");
-                    asunto = document.getElementById('asunto').value;
-                    if (!asunto) {
-                        document.querySelector(".formasunto").classList.remove("ok");
-                    } else {
-                        document.querySelector(".formasunto").classList.add("ok");
-                    }
-                }
-                if (e.target.closest(".formtextarea")) {
-                    document.querySelector(".formtextarea").classList.add("focusin");
-                } else {
-                    document.querySelector(".formtextarea").classList.remove("focusin");
-                    textarea = document.getElementById('textarea').value;
-                    if (!textarea) {
-                        document.querySelector(".formtextarea").classList.remove("ok");
-                    } else {
-                        document.querySelector(".formtextarea").classList.add("ok");
-                    }
-                }
+                // if (e.target.closest(".formname")) {
+                //     document.querySelector(".formname").classList.add("focusin");
+                // } else {
+                //     document.querySelector(".formname").classList.remove("focusin");
+                //     nombre = document.getElementById('name').value;
+                //     if (!nombre) {
+                //         document.querySelector(".formname").classList.remove("ok");
+                //     } else {
+                //         document.querySelector(".formname").classList.add("ok");
+                //     }
+                // }
+                // if (e.target.closest(".formcorreo")) {
+                //     document.querySelector(".formcorreo").classList.add("focusin");
+                // } else {
+                //     document.querySelector(".formcorreo").classList.remove("focusin");
+                //     email = document.getElementById('email').value;
+                //     if (!email) {
+                //         document.querySelector(".formcorreo").classList.remove("ok");
+                //     } else {
+                //         document.querySelector(".formcorreo").classList.add("ok");
+                //     }
+                // }
+                // if (e.target.closest(".formasunto")) {
+                //     document.querySelector(".formasunto").classList.add("focusin");
+                // } else {
+                //     document.querySelector(".formasunto").classList.remove("focusin");
+                //     asunto = document.getElementById('asunto').value;
+                //     if (!asunto) {
+                //         document.querySelector(".formasunto").classList.remove("ok");
+                //     } else {
+                //         document.querySelector(".formasunto").classList.add("ok");
+                //     }
+                // }
+                // if (e.target.closest(".formtextarea")) {
+                //     document.querySelector(".formtextarea").classList.add("focusin");
+                // } else {
+                //     document.querySelector(".formtextarea").classList.remove("focusin");
+                //     textarea = document.getElementById('textarea').value;
+                //     if (!textarea) {
+                //         document.querySelector(".formtextarea").classList.remove("ok");
+                //     } else {
+                //         document.querySelector(".formtextarea").classList.add("ok");
+                //     }
+                // }
             })
         }
     }    
@@ -434,7 +460,6 @@ $('.marquee-with-options').marquee({
     duplicated: true,
     pauseOnHover: true
 });
-
 
 $('.slider-proyectos').slick({
     centerMode: true,
