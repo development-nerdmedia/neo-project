@@ -2260,6 +2260,10 @@ section.servicios .part2 .btn {
   section.home-slider .slick-next {
     left: 12.2vw; } }
 
+@media (max-width: 1420px) {
+  section.home-slider .home-bg img {
+    height: 100%; } }
+
 @media (max-width: 1355px) {
   section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
     top: 71.5%; }
