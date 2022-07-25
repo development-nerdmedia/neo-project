@@ -297,6 +297,7 @@ section.home {
       position: absolute;
       left: 50%;
       top: 50%;
+      height: 100%;
       transform: translateX(-50%) translateY(-50%); }
   section.home .container {
     height: 100%; }
