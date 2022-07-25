@@ -92,7 +92,6 @@ MyApp = {
                     evento.target.classList.add('select');
 
                     var categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
-                    console.log(categoria);
                     $("#cargarMasModulo").attr("style", "display:flex;");
                     $(`.item-category`).not(`[data-categoria="${categoria}"]`).hide();
                     $(`.item-category.modulo-mas[data-categoria="${categoria}"]`).slice(0, 6).show(0);
@@ -100,7 +99,6 @@ MyApp = {
             });
 
             var nameCategory = $(`.item-category[data-categoria="${categoryMain}"]`).attr("data-categoria");
-            console.log(nameCategory);
             localStorage.setItem('ItemCategory', `${nameCategory}`);
             var select = $(`#categoryPortfolio`)
             $("#categoryPortfolio").val(`${nameCategory}`)
@@ -240,8 +238,6 @@ MyApp = {
             var categoriaServices = localStorage.getItem("ItemServices");
             var selection = document.getElementById("categoryPortfolio");
             // const options = selection.options[selection.selectedOptions].value;
-            console.log(categoriaServices); 
-            // console.log(options);    
             select.addEventListener('change', function () {
                 var selectedOption = this.options[select.selectedIndex];
                 var cateSelect = selectedOption.text.trimStart().trimEnd();
@@ -251,7 +247,6 @@ MyApp = {
                 $(`.item-category.modulo-mas[data-categoria="${categoria2}"]`).slice(0, 6).show();
             });
             $("#cargarMasModulo").click(function () {                
-                console.log(categoria2);
                 $(`.modulo-mas[data-categoria="${categoria2}"]:hidden`).slice(0, 6).slideDown(0);
                 if ($(`.modulo-mas[data-categoria="${categoria2}"]:hidden`).length == 0) {
                     $("#cargarMasModulo").attr("style", "display:none;");
@@ -266,7 +261,6 @@ MyApp = {
 
             function inputcheck(){
                 for (let i = 0; i < lisitaInputs.length; i++) {
-                    console.log(lisitaInputs[i].querySelector(".form-input").value);
                     if (!lisitaInputs[i].querySelector(".form-input").value) {
                         lisitaInputs[i].classList.remove("ok");   
                     }else{
@@ -287,51 +281,7 @@ MyApp = {
                         shinyItem.classList.remove("focusin");
                     });               
                     inputcheck();     
-                }
-                // if (e.target.closest(".formname")) {
-                //     document.querySelector(".formname").classList.add("focusin");
-                // } else {
-                //     document.querySelector(".formname").classList.remove("focusin");
-                //     nombre = document.getElementById('name').value;
-                //     if (!nombre) {
-                //         document.querySelector(".formname").classList.remove("ok");
-                //     } else {
-                //         document.querySelector(".formname").classList.add("ok");
-                //     }
-                // }
-                // if (e.target.closest(".formcorreo")) {
-                //     document.querySelector(".formcorreo").classList.add("focusin");
-                // } else {
-                //     document.querySelector(".formcorreo").classList.remove("focusin");
-                //     email = document.getElementById('email').value;
-                //     if (!email) {
-                //         document.querySelector(".formcorreo").classList.remove("ok");
-                //     } else {
-                //         document.querySelector(".formcorreo").classList.add("ok");
-                //     }
-                // }
-                // if (e.target.closest(".formasunto")) {
-                //     document.querySelector(".formasunto").classList.add("focusin");
-                // } else {
-                //     document.querySelector(".formasunto").classList.remove("focusin");
-                //     asunto = document.getElementById('asunto').value;
-                //     if (!asunto) {
-                //         document.querySelector(".formasunto").classList.remove("ok");
-                //     } else {
-                //         document.querySelector(".formasunto").classList.add("ok");
-                //     }
-                // }
-                // if (e.target.closest(".formtextarea")) {
-                //     document.querySelector(".formtextarea").classList.add("focusin");
-                // } else {
-                //     document.querySelector(".formtextarea").classList.remove("focusin");
-                //     textarea = document.getElementById('textarea').value;
-                //     if (!textarea) {
-                //         document.querySelector(".formtextarea").classList.remove("ok");
-                //     } else {
-                //         document.querySelector(".formtextarea").classList.add("ok");
-                //     }
-                // }
+                }                
             })
         }
     }    
