@@ -121,8 +121,20 @@ MyApp = {
                 if (e.target.closest(".item-category")) {
                     togglePortfolioPopup();
                     document.body.classList.toggle("hide-scrolling");
-                    portfolioItemDetails(e.target.parentElement);
-                }
+                    console.log(e.target.parentElement);                    
+                    // datos = document.querySelector('.info')
+                    if (e.target.parentElement.classList.contains("info")) {
+                        console.log("es igual");
+                        console.log(e.target.parentElement);
+                        // console.log(datos);
+                        portfolioItemDetails(e.target.parentElement.parentElement);
+                    }else{
+                        console.log("no es igual");
+                        console.log(e.target.parentElement);
+                        // console.log(datos);
+                            portfolioItemDetails(e.target.parentElement);
+                    }
+                }          
                 if (e.target.closest(".btn-close")) {
                     document.body.classList.toggle("hide-scrolling");
                     // const imagenesInSlider = document.querySelector(".item-foto");
