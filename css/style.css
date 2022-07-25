@@ -1651,10 +1651,10 @@ section.contacto-page {
             border: none; }
             section.contacto-page .container .content .part1 form fieldset .form-group {
               width: 100%;
-              position: relative; }
+              position: relative;
+              margin-bottom: 30px; }
               section.contacto-page .container .content .part1 form fieldset .form-group input {
                 font-family: var(--fuente-barlow);
-                margin-bottom: 30px;
                 height: 64px;
                 border: none;
                 font-size: 20px;
@@ -1676,12 +1676,11 @@ section.contacto-page {
                 color: var(--color-morado);
                 font-family: var(--fuente-barlow);
                 font-size: 18px;
-                font-weight: 400;
+                font-weight: 500;
                 transition: 0.1s linear;
                 z-index: 1; }
               section.contacto-page .container .content .part1 form fieldset .form-group textarea {
                 font-family: var(--fuente-barlow);
-                margin-bottom: 50px;
                 height: 155px;
                 border: none;
                 font-size: 20px;
@@ -1702,6 +1701,7 @@ section.contacto-page {
               left: 20px;
               top: 6px; }
           section.contacto-page .container .content .part1 form button {
+            margin-top: 50px;
             border-radius: 0px;
             -webkit-border-radius: 0;
             -webkit-appearance: none;
@@ -2205,15 +2205,16 @@ section.servicios .part2 .btn {
   section.contacto-page .container .content .part1 h1 {
     font-size: 35px; }
   /* contacto*/
-  section.contacto-page .container .content .part1 form fieldset .form-group input {
+  section.contacto-page .container .content .part1 form fieldset .form-group {
     margin-bottom: 20px; }
   section.contacto-page {
     padding: 68px 0; }
   section.contacto-page .container .content .part1 form fieldset .form-group input {
     font-size: 18px; }
   section.contacto-page .container .content .part1 form fieldset .form-group textarea {
-    margin-bottom: 25px;
     height: 144px; }
+  section.contacto-page .container .content .part1 form button {
+    margin-top: 25px; }
   section.thanks-page .container {
     width: 75%; }
   footer .content div:nth-child(1) {
@@ -2786,9 +2787,10 @@ section.servicios .part2 .btn {
     flex-direction: column; }
   section.contacto-page .container .content {
     padding-top: 20px; }
-  section.contacto-page .container .content .part1 form fieldset .form-group input,
-  section.contacto-page .container .content .part1 form fieldset .form-group textarea {
+  section.contacto-page .container .content .part1 form fieldset .form-group {
     margin-bottom: 32px; }
+  section.contacto-page .container .content .part1 form button {
+    margin-top: 32px; }
   section.contacto-page .container .content .part1 .info {
     margin: 65px 0 0px 30px;
     width: 100%; }

@@ -2163,10 +2163,10 @@ section.contacto-page{
                         border: none;
                         .form-group {
                             width: 100%;
-                            position: relative;
+                            position: relative;                            
+                            margin-bottom: 30px;
                             input {
                                 font-family: var(--fuente-barlow);
-                                margin-bottom: 30px;
                                 height: 64px;
                                 border: none;
                                 font-size: 20px;
@@ -2190,7 +2190,7 @@ section.contacto-page{
                                 color: var(--color-morado);
                                 font-family: var(--fuente-barlow);
                                 font-size: 18px;
-                                font-weight: 400;                                
+                                font-weight: 500;                                
                                 // cursor: text;
                                 transition: 0.1s linear;
                                 z-index: 1;
@@ -2202,7 +2202,6 @@ section.contacto-page{
                             // }
                             textarea {
                                 font-family: var(--fuente-barlow);
-                                margin-bottom: 50px;
                                 height: 155px;
                                 border: none;
                                 font-size: 20px;
@@ -2228,6 +2227,7 @@ section.contacto-page{
                         }
                     }
                     button{
+                        margin-top: 50px;
                         border-radius: 0px;
                         -webkit-border-radius: 0;
                         -webkit-appearance: none;
@@ -2907,7 +2907,7 @@ section.servicios .part2 .btn{
     }
 
     /* contacto*/
-    section.contacto-page .container .content .part1 form fieldset .form-group input{
+    section.contacto-page .container .content .part1 form fieldset .form-group{
         margin-bottom: 20px;
     }
     section.contacto-page{
@@ -2917,8 +2917,11 @@ section.servicios .part2 .btn{
         font-size: 18px;
     }
     section.contacto-page .container .content .part1 form fieldset .form-group textarea{
-        margin-bottom: 25px;
+        // margin-bottom: 25px;
         height: 144px;
+    }
+    section.contacto-page .container .content .part1 form button {
+        margin-top: 25px;
     }
     section.thanks-page .container{
         width: 75%;
@@ -3747,9 +3750,11 @@ section.servicios .part2 .btn{
     section.contacto-page .container .content{
         padding-top: 20px;
     }
-    section.contacto-page .container .content .part1 form fieldset .form-group input,
-    section.contacto-page .container .content .part1 form fieldset .form-group textarea{
+    section.contacto-page .container .content .part1 form fieldset .form-group{
         margin-bottom: 32px;
+    }
+    section.contacto-page .container .content .part1 form button{
+        margin-top: 32px;
     }
     section.contacto-page .container .content .part1 .info{
         margin: 65px 0 0px 30px;
