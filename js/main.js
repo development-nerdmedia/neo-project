@@ -268,15 +268,14 @@ MyApp = {
     },
     labelcontactopage: {
         init: function () {
-            var lisitaInputs = document.querySelectorAll('.form-group')
             var formespacio = document.querySelectorAll('.form-group');
 
             function inputcheck(){
-                for (let i = 0; i < lisitaInputs.length; i++) {
-                    if (!lisitaInputs[i].querySelector(".form-input").value) {
-                        lisitaInputs[i].classList.remove("ok");   
+                for (let i = 0; i < formespacio.length; i++) {
+                    if (!formespacio[i].querySelector(".form-input").value) {
+                        formespacio[i].classList.remove("ok");   
                     }else{
-                        lisitaInputs[i].classList.add("ok");   
+                        formespacio[i].classList.add("ok");   
                     }
                 }   
             }
