@@ -30,7 +30,7 @@
 
 .servicios-item a:hover, .item-servicios a:hover, .item-category,
 .item-proyectos {
-  cursor: url(../img/hover-mouse-green.png) 52 52, pointer; }
+  cursor: url(assets/images/hover-mouse-green.png) 52 52, pointer; }
 
 body.hide-scrolling {
   overflow-y: hidden; }
@@ -160,7 +160,7 @@ header {
               position: relative; }
               header nav .menu ul li.fex ul li::before {
                 content: "";
-                background-image: url(../icons/flecha-morada.svg);
+                background-image: url(assets/icons/flecha-morada.svg);
                 width: 13px;
                 height: 13px;
                 position: absolute;
@@ -449,10 +449,10 @@ section.home-slider {
   section.home-slider .slick-dots {
     bottom: 171px; }
     section.home-slider .slick-dots li button:before {
-      content: url(../icons/ellipse.svg);
+      content: url(assets/icons/ellipse.svg);
       opacity: 1; }
     section.home-slider .slick-dots li.slick-active button:before {
-      content: url(../icons/ellipse-active.svg);
+      content: url(assets/icons/ellipse-active.svg);
       opacity: 1; }
   section.home-slider .slick-prev, section.home-slider .slick-next {
     display: none !important; }
@@ -621,7 +621,7 @@ section.servicios {
         width: 100%; }
         section.servicios .part2 .item-servicios p::before {
           content: '';
-          background-image: url(../icons/flecha-verde2.svg);
+          background-image: url(assets/icons/flecha-verde2.svg);
           width: 16px;
           height: 16px;
           font-size: 20px;
@@ -636,22 +636,22 @@ section.servicios {
       position: initial; }
     section.servicios .part2 .slick-prev {
       left: -22.5vw;
-      background-image: url(../icons/flecha-izq.svg);
+      background-image: url(assets/icons/flecha-izq.svg);
       background-repeat: no-repeat !important;
       background-size: 100% !important;
       width: 54px;
       height: 63px; }
       section.servicios .part2 .slick-prev:hover {
-        background-image: url(../icons/flechaizqhover.svg); }
+        background-image: url(assets/icons/flechaizqhover.svg); }
     section.servicios .part2 .slick-next {
       left: -18.5vw;
-      background-image: url(../icons/flecha-de.svg);
+      background-image: url(assets/icons/flecha-de.svg);
       background-repeat: no-repeat !important;
       background-size: 100% !important;
       width: 54px;
       height: 63px; }
       section.servicios .part2 .slick-next:hover {
-        background-image: url(../icons/flechaderhover.svg); }
+        background-image: url(assets/icons/flechaderhover.svg); }
     section.servicios .part2 .slick-prev:before, section.servicios .part2 .slick-next:before {
       display: none; }
     section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
@@ -687,7 +687,7 @@ section.proyecto-destacado {
           color: #fff; }
           section.proyecto-destacado .content .part1 div h3::before {
             content: '';
-            background-image: url(../icons/flecha-verde2.svg);
+            background-image: url(assets/icons/flecha-verde2.svg);
             width: 17.5px;
             height: 19.7px;
             font-size: 20px;
@@ -768,7 +768,7 @@ section.proyectos {
           position: relative; }
           section.proyectos .slider-proyectos .item-proyectos .info h4::before {
             content: '';
-            background-image: url(../icons/flecha-verde2.svg);
+            background-image: url(assets/icons/flecha-verde2.svg);
             width: 16px;
             height: 16px;
             font-size: 20px;
@@ -794,22 +794,22 @@ section.proyectos {
     section.proyectos .slider-proyectos .slick-prev {
       left: initial;
       right: 305px;
-      background-image: url(../icons/flecha-izq.svg);
+      background-image: url(assets/icons/flecha-izq.svg);
       background-repeat: no-repeat !important;
       background-size: 100% !important;
       width: 54px;
       height: 63px; }
       section.proyectos .slider-proyectos .slick-prev:hover {
-        background-image: url(../icons/flechaizqhover.svg); }
+        background-image: url(assets/icons/flechaizqhover.svg); }
     section.proyectos .slider-proyectos .slick-next {
       right: 235px;
-      background-image: url(../icons/flecha-de.svg);
+      background-image: url(assets/icons/flecha-de.svg);
       background-repeat: no-repeat !important;
       background-size: 100% !important;
       width: 54px;
       height: 63px; }
       section.proyectos .slider-proyectos .slick-next:hover {
-        background-image: url(../icons/flechaderhover.svg); }
+        background-image: url(assets/icons/flechaderhover.svg); }
     section.proyectos .slider-proyectos .slick-prev:before, section.proyectos .slider-proyectos .slick-next:before {
       display: none; }
     section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next {
@@ -992,7 +992,7 @@ footer {
 section.interna {
   position: relative;
   overflow: hidden;
-  background-image: url(../img/fondo-internas_1.jpg);
+  background-image: url(assets/images/fondo-internas_1.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%; }
@@ -1178,7 +1178,7 @@ section.valores {
       position: relative; }
       .servicios-grid .servicios-item p::before {
         content: '';
-        background-image: url(../icons/flecha-verde2.svg);
+        background-image: url(assets/icons/flecha-verde2.svg);
         width: 17.5px;
         height: 17.5px;
         font-size: 20px;
@@ -1283,7 +1283,7 @@ section.tarj-contacto {
         line-height: 37px; }
         .services-info .info .part2 h3::before {
           content: '';
-          background-image: url(../icons/vineta.svg);
+          background-image: url(assets/icons/vineta.svg);
           width: 17.5px;
           height: 100%;
           font-size: 20px;
@@ -1419,7 +1419,7 @@ section.tarj-contacto {
           position: relative; }
           .proyectos-list .items-category .item-category .info h4::before {
             content: '';
-            background-image: url(../icons/flecha-verde2.svg);
+            background-image: url(assets/icons/flecha-verde2.svg);
             width: 17.5px;
             height: 18px;
             font-size: 20px;
@@ -1531,7 +1531,7 @@ section.item-popup {
       position: relative; }
       section.item-popup .content h4::before {
         content: '';
-        background-image: url(../icons/vineta.svg);
+        background-image: url(assets/icons/vineta.svg);
         width: 17.5px;
         height: 18px;
         font-size: 20px;
@@ -1557,21 +1557,21 @@ section.item-popup {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           margin-bottom: 10px; }
       section.item-popup .content .slider-fotos .slick-prev {
-        background-image: url(../icons/flecha-izq-blanco.svg);
+        background-image: url(assets/icons/flecha-izq-blanco.svg);
         background-repeat: no-repeat !important;
         background-size: 100% !important;
         width: 54px;
         height: 63px; }
         section.item-popup .content .slider-fotos .slick-prev:hover {
-          background-image: url(../icons/flechaizqhover.svg); }
+          background-image: url(assets/icons/flechaizqhover.svg); }
       section.item-popup .content .slider-fotos .slick-next {
-        background-image: url(../icons/flecha-de-blanco.svg);
+        background-image: url(assets/icons/flecha-de-blanco.svg);
         background-repeat: no-repeat !important;
         background-size: 100% !important;
         width: 54px;
         height: 63px; }
         section.item-popup .content .slider-fotos .slick-next:hover {
-          background-image: url(../icons/flechaderhover.svg); }
+          background-image: url(assets/icons/flechaderhover.svg); }
       section.item-popup .content .slider-fotos .slick-prev:before, section.item-popup .content .slider-fotos .slick-next:before {
         display: none; }
       section.item-popup .content .slider-fotos .slick-prev {
@@ -1581,9 +1581,9 @@ section.item-popup {
       section.item-popup .content .slider-fotos .slick-prev.slick-disabled, section.item-popup .content .slider-fotos .slick-next.slick-disabled {
         opacity: 0.5; }
       section.item-popup .content .slider-fotos .slick-prev.slick-disabled:hover {
-        background-image: url(../icons/flecha-izq-blanco.svg); }
+        background-image: url(assets/icons/flecha-izq-blanco.svg); }
       section.item-popup .content .slider-fotos .slick-next.slick-disabled:hover {
-        background-image: url(../icons/flecha-de-blanco.svg); }
+        background-image: url(assets/icons/flecha-de-blanco.svg); }
     section.item-popup .content .parrafo-popup {
       padding-top: 15px;
       font-family: var(--fuente-barlow);
@@ -1599,7 +1599,7 @@ section.contacto-page {
   height: 100vh;
   padding: 80px 0;
   position: relative;
-  background-image: url(../img/fondo_contacto_2.jpg);
+  background-image: url(assets/images/fondo_contacto_2.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%; }
@@ -1786,7 +1786,7 @@ section.contacto-page {
             padding-bottom: 33px; }
             section.contacto-page .container .content .part1 .info p::before {
               content: '';
-              background-image: url(../icons/flecha-morada.svg);
+              background-image: url(assets/icons/flecha-morada.svg);
               width: 16px;
               height: 16px;
               font-size: 20px;
@@ -1822,7 +1822,7 @@ section.thanks-page {
   height: 100vh;
   padding: 80px 0;
   position: relative;
-  background-image: url(../img/fondo_contacto_2.jpg);
+  background-image: url(assets/images/fondo_contacto_2.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%; }
@@ -1869,7 +1869,7 @@ section.thanks-page {
         position: relative; }
         section.thanks-page .container .content h1::before {
           content: '';
-          background-image: url(../icons/flecha-morada.svg);
+          background-image: url(assets/icons/flecha-morada.svg);
           width: 36.42px;
           height: 41px;
           font-size: 20px;
@@ -2035,6 +2035,11 @@ section.servicios .part2 .btn {
     left: 12.5vw; } }
 
 @media (max-width: 1600px) {
+  section.thanks-page .container .content h1::before{
+    width: 27.42px;
+    height: 27px;
+    left: -32px;
+  }
   section.home-slider .home-bg lottie-player {
     left: 51%;
     top: -55px; }
@@ -2438,6 +2443,7 @@ section.servicios .part2 .btn {
     padding-right: 0px; } }
 
 @media (max-width: 1160px) {
+  
   section.servicios .part2 .slick-prev, section.servicios .part2 .slick-next {
     top: 76%; }
   section.experiencias .info .card-info:nth-child(1) {
@@ -2462,7 +2468,9 @@ section.servicios .part2 .btn {
 
 @media (max-width: 1052px) {
   .content-title h1 {
-    font-size: 60px; } }
+    font-size: 60px;
+  }
+}
 
 @media (max-width: 1090px) {
   section.home-slider .slick-dots {
@@ -2480,7 +2488,7 @@ section.servicios .part2 .btn {
     z-index: 99;
     padding: 100px 0;
     overflow: hidden;
-    background-image: url(../img/fondo-menu.jpg);
+    background-image: url(assets/images/fondo-menu.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top;
@@ -2516,7 +2524,7 @@ section.servicios .part2 .btn {
             color: var(--color-morado); }
           section.menupage .content ul li a::before {
             content: '';
-            background-image: url(../icons/flecha-morada.svg);
+            background-image: url(assets/icons/flecha-morada.svg);
             width: 29.5px;
             height: 31px;
             position: absolute;
@@ -2640,7 +2648,7 @@ section.servicios .part2 .btn {
     padding: 58px 0; }
   section.contacto-page,
   section.thanks-page {
-    background-image: url(../img/fondo_contacto_tablet.jpg); }
+    background-image: url(assets/images/fondo_contacto_tablet.jpg); }
   section.servicios .part1 a {
     padding: 11px 14px; }
   section.contacto-page .container .content .part1 .formulario-contacto .wpcf7 {
@@ -2839,7 +2847,7 @@ section.servicios .part2 .btn {
     display: block; }
   .proyectos-list .category form::before {
     content: '';
-    background-image: url(../icons/flecha-blanca-abajo.svg);
+    background-image: url(assets/icons/flecha-blanca-abajo.svg);
     width: 19px;
     height: 19px;
     position: absolute;
@@ -2932,16 +2940,25 @@ section.servicios .part2 .btn {
     overflow: hidden;
     transition: 0.2s linear; } }
 
+    
+    
 @media (max-width: 990px) and (max-width: 790px) {
   section.home {
     height: 130vw; } }
 
-@media (max-width: 795px) {
-  .content-title h1 {
-    font-size: 50px;
-    max-width: 650px; } }
+    @media (max-width: 795px){
+      .content-title h1 {
+        font-size: 50px;
+        max-width: 650px;
+      }
+    }
 
 @media (max-width: 768px) {
+  section.thanks-page .container .content h1::before{
+    width: 22.42px;
+    height: 25px;
+    left: -26px;
+  }
   section.home-slider lottie-player.responsive {
     bottom: -36px; }
   section.home-slider .content .part1 .marquee-with-options {
@@ -3234,7 +3251,7 @@ section.servicios .part2 .btn {
     display: block; }
     .proyectos-list .category form::before {
       content: '';
-      background-image: url(../icons/flecha-blanca-abajo.svg);
+      background-image: url(assets/icons/flecha-blanca-abajo.svg);
       width: 19px;
       height: 19px;
       position: absolute;
@@ -3297,6 +3314,9 @@ section.servicios .part2 .btn {
     bottom: 7px; } }
 
 @media (max-width: 630px) {
+  section.thanks-page .container .top {
+    right: -38px;
+  }
   section.home-slider lottie-player.responsive {
     bottom: 34px; }
   section.home .content {
@@ -3356,9 +3376,9 @@ section.servicios .part2 .btn {
 
 @media (max-width: 649px) {
   section.servicios .slick-dots li button:before {
-    content: url(../icons/ellipse.svg); }
+    content: url(assets/icons/ellipse.svg); }
   section.servicios .slick-dots li.slick-active button:before {
-    content: url(../icons/ellipse-active.svg); }
+    content: url(assets/icons/ellipse-active.svg); }
   section.servicios .slick-dots li button:before {
     opacity: 1; }
   section.servicios .slick-dots {
@@ -3372,9 +3392,9 @@ section.servicios .part2 .btn {
   section.proyectos .slider-proyectos .slick-prev, section.proyectos .slider-proyectos .slick-next {
     display: none !important; }
   section.proyectos .slick-dots li button:before {
-    content: url(../icons/ellipse.svg); }
+    content: url(assets/icons/ellipse.svg); }
   section.proyectos .slick-dots li.slick-active button:before {
-    content: url(../icons/ellipse-active.svg); }
+    content: url(assets/icons/ellipse-active.svg); }
   section.proyectos .slick-dots li button:before {
     opacity: 1; }
   section.proyectos .slick-dots {
@@ -3383,6 +3403,7 @@ section.servicios .part2 .btn {
     margin-bottom: 80px; } }
 
 @media (max-width: 584px) {
+
   .btn-contacto {
     position: fixed;
     bottom: 0;
@@ -3447,14 +3468,19 @@ section.servicios .part2 .btn {
     right: 21px;
     bottom: 58px; }
   section.proyecto-destacado .content .part2 iframe {
-    height: 273px; }
-  .content-title h1 {
-    font-size: 40px; } }
+    height: 273px; } 
+    .content-title h1 {
+      font-size: 40px;
+    }}
 
 @media (max-width: 500px) {
+  section.thanks-page .container .top {
+    right: -28px;
+  }
   ul.marquee-content2 li img {
     transform: scale(1);
-    width: 80%; }
+    width: 80%;
+  }
   section.servicios .part2 .item-servicios p {
     font-size: 25px; }
   section.home-slider .home-bg img {
@@ -3490,9 +3516,9 @@ section.servicios .part2 .btn {
     color: var(--color-morado) !important;
     opacity: 1; }
   section.item-popup .slick-dots li.slick-active button:before {
-    content: url(../icons/ellipse-active.svg); }
+    content: url(assets/icons/ellipse-active.svg); }
   .slick-dots li button:before {
-    content: url(../icons/ellipse.svg); }
+    content: url(assets/icons/ellipse.svg); }
   section.item-popup .slick-dots li button:before {
     opacity: 1; }
   section.item-popup .content .parrafo-popup {
@@ -3529,6 +3555,12 @@ section.servicios .part2 .btn {
   section.home {
     height: 145vw; } }
 
+@media (max-width: 440px) {
+  .content-title h1 {
+    font-size: 35px !important;
+}
+}
+
 @media (max-width: 425px) {
   section.home-slider lottie-player.responsive {
     width: 160vw;
@@ -3544,13 +3576,13 @@ section.servicios .part2 .btn {
     left: 21px;
     top: 28px; }
   section.menupage {
-    background-image: url(../img/fondomenú_movil.jpg);
+    background-image: url(assets/images/fondomenú_movil.jpg);
     background-position: left top; }
   section.interna {
-    background-image: url(../img/fondointerna_movil.jpg);
+    background-image: url(assets/images/fondointerna_movil.jpg);
     background-position: left top; }
   section.contacto-page, section.thanks-page {
-    background-image: url(../img/fondocontacto_movil.jpg);
+    background-image: url(assets/images/fondocontacto_movil.jpg);
     background-position: left top; }
   section.home .content {
     padding-top: 135px;
@@ -3587,9 +3619,9 @@ section.servicios .part2 .btn {
   section.servicios .slick-dots li button:before {
     opacity: 1; }
   .slick-dots li button:before {
-    content: url(../icons/ellipse.svg); }
+    content: url(assets/icons/ellipse.svg); }
   section.servicios .slick-dots li.slick-active button:before {
-    content: url(../icons/ellipse-active.svg); }
+    content: url(assets/icons/ellipse-active.svg); }
   section.servicios .part2 .slick-slider {
     margin-bottom: 80px; }
   section.servicios .part2 .slick-slider .slick-dots {
@@ -3604,7 +3636,7 @@ section.servicios .part2 .btn {
   section.proyectos .slick-dots li button:before {
     opacity: 1; }
   section.proyectos .slick-dots li.slick-active button:before {
-    content: url(../icons/ellipse-active.svg); }
+    content: url(assets/icons/ellipse-active.svg); }
   section.proyectos .slick-dots {
     bottom: -50px; }
   :root {
@@ -3740,7 +3772,7 @@ section.servicios .part2 .btn {
     color: var(--color-morado) !important;
     opacity: 1; }
   section.item-popup .slick-dots li.slick-active button:before {
-    content: url(../icons/ellipse-active.svg); }
+    content: url(assets/icons/ellipse-active.svg); }
   section.item-popup .slick-dots {
     bottom: -35px; }
   section.item-popup .content .slider-fotos .item-foto {
@@ -3779,10 +3811,11 @@ section.servicios .part2 .btn {
     font-size: 40px; }
   section.thanks-page .container .content p {
     font-size: 25px; }
-  section.thanks-page .container .content h1::before {
-    width: 21px;
-    height: 23px;
-    left: -30px; }
+    section.thanks-page .container .content h1::before {
+      width: 18px;
+      height: 18px;
+      left: -25px;
+  }
   section.thanks-page .container {
     width: 91.4%; }
   section.thanks-page .container .top {
